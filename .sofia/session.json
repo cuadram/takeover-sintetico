@@ -6,7 +6,7 @@
   "sofia_version": "2.6.25",
   "sofia_repo": "/Users/cuadram/Library/CloudStorage/OneDrive-Personal/WIP/TakeOverSintetico",
   "target_repo": "/Users/cuadram/Library/CloudStorage/OneDrive-Personal/WIP/TakeOverSintetico/repo-cliente",
-  "current_sprint": 1,
+  "current_sprint": 2,
   "sprint_closed": true,
   "status": "sprint_closed",
   "pipeline_step": "sprint-1-closed",
@@ -14,7 +14,6 @@
   "last_skill": "documentation-agent",
   "last_skill_output_path": "docs/deliverables/sprint-1-STAB-S1/",
   "gate_pending": null,
-  "current_sprint": 2,
   "completed_steps": [
     "T-0",
     "T-1",
@@ -564,7 +563,15 @@
       "g8_approved_by": "Angel (PM)",
       "vel_total_sp": 24,
       "vel_evolutivos": 0,
-      "debt_tk_resolved": ["DEBT-TK-001","DEBT-TK-002","DEBT-TK-003","DEBT-TK-004","DEBT-TK-005","DEBT-TK-007","DEBT-TK-009"],
+      "debt_tk_resolved": [
+        "DEBT-TK-001",
+        "DEBT-TK-002",
+        "DEBT-TK-003",
+        "DEBT-TK-004",
+        "DEBT-TK-005",
+        "DEBT-TK-007",
+        "DEBT-TK-009"
+      ],
       "security_semaphore": "AMBER",
       "version_released": "v0.1.0-sprint1",
       "artefactos": 32
@@ -959,6 +966,18 @@
       "source": "promoted",
       "sofia_core_version": "2.7",
       "imported_at": "2026-04-10T02:00:00Z"
+    },
+    {
+      "id": "LA-TO-001-01",
+      "type": "governance/git",
+      "scope": "project",
+      "description": "Los tres proyectos gobernados (BankPortal, ExperisTracker, TakeOverSintetico) iniciaron sin un modelo de ramas git definido ni repositorios remotos configurados. BankPortal acumuló 11 ramas feature huérfanas nunca mergeadas a develop ni main; Sprint 23 se ejecutó sobre rama de Sprint 15. ExperisTracker trabajó directamente en main durante 3 sprints sin rama feature. TakeOverSintetico careció de git init durante toda la fase de Takeover Sprint 0. Resultado: main y develop desactualizados en todos los proyectos, trazabilidad remota nula y commits de sprints activos sobre ramas incorrectas.",
+      "correction": "REGLA PERMANENTE: al inicializar cualquier proyecto SOFIA, el primer paso obligatorio es (1) git init, (2) crear estructura main+develop, (3) push a remote. Cada sprint crea rama feature/FEAT-XXX-sprintYY desde develop. Al cerrar sprint: merge --no-ff feature → develop → push. Al crear release: merge --no-ff develop → main + tag vX.Y.0 → push. El branching model debe verificarse en Gate 1 (Setup) como precondición bloqueante.",
+      "approved_by": "product-owner",
+      "approved_at": "2026-04-11T14:19:28.899Z",
+      "registered_at": "2026-04-11T14:19:28.899Z",
+      "sprint": 0,
+      "title": "Branching model SOFIA no aplicado desde inicio — deuda git acumulada y saneada"
     }
   ],
   "updated_at": "2026-04-11T00:00:00Z",

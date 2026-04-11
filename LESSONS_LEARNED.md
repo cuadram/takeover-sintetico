@@ -348,3 +348,11 @@ _SOFIA-CORE v2.6.31 · Importada: 2026-04-07T12:11:06.796Z_
 
 ---
 
+
+## LA-TO-001-01 — Branching model SOFIA no aplicado desde inicio — deuda git acumulada y saneada
+- **Fecha:** 2026-04-11
+- **Tipo:** governance/git
+- **Scope:** project
+- **Problema:** Proyectos iniciados sin modelo de ramas git. BankPortal: 11 ramas huérfanas, Sprint 23 en rama de Sprint 15. ExperisTracker: desarrollo directo en main 3 sprints. TakeOverSintetico: sin git init durante Takeover Sprint 0.
+- **Corrección:** REGLA PERMANENTE — git init + main+develop en Gate 1. Cada sprint: rama feature/FEAT-XXX-sprintYY desde develop. Cierre sprint: merge --no-ff feature→develop→push. Release: merge --no-ff develop→main + tag vX.Y.0.
+- **Aprobado por:** Product Owner | 2026-04-11
