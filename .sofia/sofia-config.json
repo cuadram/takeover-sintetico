@@ -13,5 +13,17 @@
   },
   "ma_baseline": {
     "enabled": false
+  },
+  "guardrails": {
+    "mandatory_pre_gate": {
+      "G-1": {
+        "checks": [
+          "GR-CORE-030: git init + main+develop + remote configurado y pusheado antes de primer sprint"
+        ],
+        "blocking": true,
+        "note": "Verificar con: git remote -v && git branch -a"
+      }
+    },
+    "updated": "2026-04-11T14:24:16.329Z"
   }
 }
