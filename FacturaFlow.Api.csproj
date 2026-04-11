@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>FacturaFlow.Api</AssemblyName>
+    <RootNamespace>FacturaFlow</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- AUTENTICACIÓN — RT-004: CVE-2024-21319 resuelto con v8.x -->
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.*" />
+
+    <!-- ORM — RT-003: CVE-2024-0057 resuelto con v8.x -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.*" />
+
+    <!-- SEGURIDAD — RT-005: BCrypt para hash de passwords -->
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.*" />
+
+    <!-- MAPEO — verificado compatible .NET 8 runtime -->
+    <PackageReference Include="AutoMapper" Version="12.0.*" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.*" />
+
+    <!-- DOCUMENTACIÓN API -->
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.*" />
+
+    <!-- LOGGING -->
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.*" />
+
+    <!-- SERIALIZACIÓN — migrado de Newtonsoft.Json EOL a System.Text.Json nativo .NET 8 -->
+    <!-- DEBT-TK-009 RESUELTO: Newtonsoft.Json 12.0.3 eliminado -->
+
+    <!-- TESTS — INC-003: xUnit + FluentAssertions añadidos en Sprint 1 -->
+    <PackageReference Include="xunit" Version="2.9.*" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.*" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.*" />
+    <PackageReference Include="FluentAssertions" Version="6.12.*" />
+  </ItemGroup>
+</Project>

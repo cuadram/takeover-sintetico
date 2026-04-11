@@ -1,0 +1,142 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# CI/CD extended — FacturaFlow · SOFIA Sprint 1 Step 7
+# Workflow: build + test + docker build + release tagging
+# Extiende ci.yml (RT-006) con stages de Docker y release
+# INC-G7-001 fix: Trivy image-ref usa primer tag de metadata-action (sin v-prefix)
+# ─────────────────────────────────────────────────────────────────────────────
+name: CD — FacturaFlow Release
+
+on:
+  push:
+    tags:
+      - 'v*'          # Disparado solo en tags de release: v0.1.0, v1.0.0, etc.
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository_owner }}/facturaflow-api
+
+jobs:
+  build-and-test:
+    name: Build & Test (.NET 8)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Cache NuGet packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.nuget/packages
+          key: nuget-${{ hashFiles('**/*.csproj') }}
+          restore-keys: nuget-
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --no-restore --configuration Release
+
+      - name: Run unit tests
+        run: dotnet test --no-restore --verbosity normal --logger "trx;LogFileName=results.xml"
+        env:
+          JWTAUTH__SECRET: ${{ secrets.JWTAUTH_SECRET_TEST }}
+          # CONNECTIONSTRINGS__DEFAULTCONNECTION: solo cuando haya integration tests (Sprint 2)
+
+      - name: Publish test results
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: xUnit Tests
+          path: '**/results.xml'
+          reporter: dotnet-trx
+
+  docker-build-push:
+    name: Docker Build & Push
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract Docker metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+
+      - name: Build Docker image (local para scan)
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          push: false
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          load: true
+
+      - name: Vulnerability scan — Trivy
+        uses: aquasecurity/trivy-action@master
+        with:
+          # INC-G7-001 fix: metadata-action genera tags sin v-prefix (semver {{version}})
+          # fromJSON().tags[0] = primera imagen tagueada = la que está cargada en local
+          image-ref: ${{ fromJSON(steps.meta.outputs.json).tags[0] }}
+          format: table
+          exit-code: '1'
+          severity: CRITICAL
+          # BLOQUEANTE si hay CVE Critical — no hacer push
+
+      - name: Push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+  release-notes:
+    name: Generate Release Notes
+    needs: docker-build-push
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          generate_release_notes: true
+          body: |
+            ## FacturaFlow ${{ github.ref_name }}
+
+            ### Sprint 1 — Estabilización de Seguridad
+            - ✅ CVE-2024-0057 (EF Core) resuelto — upgrade a .NET 8
+            - ✅ CVE-2024-21319 (JwtBearer) resuelto
+            - ✅ JWT secret y DB password eliminados de repositorio
+            - ✅ Passwords de usuarios migrados a BCrypt (cost factor 12)
+            - ✅ CI/CD implantado — GitHub Actions + Docker
+
+            ### Instrucciones de despliegue
+            Ver `infra/RUNBOOK-v0.1.0.md`
+
+            ### Variables de entorno requeridas
+            - `JWTAUTH__SECRET` — JWT signing secret ≥ 256 bits
+            - `CONNECTIONSTRINGS__DEFAULTCONNECTION` — Connection string SQL Server

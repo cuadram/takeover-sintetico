@@ -1,0 +1,63 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# CI — FacturaFlow · SOFIA Sprint 1 RT-006
+# Workflow: build + test en cada push a main y develop
+# ─────────────────────────────────────────────────────────────────────────────
+name: CI — FacturaFlow
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build:
+    name: Build (.NET 8)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --no-restore --configuration Release
+
+  test:
+    name: Test (xUnit)
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Run tests
+        run: dotnet test --no-restore --verbosity normal --logger "trx;LogFileName=results.xml"
+        env:
+          # Secrets configurados en GitHub → Settings → Secrets and variables → Actions
+          JWTAUTH__SECRET: ${{ secrets.JWTAUTH_SECRET_TEST }}
+          CONNECTIONSTRINGS__DEFAULTCONNECTION: ${{ secrets.DB_CONNECTIONSTRING_TEST }}
+
+      - name: Publish test results
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: xUnit Tests
+          path: '**/results.xml'
+          reporter: dotnet-trx
