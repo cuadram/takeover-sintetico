@@ -76,3 +76,24 @@ La documentación del cliente incluye:
 - manual-funcional.md (Oct 2024) → DTS_FUNC esperado: GOOD ~0.65
 - openapi.yaml → DTS_API esperado: TRUSTED ~0.82
 - arquitectura-2020.md → DTS_ARCH esperado: POOR ~0.20 (ZOMBIE)
+
+## REPOSITORIO GIT
+- **Remote:** https://github.com/cuadram/takeover-sintetico.git
+- **Provider:** GitHub (private)
+- **Rama main:** main
+- **Rama develop:** main
+- **Rama activa sprint:** main
+- **Branching model:** feature/FEAT-XXX-sprintYY desde develop
+- **Guardrail:** GR-CORE-030 (Gate 1 bloqueante)
+
+### Comandos de referencia
+```bash
+# Verificar estado
+git remote -v && git branch -a
+# Nuevo sprint
+git checkout develop && git checkout -b feature/FEAT-XXX-sprintYY
+# Cierre sprint
+git checkout develop && git merge --no-ff feature/FEAT-XXX-sprintYY && git push origin develop
+# Release
+git checkout main && git merge --no-ff develop && git tag vX.Y.0 && git push origin main --tags
+```

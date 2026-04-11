@@ -25,5 +25,16 @@
       }
     },
     "updated": "2026-04-11T14:24:16.329Z"
-  }
+  },
+  "repository": {
+    "remote": "https://github.com/cuadram/takeover-sintetico.git",
+    "provider": "github",
+    "visibility": "private",
+    "default_branch": "main",
+    "develop_branch": null,
+    "active_branch": "main",
+    "branching_model": "feature/FEAT-XXX-sprintYY",
+    "guardrail": "GR-CORE-030"
+  },
+  "updated_at": "2026-04-11T14:29:25.802Z"
 }

@@ -1040,5 +1040,15 @@
     "la_022_08_compliant": true,
     "pending_operator_deposit": true,
     "deposit_path": "docs/deliverables/sprint-1-STAB-S1/"
+  },
+  "repository": {
+    "remote": "https://github.com/cuadram/takeover-sintetico.git",
+    "provider": "github",
+    "visibility": "private",
+    "default_branch": "main",
+    "develop_branch": null,
+    "active_branch": "main",
+    "branching_model": "feature/FEAT-XXX-sprintYY",
+    "guardrail": "GR-CORE-030"
   }
 }
