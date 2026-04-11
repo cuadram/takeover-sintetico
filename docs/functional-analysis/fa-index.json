@@ -1,0 +1,566 @@
+{
+  "_version": "0.1",
+  "_mode": "takeover",
+  "_generated_by": "fa-reverse-agent v1.0",
+  "_generated_at": "2026-04-07T10:00:00Z",
+  "_updated_at": "2026-04-07T10:30:00Z",
+  "_update_reason": "Resolución de 4 DISCREPANCYs en GT-3 — Angel (PO) 2026-04-07",
+  "_strategy": "DOCUMENT-LED+CODE-VALIDATED",
+  "_dts_func": 0.645,
+  "_dts_api": 0.820,
+  "_dts_arch": "ZOMBIE-EXCLUDED",
+
+  "project": "facturaflow",
+  "client": "RetailCorp S.L. (Laboratorio Sintético SOFIA)",
+  "description": "FacturaFlow es el sistema de gestión de facturación de RetailCorp S.L. Permite crear, emitir y controlar el ciclo de vida de facturas a clientes nacionales y europeos, gestionando el régimen de IVA aplicable según el tipo de cliente. El sistema está en producción desde 2022 y gestiona más de 8.000 facturas anuales.",
+  "domain": "retail-facturacion",
+  "actors": [
+    {
+      "rol": "Administrador",
+      "desc": "Acceso completo al sistema. Puede gestionar clientes, facturas, usuarios e informes. Único rol que puede eliminar borradores y anular facturas emitidas.",
+      "code_ref": "Roles = 'Admin' en [Authorize(Roles=...)]"
+    },
+    {
+      "rol": "Comercial",
+      "desc": "Puede crear y modificar clientes, y crear facturas. No gestiona usuarios ni tiene acceso completo a informes.",
+      "code_ref": "Roles = 'Comercial' en [Authorize(Roles=...)]"
+    },
+    {
+      "rol": "Contabilidad",
+      "desc": "Puede consultar clientes y facturas, y registrar el pago de facturas emitidas (DEBT-TK-011 — pendiente de implementar). Sin acceso a gestión de usuarios.",
+      "code_ref": "manual-funcional.md §5.1 — validado parcialmente"
+    },
+    {
+      "rol": "Solo Lectura",
+      "desc": "Acceso de consulta únicamente. Sin capacidad de crear ni modificar datos.",
+      "code_ref": "Rol por defecto en entidad Usuario + manual-funcional.md §5.1"
+    }
+  ],
+  "regulations": [
+    {
+      "id": "AEAT",
+      "desc": "Normativa fiscal española — referenciada en FIXME de FacturasController: DELETE físico incumple auditoría AEAT. DEBT-TK-008.",
+      "evidence": "Controllers/FacturasController.cs — FIXME comment"
+    },
+    {
+      "id": "GDPR",
+      "desc": "Protección de datos — DELETE físico viola audit trail GDPR. DEBT-TK-008.",
+      "evidence": "Controllers/FacturasController.cs — FIXME comment"
+    }
+  ],
+  "glossary": [
+    { "term": "Factura", "def": "Documento fiscal que registra una operación económica entre RetailCorp y un cliente. Tiene un ciclo de vida: BORRADOR → EMITIDA → PAGADA / ANULADA." },
+    { "term": "Cliente", "def": "Empresa o persona que contrata servicios de RetailCorp. Clasificado por tipo fiscal (NACIONAL, EUROPEO, EXTRACOMUNITARIO) que determina el IVA aplicable." },
+    { "term": "Estado de factura", "def": "Fase del ciclo de vida de una factura. Valores: BORRADOR (editable), EMITIDA (enviada al cliente), PAGADA (cobrada — transición pendiente de implementar), ANULADA (cancelada — transición pendiente de implementar)." },
+    { "term": "Base imponible", "def": "Importe de la factura antes de aplicar el IVA." },
+    { "term": "Total", "def": "Importe final: Base Imponible + (Base Imponible × PorcentajeIVA / 100)." }
+  ],
+
+  "modules": [
+    {
+      "id": "MOD-TK-001",
+      "name": "Gestión de Clientes",
+      "description": "Permite crear, consultar y actualizar el catálogo de clientes de RetailCorp, incluyendo su clasificación fiscal.",
+      "confidence": "HIGH",
+      "source": "endpoints + bd-schema + documentation"
+    },
+    {
+      "id": "MOD-TK-002",
+      "name": "Gestión de Facturas",
+      "description": "Gestiona el ciclo de vida de las facturas: creación, emisión, cobro y anulación. Las transiciones de cobro (→PAGADA) y anulación (→ANULADA) están pendientes de implementación (DEBT-TK-011, DEBT-TK-012).",
+      "confidence": "HIGH",
+      "source": "endpoints + bd-schema + documentation + tests"
+    },
+    {
+      "id": "MOD-TK-003",
+      "name": "Gestión de Usuarios y Control de Acceso",
+      "description": "Controla el acceso al sistema mediante usuarios y roles. La autenticación se realiza vía JWT. La gestión CRUD de usuarios no tiene controller detectado en el repositorio entregado.",
+      "confidence": "MEDIUM",
+      "source": "bd-schema + jwt-config"
+    },
+    {
+      "id": "MOD-TK-004",
+      "name": "Informes y Exportación",
+      "description": "Módulo pendiente de implementación. Los informes REST no están implementados (DEBT-TK-013). La exportación PDF existe en producción pero el código no fue entregado (DEBT-TK-014 — URGENTE recuperar).",
+      "confidence": "NONE",
+      "source": "documentation-only + resoluciones GT-3",
+      "debts": ["DEBT-TK-013", "DEBT-TK-014"]
+    }
+  ],
+
+  "total_functionalities": 14,
+  "total_business_rules": 13,
+
+  "functionalities": [
+    {
+      "id": "FA-TK-001",
+      "name": "Estado inicial de borrador al crear una factura",
+      "module": "MOD-TK-002",
+      "sprint": 0,
+      "status": "EXISTING",
+      "inferred": false,
+      "confidence": "HIGH",
+      "sources": [
+        { "type": "test", "ref": "Tests/FacturaTests.cs — Factura_EstadoInicial_DebeSerBorrador()", "reliability": "HIGH" },
+        { "type": "endpoint", "ref": "POST /api/v1/facturas — factura.Estado = 'BORRADOR' en Create()", "reliability": "HIGH" },
+        { "type": "bd-schema", "ref": "tabla Facturas — columna Estado nvarchar(20) NOT NULL", "reliability": "MEDIUM" }
+      ],
+      "description": "Toda factura recién creada adopta automáticamente el estado BORRADOR. Indica que la factura es editable y aún no ha sido emitida al cliente.",
+      "business_rules": ["RN-TK-001", "RN-TK-002"],
+      "discrepancy": false,
+      "needs_validation_gt3": false
+    },
+    {
+      "id": "FA-TK-002",
+      "name": "Cálculo del importe total de una factura",
+      "module": "MOD-TK-002",
+      "sprint": 0,
+      "status": "EXISTING",
+      "inferred": true,
+      "confidence": "MEDIUM",
+      "sources": [
+        { "type": "test", "ref": "Tests/FacturaTests.cs — Factura_Total_DebeCalcularseCorrectamente()", "reliability": "MEDIUM" },
+        { "type": "bd-schema", "ref": "tabla Facturas — columnas BaseImponible, PorcentajeIVA, Total (decimal 18,2)", "reliability": "MEDIUM" }
+      ],
+      "description": "El importe total de una factura = Base Imponible + (Base Imponible × Porcentaje IVA / 100). El IVA por defecto es 21%. Nota: el cálculo no es automático en el sistema actual — el campo Total debe enviarse calculado desde el cliente de la API.",
+      "business_rules": ["RN-TK-013"],
+      "discrepancy": false,
+      "needs_validation_gt3": true,
+      "validation_note": "VAL-001: ¿debe el backend calcular el Total automáticamente? Test tiene FIXME explícito."
+    },
+    {
+      "id": "FA-TK-003",
+      "name": "Consulta del catálogo de clientes",
+      "module": "MOD-TK-001",
+      "sprint": 0,
+      "status": "EXISTING",
+      "inferred": false,
+      "confidence": "HIGH",
+      "sources": [
+        { "type": "endpoint", "ref": "GET /api/v1/clientes — ClientesController.GetAll()", "reliability": "HIGH" },
+        { "type": "documentation", "ref": "openapi.yaml — GET /clientes (DTS=0.820)", "reliability": "HIGH" },
+        { "type": "documentation", "ref": "manual-funcional.md §2.2", "reliability": "MEDIUM" }
+      ],
+      "description": "Cualquier usuario autenticado puede consultar el listado completo de clientes. Devuelve: razón social, NIF/CIF, email, teléfono, dirección, estado activo/inactivo, tipo de cliente y fecha de alta.",
+      "business_rules": ["RN-TK-012"],
+      "discrepancy": false,
+      "needs_validation_gt3": false
+    },
+    {
+      "id": "FA-TK-004",
+      "name": "Alta de nuevo cliente",
+      "module": "MOD-TK-001",
+      "sprint": 0,
+      "status": "EXISTING",
+      "inferred": false,
+      "confidence": "HIGH",
+      "sources": [
+        { "type": "endpoint", "ref": "POST /api/v1/clientes — [Authorize(Roles='Admin,Comercial')]", "reliability": "HIGH" },
+        { "type": "documentation", "ref": "openapi.yaml — POST /clientes (DTS=0.820)", "reliability": "HIGH" },
+        { "type": "documentation", "ref": "manual-funcional.md §2.1", "reliability": "MEDIUM" },
+        { "type": "bd-schema", "ref": "IX_Clientes_NifCif UNIQUE INDEX", "reliability": "HIGH" }
+      ],
+      "description": "Administrador y Comercial pueden registrar nuevos clientes. Campos obligatorios: razón social, NIF/CIF, email y tipo de cliente (NACIONAL/EUROPEO/EXTRACOMUNITARIO). El NIF/CIF debe ser único.",
+      "business_rules": ["RN-TK-003", "RN-TK-004", "RN-TK-007"],
+      "discrepancy": false,
+      "needs_validation_gt3": true,
+      "validation_note": "VAL-002: comportamiento ante NIF/CIF duplicado actualmente sin mensaje amigable."
+    },
+    {
+      "id": "FA-TK-005",
+      "name": "Consulta de detalle de cliente",
+      "module": "MOD-TK-001",
+      "sprint": 0,
+      "status": "EXISTING",
+      "inferred": false,
+      "confidence": "HIGH",
+      "sources": [
+        { "type": "endpoint", "ref": "GET /api/v1/clientes/{id} — ClientesController.GetById()", "reliability": "HIGH" },
+        { "type": "documentation", "ref": "openapi.yaml — GET /clientes/{id} (DTS=0.820)", "reliability": "HIGH" }
+      ],
+      "description": "Cualquier usuario autenticado puede consultar el detalle completo de un cliente por su identificador. Si no existe devuelve error de no encontrado.",
+      "business_rules": ["RN-TK-012"],
+      "discrepancy": false,
+      "needs_validation_gt3": false
+    },
+    {
+      "id": "FA-TK-006",
+      "name": "Actualización de datos de cliente",
+      "module": "MOD-TK-001",
+      "sprint": 0,
+      "status": "EXISTING",
+      "inferred": false,
+      "confidence": "HIGH",
+      "sources": [
+        { "type": "endpoint", "ref": "PUT /api/v1/clientes/{id} — [Authorize(Roles='Admin,Comercial')]", "reliability": "HIGH" },
+        { "type": "documentation", "ref": "openapi.yaml — PUT /clientes/{id} (DTS=0.820)", "reliability": "HIGH" },
+        { "type": "documentation", "ref": "manual-funcional.md §2.3", "reliability": "MEDIUM" }
+      ],
+      "description": "Administrador y Comercial pueden actualizar los datos de un cliente existente.",
+      "business_rules": ["RN-TK-003"],
+      "discrepancy": false,
+      "needs_validation_gt3": false
+    },
+    {
+      "id": "FA-TK-007",
+      "name": "Consulta de facturas de un cliente",
+      "module": "MOD-TK-001",
+      "sprint": 0,
+      "status": "EXISTING",
+      "inferred": false,
+      "confidence": "HIGH",
+      "sources": [
+        { "type": "endpoint", "ref": "GET /api/v1/clientes/{id}/facturas — ClientesController.GetFacturas()", "reliability": "HIGH" },
+        { "type": "documentation", "ref": "openapi.yaml — GET /clientes/{id}/facturas (DTS=0.820)", "reliability": "HIGH" }
+      ],
+      "description": "Cualquier usuario autenticado puede consultar todas las facturas asociadas a un cliente concreto.",
+      "business_rules": [],
+      "discrepancy": false,
+      "needs_validation_gt3": false
+    },
+    {
+      "id": "FA-TK-008",
+      "name": "Consulta de listado de facturas con filtro por estado",
+      "module": "MOD-TK-002",
+      "sprint": 0,
+      "status": "EXISTING",
+      "inferred": false,
+      "confidence": "HIGH",
+      "sources": [
+        { "type": "endpoint", "ref": "GET /api/v1/facturas?estado= — [FromQuery] string? estado", "reliability": "HIGH" },
+        { "type": "documentation", "ref": "openapi.yaml — GET /facturas enum [BORRADOR,EMITIDA,PAGADA,ANULADA] (DTS=0.820)", "reliability": "HIGH" },
+        { "type": "documentation", "ref": "manual-funcional.md §3.2", "reliability": "MEDIUM" }
+      ],
+      "description": "Cualquier usuario autenticado puede consultar facturas filtrando opcionalmente por estado: BORRADOR, EMITIDA, PAGADA o ANULADA. Sin filtro se devuelven todas.",
+      "business_rules": ["RN-TK-011"],
+      "discrepancy": false,
+      "needs_validation_gt3": true,
+      "validation_note": "VAL-003: filtrado en memoria — HACK documentado. Riesgo de rendimiento con volumen creciente."
+    },
+    {
+      "id": "FA-TK-009",
+      "name": "Creación de factura en estado borrador",
+      "module": "MOD-TK-002",
+      "sprint": 0,
+      "status": "EXISTING",
+      "inferred": false,
+      "confidence": "HIGH",
+      "sources": [
+        { "type": "endpoint", "ref": "POST /api/v1/facturas — FacturasController.Create()", "reliability": "HIGH" },
+        { "type": "documentation", "ref": "openapi.yaml — POST /facturas (DTS=0.820)", "reliability": "HIGH" },
+        { "type": "documentation", "ref": "manual-funcional.md §3.1", "reliability": "MEDIUM" },
+        { "type": "test", "ref": "FA-TK-001 confirma estado inicial BORRADOR", "reliability": "HIGH" }
+      ],
+      "description": "Usuarios autenticados pueden crear facturas. Toda factura nueva se crea en estado BORRADOR. Campos obligatorios: cliente y base imponible. IVA por defecto: 21%.",
+      "business_rules": ["RN-TK-001", "RN-TK-002", "RN-TK-013"],
+      "discrepancy": false,
+      "needs_validation_gt3": true,
+      "validation_note": "VAL-004: sin validación de existencia del cliente. Numeración por ejercicio no implementada."
+    },
+    {
+      "id": "FA-TK-010",
+      "name": "Consulta de detalle de factura",
+      "module": "MOD-TK-002",
+      "sprint": 0,
+      "status": "EXISTING",
+      "inferred": false,
+      "confidence": "HIGH",
+      "sources": [
+        { "type": "endpoint", "ref": "GET /api/v1/facturas/{id} — FacturasController.GetById()", "reliability": "HIGH" },
+        { "type": "documentation", "ref": "openapi.yaml — GET /facturas/{id} (DTS=0.820)", "reliability": "HIGH" }
+      ],
+      "description": "Cualquier usuario autenticado puede consultar el detalle completo de una factura por su identificador.",
+      "business_rules": [],
+      "discrepancy": false,
+      "needs_validation_gt3": false
+    },
+    {
+      "id": "FA-TK-011",
+      "name": "Emisión de factura al cliente",
+      "module": "MOD-TK-002",
+      "sprint": 0,
+      "status": "EXISTING",
+      "inferred": false,
+      "confidence": "HIGH",
+      "sources": [
+        { "type": "endpoint", "ref": "PUT /api/v1/facturas/{id}/emitir — FacturasController.Emitir()", "reliability": "HIGH" },
+        { "type": "documentation", "ref": "openapi.yaml — PUT /facturas/{id}/emitir (DTS=0.820)", "reliability": "HIGH" },
+        { "type": "documentation", "ref": "manual-funcional.md §4", "reliability": "MEDIUM" }
+      ],
+      "description": "Los usuarios autenticados pueden emitir facturas en BORRADOR, pasándolas a EMITIDA. Solo se pueden emitir facturas en BORRADOR. Se registra la fecha de emisión.",
+      "business_rules": ["RN-TK-006"],
+      "discrepancy": false,
+      "needs_validation_gt3": true,
+      "validation_note": "VAL-005: manual indica que requiere cliente activo — no implementado en código."
+    },
+    {
+      "id": "FA-TK-012",
+      "name": "Eliminación de factura en borrador",
+      "module": "MOD-TK-002",
+      "sprint": 0,
+      "status": "EXISTING",
+      "inferred": false,
+      "confidence": "HIGH",
+      "sources": [
+        { "type": "endpoint", "ref": "DELETE /api/v1/facturas/{id} — [Authorize(Roles='Admin')]", "reliability": "HIGH" },
+        { "type": "documentation", "ref": "openapi.yaml — DELETE /facturas/{id} (DTS=0.820)", "reliability": "HIGH" }
+      ],
+      "description": "Solo el Administrador puede eliminar facturas en BORRADOR. Comportamiento actual: borrado físico (incorrecto — debe cambiar a transición → ANULADA). DEBT-TK-008.",
+      "business_rules": ["RN-TK-005"],
+      "discrepancy": false,
+      "needs_validation_gt3": true,
+      "validation_note": "VAL-006: ¿cambia a 'anulación de borrador' (→ANULADA) en Sprint 1? Coordinado con DISC-T3-002/DEBT-TK-012."
+    },
+    {
+      "id": "FA-TK-013",
+      "name": "Autenticación y control de acceso por rol",
+      "module": "MOD-TK-003",
+      "sprint": 0,
+      "status": "EXISTING",
+      "inferred": true,
+      "confidence": "MEDIUM",
+      "sources": [
+        { "type": "endpoint", "ref": "appsettings.json — JwtSettings (Secret, Issuer, Audience, ExpiryMinutes: 1440)", "reliability": "MEDIUM" },
+        { "type": "endpoint", "ref": "[Authorize] en todos los controllers + [Authorize(Roles=...)] en endpoints restringidos", "reliability": "HIGH" },
+        { "type": "bd-schema", "ref": "tabla Usuarios — Email (UNIQUE), Password, Rol, Activo", "reliability": "MEDIUM" }
+      ],
+      "description": "El sistema protege todos sus endpoints mediante autenticación JWT con validez de 24 horas. El acceso está controlado por rol: Administrador, Comercial, Contabilidad, Solo Lectura.",
+      "business_rules": ["RN-TK-012"],
+      "discrepancy": false,
+      "needs_validation_gt3": true,
+      "validation_note": "VAL-007: endpoint de login no detectado en el repositorio entregado. Confirmar con equipo saliente."
+    },
+    {
+      "id": "FA-TK-014",
+      "name": "Gestión de usuarios del sistema",
+      "module": "MOD-TK-003",
+      "sprint": 0,
+      "status": "UNKNOWN",
+      "inferred": true,
+      "confidence": "LOW",
+      "sources": [
+        { "type": "bd-schema", "ref": "tabla Usuarios — Id, Email (UNIQUE), Password, Rol, Activo", "reliability": "MEDIUM" },
+        { "type": "documentation", "ref": "manual-funcional.md §5 — Solo Admin gestiona usuarios", "reliability": "MEDIUM" }
+      ],
+      "description": "El sistema tiene tabla de usuarios con credenciales y roles. No se detectó controller de usuarios en el repositorio entregado. Estado UNKNOWN hasta confirmación del equipo saliente.",
+      "business_rules": ["RN-TK-010"],
+      "discrepancy": false,
+      "needs_validation_gt3": true,
+      "validation_note": "VAL-008: ¿existe controller de usuarios no entregado o gestión manual vía BD?"
+    }
+  ],
+
+  "business_rules": [
+    {
+      "id": "RN-TK-001",
+      "fa_id": "FA-TK-001",
+      "description": "Toda factura se crea siempre en estado BORRADOR.",
+      "inferred": false,
+      "source": "test + endpoint-code",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "RN-TK-002",
+      "fa_id": "FA-TK-009",
+      "description": "El porcentaje de IVA por defecto al crear una factura es el 21%.",
+      "inferred": false,
+      "source": "bd-schema + endpoint-params",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "RN-TK-003",
+      "fa_id": "FA-TK-004",
+      "description": "Solo Administrador y Comercial pueden crear y modificar datos de clientes.",
+      "inferred": false,
+      "source": "endpoint-code [Authorize(Roles='Admin,Comercial')]",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "RN-TK-004",
+      "fa_id": "FA-TK-004",
+      "description": "El NIF/CIF de un cliente debe ser único en el sistema.",
+      "inferred": false,
+      "source": "bd-schema (IX_Clientes_NifCif UNIQUE) + documentation",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "RN-TK-005",
+      "fa_id": "FA-TK-012",
+      "description": "Solo el Administrador puede eliminar facturas en estado BORRADOR.",
+      "inferred": false,
+      "source": "endpoint-code [Authorize(Roles='Admin')] + documentation",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "RN-TK-006",
+      "fa_id": "FA-TK-011",
+      "description": "Solo se pueden emitir facturas en estado BORRADOR. Cualquier otro estado resulta en error.",
+      "inferred": false,
+      "source": "endpoint-code (if Estado != 'BORRADOR' → BadRequest)",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "RN-TK-007",
+      "fa_id": "FA-TK-004",
+      "description": "El tipo de cliente determina el régimen de IVA: NACIONAL (21%), EUROPEO (exento — intracomunitario), EXTRACOMUNITARIO (no aplicable).",
+      "inferred": true,
+      "source": "documentation manual-funcional.md §2.1 (DTS=0.645)",
+      "confidence": "MEDIUM",
+      "note": "La lógica de aplicación automática de IVA según tipo NO está implementada en el código actual."
+    },
+    {
+      "id": "RN-TK-008",
+      "fa_id": "DISC-T3-001",
+      "description": "Solo Contabilidad y Administrador pueden registrar el pago de una factura emitida (EMITIDA → PAGADA).",
+      "inferred": true,
+      "source": "documentation manual-funcional.md §4 (DTS=0.645)",
+      "confidence": "MEDIUM",
+      "note": "Pendiente de implementación — DEBT-TK-011."
+    },
+    {
+      "id": "RN-TK-009",
+      "fa_id": "DISC-T3-002",
+      "description": "Solo el Administrador puede anular una factura en estado EMITIDA (EMITIDA → ANULADA).",
+      "inferred": true,
+      "source": "documentation manual-funcional.md §4 (DTS=0.645)",
+      "confidence": "MEDIUM",
+      "note": "Pendiente de implementación — DEBT-TK-012."
+    },
+    {
+      "id": "RN-TK-010",
+      "fa_id": "FA-TK-014",
+      "description": "El email de cada usuario debe ser único en el sistema.",
+      "inferred": false,
+      "source": "bd-schema (IX_Usuarios_Email UNIQUE)",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "RN-TK-011",
+      "fa_id": "FA-TK-008",
+      "description": "El listado de facturas puede filtrarse por estado. Estados válidos: BORRADOR, EMITIDA, PAGADA, ANULADA.",
+      "inferred": false,
+      "source": "endpoint-code + openapi.yaml",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "RN-TK-012",
+      "fa_id": "FA-TK-003",
+      "description": "Todos los endpoints requieren autenticación. Los no autenticados reciben error 401.",
+      "inferred": false,
+      "source": "endpoint-code ([Authorize] en ambos controllers)",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "RN-TK-013",
+      "fa_id": "FA-TK-002",
+      "description": "Total = Base Imponible + (Base Imponible × PorcentajeIVA / 100).",
+      "inferred": true,
+      "source": "test (cálculo manual en FacturaTests.cs) + bd-schema",
+      "confidence": "MEDIUM",
+      "note": "El cálculo no es automático actualmente — el campo Total se persiste con el valor enviado por el cliente de la API."
+    }
+  ],
+
+  "discrepancies": [
+    {
+      "id": "DISC-T3-001",
+      "fa_name": "Registro de pago de factura (EMITIDA → PAGADA)",
+      "type": "DOCUMENTED-NOT-FOUND",
+      "status": "RESOLVED",
+      "resolution_type": "CONFIRMED-MISSING",
+      "resolution": "Funcionalidad no implementada en el sistema actual. Pendiente de implementar.",
+      "resolution_by": "Angel (PO)",
+      "resolution_at": "2026-04-07T10:30:00Z",
+      "debt_generated": "DEBT-TK-011",
+      "debt_priority": "HIGH",
+      "debt_sp": 3,
+      "debt_sprint": "S1"
+    },
+    {
+      "id": "DISC-T3-002",
+      "fa_name": "Anulación de factura emitida (EMITIDA → ANULADA)",
+      "type": "DOCUMENTED-NOT-FOUND",
+      "status": "RESOLVED",
+      "resolution_type": "CONFIRMED-MISSING",
+      "resolution": "Deuda funcional. La anulación formal de facturas emitidas no está implementada. El DELETE físico existente no es equivalente.",
+      "resolution_by": "Angel (PO)",
+      "resolution_at": "2026-04-07T10:30:00Z",
+      "debt_generated": "DEBT-TK-012",
+      "debt_priority": "HIGH",
+      "debt_sp": 2,
+      "debt_sprint": "S1"
+    },
+    {
+      "id": "DISC-T3-003",
+      "fa_name": "Informes de facturación",
+      "type": "DOCUMENTED-NOT-FOUND",
+      "status": "RESOLVED",
+      "resolution_type": "CONFIRMED-MISSING",
+      "resolution": "Los informes no están implementados en ninguna forma en el sistema actual.",
+      "resolution_by": "Angel (PO)",
+      "resolution_at": "2026-04-07T10:30:00Z",
+      "debt_generated": "DEBT-TK-013",
+      "debt_priority": "MEDIUM",
+      "debt_sp": 8,
+      "debt_sprint": "Backlog"
+    },
+    {
+      "id": "DISC-T3-004",
+      "fa_name": "Exportación de factura a PDF",
+      "type": "DOCUMENTED-NOT-FOUND",
+      "status": "RESOLVED",
+      "resolution_type": "CONFIRMED-EXISTS-MISSING-CODE",
+      "resolution": "La funcionalidad existe en producción pero el código no fue incluido en el repositorio entregado. Deuda de código — recuperar urgentemente del equipo saliente.",
+      "resolution_by": "Angel (PO)",
+      "resolution_at": "2026-04-07T10:30:00Z",
+      "debt_generated": "DEBT-TK-014",
+      "debt_priority": "HIGH",
+      "debt_sp": 3,
+      "debt_sprint": "S1 — URGENTE"
+    }
+  ],
+
+  "doc_version": "0.1",
+  "doc_history": [
+    {
+      "version": "0.1",
+      "sprint": 0,
+      "date": "2026-04-07T10:00:00Z",
+      "description": "Versión inicial — Takeover Sprint 0 · FA Reverse Engineering"
+    },
+    {
+      "version": "0.1-GT3",
+      "sprint": 0,
+      "date": "2026-04-07T10:30:00Z",
+      "description": "Resolución de 4 DISCREPANCYs en GT-3. Angel (PO). discrepancies_open: 4 → 0."
+    }
+  ],
+  "last_sprint_consolidated": 0,
+  "sprints_covered": "S0-takeover",
+
+  "takeover_metadata": {
+    "strategy": "DOCUMENT-LED+CODE-VALIDATED",
+    "dts_func": 0.645,
+    "dts_api": 0.820,
+    "sources_used": ["tests", "endpoints", "bd-schema", "documentation-func", "documentation-api"],
+    "discrepancies_total": 4,
+    "discrepancies_open": 0,
+    "discrepancies_resolved": 4,
+    "needs_validation_gt3_count": 8,
+    "debts_from_discrepancies": ["DEBT-TK-011", "DEBT-TK-012", "DEBT-TK-013", "DEBT-TK-014"],
+    "confidence_distribution": {
+      "HIGH": 10,
+      "MEDIUM": 3,
+      "LOW": 1,
+      "NONE": 0
+    },
+    "status_distribution": {
+      "EXISTING": 12,
+      "UNKNOWN": 1,
+      "EXISTING_BROKEN": 0,
+      "DOCUMENTED_NOT_FOUND": 0
+    },
+    "gr_core_025_satisfied": true,
+    "gt3_unblocked": true
+  }
+}

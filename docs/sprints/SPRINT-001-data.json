@@ -1,0 +1,169 @@
+{
+  "sprint": 1,
+  "type": "stabilization",
+  "status": "in_progress",
+  "sprint_goal": "Estabilizar FacturaFlow resolviendo todos los riesgos de seguridad críticos, establecer CI/CD básico e implantar la infraestructura de gobernanza SOFIA",
+  "project": "facturaflow",
+  "client": "RetailCorp S.L. (Laboratorio Sintético SOFIA)",
+  "sofia_version": "2.6.25",
+  "start_date": "2026-04-10",
+  "end_date": "2026-04-24",
+  "duration_weeks": 2,
+  "sprint_opened_at": "2026-04-10T03:00:00Z",
+  "sprint_opened_by": "Angel (SM/PM)",
+
+  "capacity": {
+    "total_sp": 24,
+    "evolutivos_sp": 0,
+    "security_sp": 13,
+    "cicd_sp": 5,
+    "governance_sp": 6,
+    "note": "Sprint 100% deuda técnica mandatory. Primer evolutivo: Sprint 2."
+  },
+
+  "backlog": [
+    {
+      "debt_id": "DEBT-TK-003",
+      "jira_key": "FF-5",
+      "summary": "TK-003 · Rotar JWT secret + migrar a variable de entorno",
+      "priority": "CRITICAL",
+      "tag": "INMEDIATO",
+      "sp": 1,
+      "area": "Security",
+      "epic": "FF-1",
+      "sprint_target": "S1-semana1"
+    },
+    {
+      "debt_id": "DEBT-TK-004",
+      "jira_key": "FF-6",
+      "summary": "TK-004 · Rotar contraseña BD + migrar a variable de entorno",
+      "priority": "CRITICAL",
+      "tag": "INMEDIATO",
+      "sp": 1,
+      "area": "Security",
+      "epic": "FF-1",
+      "sprint_target": "S1-semana1"
+    },
+    {
+      "debt_id": "DEBT-TK-001",
+      "jira_key": "FF-7",
+      "summary": "TK-001 · Upgrade EF Core 6.0.0 → 8.x LTS (CVE-2024-0057 CVSS 9.1)",
+      "priority": "CRITICAL",
+      "cvss": "9.1",
+      "cve": "CVE-2024-0057",
+      "sp": 5,
+      "area": "Security",
+      "epic": "FF-1",
+      "sprint_target": "S1-semana1"
+    },
+    {
+      "debt_id": "DEBT-TK-002",
+      "jira_key": "FF-8",
+      "summary": "TK-002 · Upgrade JwtBearer 6.0.0 → 8.x (CVE-2024-21319 CVSS 6.8)",
+      "priority": "HIGH",
+      "cvss": "6.8",
+      "cve": "CVE-2024-21319",
+      "sp": 1,
+      "area": "Security",
+      "epic": "FF-1",
+      "sprint_target": "S1-semana1"
+    },
+    {
+      "debt_id": "DEBT-TK-005",
+      "jira_key": "FF-9",
+      "summary": "TK-005 · Migrar passwords de usuarios a BCrypt hash",
+      "priority": "CRITICAL",
+      "sp": 5,
+      "area": "Security",
+      "epic": "FF-1",
+      "sprint_target": "S1-semana1-2"
+    },
+    {
+      "debt_id": "DEBT-TK-007",
+      "jira_key": "FF-10",
+      "summary": "TK-007 · Pipeline CI/CD básico — GitHub Actions (build + test)",
+      "priority": "HIGH",
+      "sp": 5,
+      "area": "DevOps",
+      "epic": "FF-2",
+      "sprint_target": "S1-semana2"
+    },
+    {
+      "debt_id": "GOV-S1",
+      "jira_key": "FF-22",
+      "summary": "GOV-S1 · Implantación infraestructura de gobernanza SOFIA (CMMI L2 operativo)",
+      "priority": "HIGH",
+      "sp": 6,
+      "area": "Governance",
+      "epic": "FF-3",
+      "sprint_target": "S1-semana1-2"
+    }
+  ],
+
+  "closed_as_duplicate": ["FF-16", "FF-17", "FF-18", "FF-19", "FF-20", "FF-21"],
+  "closed_sprint0_setup": ["FF-11", "FF-12", "FF-13", "FF-14", "FF-15"],
+
+  "sequencing": {
+    "week_1": ["FF-5", "FF-6", "FF-7", "FF-8", "FF-9 (inicio)", "FF-22 (inicio)"],
+    "week_2": ["FF-9 (cierre)", "FF-10", "FF-22 (cierre)"],
+    "rationale": "Secrets y CVEs primero (riesgo inmediato). Passwords en paralelo con governance. CI/CD en semana 2 una vez el código está limpio de vulnerabilidades."
+  },
+
+  "risks": [
+    {
+      "id": "R-S1-001",
+      "description": "Código de exportación PDF no recuperado de Miguel Fernández (TI RetailCorp)",
+      "category": "Externo",
+      "probability": "M",
+      "impact": "A",
+      "exposure": "A",
+      "status": "Abierto",
+      "action": "Contactar Miguel Fernández en día 1 de sprint. Si no responde en 48h, escalar a PM RetailCorp."
+    },
+    {
+      "id": "R-S1-002",
+      "description": "BUILD_UNKNOWN — el sistema nunca se ha compilado en entorno controlado",
+      "category": "Técnico",
+      "probability": "M",
+      "impact": "A",
+      "exposure": "A",
+      "status": "Abierto",
+      "action": "Verificar build en día 1. Si BUILD_FAIL, bloquear sprint y escalar a TL."
+    },
+    {
+      "id": "R-S1-003",
+      "description": "Migración de passwords (hash) puede dejar usuarios sin acceso si no se gestiona correctamente",
+      "category": "Técnico",
+      "probability": "M",
+      "impact": "A",
+      "exposure": "A",
+      "status": "Abierto",
+      "action": "Plan de migración con rollback documentado antes de ejecutar FF-9."
+    }
+  ],
+
+  "exit_criteria": [
+    "FF-7: EF Core actualizado, CVE-2024-0057 no detectable",
+    "FF-8: JwtBearer actualizado, CVE-2024-21319 no detectable",
+    "FF-5: JWT secret en variable de entorno, eliminado de appsettings.json y del historial git",
+    "FF-6: DB password en variable de entorno, eliminada de appsettings.json y del historial git",
+    "FF-9: Todas las contraseñas almacenadas con BCrypt. Tests verifican que no hay texto plano.",
+    "FF-10: Pipeline CI/CD activo en GitHub Actions. Build y tests ejecutan automáticamente.",
+    "FF-22: Workflow Jira SOFIA activo, Confluence estructurado, Git Flow implantado, PP y Risk Register publicados.",
+    "Semáforo de seguridad: RED → AMBER (0 CVEs críticos, 0 secrets en código)"
+  ],
+
+  "jira_issues": {
+    "FF-5": "DEBT-TK-003",
+    "FF-6": "DEBT-TK-004",
+    "FF-7": "DEBT-TK-001",
+    "FF-8": "DEBT-TK-002",
+    "FF-9": "DEBT-TK-005",
+    "FF-10": "DEBT-TK-007",
+    "FF-22": "GOV-S1"
+  },
+
+  "artifacts": [],
+  "sprint_closed": false,
+  "sprint_closed_at": null
+}

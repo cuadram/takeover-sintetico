@@ -1,0 +1,30 @@
+{
+  "snapshot_type": "step-completed",
+  "step": "T-3",
+  "skill": "fa-reverse-agent",
+  "timestamp": "2026-04-07T10:00:00Z",
+  "gate_pending": "GT-3",
+  "status": "gate_pending",
+  "completed_steps": ["T-0", "T-1", "T-2", "T-3"],
+  "fa_summary": {
+    "strategy": "DOCUMENT-LED+CODE-VALIDATED",
+    "dts_func": 0.645,
+    "modules": 4,
+    "functionalities": 14,
+    "business_rules": 13,
+    "discrepancies_open": 4,
+    "needs_validation": 8,
+    "confidence_HIGH": 10,
+    "confidence_MEDIUM": 3,
+    "confidence_LOW": 1
+  },
+  "artifacts_at_snapshot": [
+    "docs/takeover/T0-DOC-MATRIX.json",
+    "docs/takeover/T1-INVENTORY.md",
+    "docs/takeover/T1-STACK-MAP.json",
+    "docs/takeover/T2-QUALITY-BASELINE.md",
+    "docs/functional-analysis/fa-index.json",
+    "docs/takeover/T3-FA-DRAFT.md",
+    "docs/takeover/T3-FA-GAPS.md"
+  ]
+}

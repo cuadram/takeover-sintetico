@@ -1,0 +1,17 @@
+{
+  "snapshot_type": "sprint-closed",
+  "sprint": 0,
+  "closed_at": "2026-04-07T13:00:00Z",
+  "gate": "GT-5",
+  "gate_type": "HITL-CLIENTE",
+  "approved_by": "Angel — representante RetailCorp S.L.",
+  "pipeline_mode_next": "evolutivo",
+  "current_sprint_next": 1,
+  "vel_s1_evolutivos": 0,
+  "first_evolutive_sprint": 2,
+  "artifacts_total": 12,
+  "debt_tk_open": 14,
+  "completed_steps": ["T-0","T-1","T-2","T-3","T-4","T-5"],
+  "all_gates_approved": ["GT-0","GT-1","GT-2","GT-3","GT-4","GT-5"],
+  "sprint_0_status": "CLOSED"
+}

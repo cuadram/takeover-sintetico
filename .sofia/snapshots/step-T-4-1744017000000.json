@@ -1,0 +1,27 @@
+{
+  "snapshot_type": "step-completed",
+  "step": "T-4",
+  "skill": "governance-gap-agent",
+  "timestamp": "2026-04-07T11:30:00Z",
+  "gate_pending": "GT-4",
+  "completed_steps": ["T-0", "T-1", "T-2", "T-3", "T-4"],
+  "governance_summary": {
+    "doc_volume_score": 0.47,
+    "doc_quality_score": 0.22,
+    "process_maturity_score": 0.08,
+    "process_maturity_level": "AD-HOC",
+    "cmmi_gap_score": 0.56,
+    "cmmi_level_estimated": "L1-L2",
+    "cmmi_l3_sprint": "S3",
+    "s1_sp_committed": 40,
+    "s1_sp_evolutivos": 0,
+    "adoption_overhead_s1_sp": 6
+  },
+  "artifacts_at_snapshot": [
+    "docs/takeover/T0-DOC-MATRIX.json",
+    "docs/takeover/T1-INVENTORY.md", "docs/takeover/T1-STACK-MAP.json",
+    "docs/takeover/T2-QUALITY-BASELINE.md",
+    "docs/functional-analysis/fa-index.json", "docs/takeover/T3-FA-DRAFT.md", "docs/takeover/T3-FA-GAPS.md",
+    "docs/takeover/T4-GOVERNANCE-GAP.md", "docs/takeover/T4-CMMI-ASSESSMENT.md", "docs/takeover/T4-ADOPTION-ROADMAP.md"
+  ]
+}

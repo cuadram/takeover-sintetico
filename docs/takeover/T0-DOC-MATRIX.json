@@ -1,0 +1,178 @@
+{
+  "_generated_by": "documentation-intake-agent v1.0",
+  "generated_at": "2026-04-06T21:15:00Z",
+  "project": "facturaflow",
+  "client": "RetailCorp S.L. (Laboratorio Sintético SOFIA)",
+  "pipeline_step": "T-0",
+  "client_docs_provided": true,
+  "zombie_detected": true,
+
+  "docs_inventory": [
+    {
+      "filename": "manual-funcional.md",
+      "type": "FUNC",
+      "format": "markdown",
+      "size_kb": 4.08,
+      "last_modified": "2024-10-01",
+      "language": "es",
+      "notes": "Manual funcional v2.1 revisado por Dpto. TI. Cubre módulos activos principales. Reconoce gaps explícitos (PDF export sin doc, informes sin endpoint REST)."
+    },
+    {
+      "filename": "openapi.yaml",
+      "type": "API",
+      "format": "yaml",
+      "size_kb": 7.33,
+      "last_modified": "unknown",
+      "language": "es",
+      "notes": "OpenAPI 3.0.1 versión 1.4. Sin fecha explícita en metadata. Cubre Clientes y Facturas. Faltan endpoints de transición /pagar y /anular, y toda la capa de autenticación/usuarios."
+    },
+    {
+      "filename": "arquitectura-2020.md",
+      "type": "ARCH",
+      "format": "markdown",
+      "size_kb": 2.15,
+      "last_modified": "2020-03-01",
+      "language": "es",
+      "notes": "⚠️ ZOMBIE. Diseño arquitectónico de 2020 por Carlos Ruiz (ya no en la empresa). Stack incompatible con sistema real. Excluida por decisión TL en GT-0."
+    }
+  ],
+
+  "dts_by_type": {
+    "FUNC": {
+      "dts": 0.645,
+      "level": "GOOD",
+      "docs_count": 1,
+      "dimensions": {
+        "actualidad": {
+          "score": 0.55,
+          "justification": "Documento de Octubre 2024 — 18 meses de antigüedad respecto al takeover (Abril 2026). Los flujos core de negocio siguen vigentes, pero contiene referencias desactualizadas: la migración a bcrypt estaba 'planificada para Q1 2025' y claramente no se realizó. SAP pendiente desde 2023, sin cambios. El PDF export sigue sin documentar.",
+          "evidence": "§5.2: 'Migración a bcrypt planificada para Q1 2025'. §7: 'SAP pendiente desde 2023'. §3.3: endpoint PDF export reconocido como existente pero no documentado."
+        },
+        "completitud": {
+          "score": 0.65,
+          "justification": "Cubre los 4 módulos activos (Clientes, Facturas, Usuarios/Roles, Informes básicos). Gaps explícitos reconocidos en el propio documento: endpoint exportación PDF sin especificar, endpoints de informes sin documentar. No hay mención de autenticación/login. Ciclo de vida de facturas completo incluyendo ANULADA.",
+          "evidence": "§3.3: 'se sabe que existe un endpoint de exportación a PDF pero no está documentado'. §6.1: 'Los informes funcionan pero no tienen endpoint REST documentado'. Ciclo BORRADOR→EMITIDA→PAGADA/ANULADA documentado en §4."
+        },
+        "coherencia": {
+          "score": 0.75,
+          "justification": "Internamente consistente. Nomenclatura de entidades estable ('Cliente', 'Factura'). Los estados de factura, roles y reglas de negocio son coherentes a lo largo del documento. Sin contradicciones detectadas entre secciones. El ciclo de vida de §4 concuerda con los filtros descritos en §3.2.",
+          "evidence": "Enum tipoCliente (NACIONAL/EUROPEO/EXTRACOMUNITARIO) en §2.1 coincide exactamente con enum de openapi.yaml. Roles y permisos de §5.1 alineados con 403 responses de la spec API."
+        },
+        "verificabilidad": {
+          "score": 0.65,
+          "justification": "Algunos elementos directamente verificables: filtro ?estado= en listado de facturas, transiciones de ciclo de vida, roles y sus permisos. Sin embargo, la mayoría de endpoints no tienen rutas concretas (solo descripciones funcionales). El endpoint de exportación PDF explícitamente no documentado.",
+          "evidence": "§3.2: 'El endpoint de listado permite filtrar por estado: ?estado=BORRADOR'. Ciclo BORRADOR→EMITIDA→PAGADA→ANULADA verificable contra código. Tabla de roles §5.1 verificable."
+        }
+      },
+      "dts_formula": "DTS = (0.55×0.30) + (0.65×0.25) + (0.75×0.25) + (0.65×0.20) = 0.165 + 0.1625 + 0.1875 + 0.13 = 0.645",
+      "strategy_t3": "DOCUMENT-LED",
+      "strategy_rationale": "DTS GOOD (0.645): usar manual-funcional.md como lista inicial de funcionalidades, validar 100% contra código fuente .NET. No asumir que lo documentado está implementado sin verificación.",
+      "usable_by": [
+        "fa-reverse-agent T-3 (DOCUMENT-LED: lista funcional + triangulación 100%)",
+        "inventory-agent T-1 (contexto de negocio y módulos activos)",
+        "governance-gap-agent T-4 (documentación funcional EXISTE_PARCIAL: DTS GOOD)"
+      ]
+    },
+
+    "API": {
+      "dts": 0.820,
+      "level": "TRUSTED",
+      "docs_count": 1,
+      "dimensions": {
+        "actualidad": {
+          "score": 0.85,
+          "justification": "Sin fecha explícita en el YAML, pero la versión 1.4 y la coherencia con el manual funcional de Oct 2024 sugieren que está actualizada. El enum de estados y los tipos de cliente coinciden exactamente con el manual. No hay referencias a tecnologías obsoletas.",
+          "evidence": "openapi.yaml version: '1.4'. Enum estado: [BORRADOR, EMITIDA, PAGADA, ANULADA] coincide con manual-funcional §4. tipoCliente enum coincide con manual-funcional §2.1."
+        },
+        "completitud": {
+          "score": 0.68,
+          "justification": "Cubre CRUD completo de Clientes y operaciones principales de Facturas. Pendientes significativos: no hay endpoint /pagar, /anular, autenticación/login, usuarios, informes ni exportación PDF. Solo /emitir de las tres transiciones de estado.",
+          "evidence": "Endpoints presentes: GET/POST /clientes, GET/PUT /clientes/{id}, GET /clientes/{id}/facturas, GET/POST /facturas, GET/DELETE /facturas/{id}, PUT /facturas/{id}/emitir. Ausentes: /pagar, /anular, /auth/login, /usuarios, /informes, /exportar."
+        },
+        "coherencia": {
+          "score": 0.90,
+          "justification": "Coherente internamente. Schemas bien definidos y reutilizados. La seguridad bearerAuth referenciada consistentemente. Los 403 con mención de roles coinciden con la jerarquía de roles del manual funcional. Sin contradicciones detectadas.",
+          "evidence": "Schemas Cliente/ClienteInput/Factura/FacturaInput referenciados via $ref. bearerAuth aplicado globalmente. Roles Admin/Comercial/Contabilidad en 403 responses coherentes con §5.1 del manual."
+        },
+        "verificabilidad": {
+          "score": 0.85,
+          "justification": "Altamente verificable. Rutas concretas con métodos HTTP, parámetros tipados, códigos de respuesta y schemas de request/response. Los nombres de campos son verificables directamente contra entidades .NET. Algunos responses sin ejemplos.",
+          "evidence": "GET /clientes/{id} → schema Cliente con campos id, razonSocial, nifCif, email, activo, tipoCliente, fechaAlta. POST /facturas → FacturaInput con clienteId, baseImponible, porcentajeIVA (default 21)."
+        }
+      },
+      "dts_formula": "DTS = (0.85×0.30) + (0.68×0.25) + (0.90×0.25) + (0.85×0.20) = 0.255 + 0.170 + 0.225 + 0.170 = 0.820",
+      "strategy_t3": "DOCUMENT-FIRST",
+      "strategy_rationale": "DTS TRUSTED (0.820): usar openapi.yaml como fuente primaria de endpoints. Validar sampling del 20% contra controllers .NET. DTS_API sin fecha explícita — TL confirma en GT-0 que la coherencia interna con manual Oct 2024 es evidencia suficiente de actualidad.",
+      "usable_by": [
+        "fa-reverse-agent T-3 (DOCUMENT-FIRST: endpoints de la spec como fuente primaria, sampling 20%)",
+        "quality-baseline-agent T-2 (confirmar api_documented=true con alta confianza)",
+        "inventory-agent T-1 (enriquecer operability assessment)"
+      ]
+    },
+
+    "ARCH": {
+      "dts": 0.210,
+      "level": "POOR",
+      "docs_count": 1,
+      "zombie_detected": true,
+      "zombie_indicators": [
+        "Antigüedad crítica: Marzo 2020 — 6 años antes del takeover",
+        "Arquitectura documentada: microservicios Java 11 + Spring Boot 2.4",
+        "Sistema real: monolito .NET 6",
+        "BD documentada: PostgreSQL + MySQL / BD real: SQL Server",
+        "Stack documentado: Kubernetes/Docker/Jenkins / Stack real: deploy manual FTP",
+        "Autor Carlos Ruiz abandonó la empresa en junio 2020",
+        "El propio documento advierte: 'La implementación actual puede diferir significativamente'",
+        "'Actualización de arquitectura pendiente desde 2021' — nunca realizada"
+      ],
+      "dimensions": {
+        "actualidad": { "score": 0.15, "justification": "6 años de antigüedad. Stack completamente diferente al real.", "evidence": "Fecha: Marzo 2020. Java 11 + Spring Boot 2.4 vs .NET 6 real." },
+        "completitud": { "score": 0.35, "justification": "Cubre un sistema que no existe. Dominios conceptuales coinciden pero stack no.", "evidence": "5 microservicios documentados. Dominios Factura/Cliente/Auth coinciden en concepto únicamente." },
+        "coherencia": { "score": 0.15, "justification": "Incoherente con el sistema real y con los otros documentos.", "evidence": "ARCH: Java + PostgreSQL. Real: .NET 6 + SQL Server. ARCH: Keycloak. Real: JWT hardcodeado." },
+        "verificabilidad": { "score": 0.20, "justification": "Solo dominios de negocio verificables. Stack y rutas: 0% verificable.", "evidence": "Nombres de microservicios no verificables contra código .NET." }
+      },
+      "dts_formula": "DTS = (0.15×0.30) + (0.35×0.25) + (0.15×0.25) + (0.20×0.20) = 0.045 + 0.0875 + 0.0375 + 0.040 = 0.210",
+      "strategy_t3": "CODE-ONLY",
+      "strategy_rationale": "DTS POOR (0.210) + ZOMBIE DETECTADO. Excluida por decisión TL en GT-0. Archivar como referencia histórica únicamente.",
+      "usable_by": [],
+      "zombie_recommendation": "EXCLUIDA POR DECISIÓN TL (GT-0). No usar como fuente técnica en ningún agente del pipeline."
+    }
+  },
+
+  "global_dts_summary": {
+    "types_evaluated": ["FUNC", "API", "ARCH"],
+    "types_missing": ["DATA", "OPS", "PROC", "TEST", "MGMT"],
+    "highest_dts": { "type": "API", "dts": 0.820, "level": "TRUSTED" },
+    "lowest_dts": { "type": "ARCH", "dts": 0.210, "level": "POOR" },
+    "zombie_types": ["ARCH"],
+    "recommended_primary_strategy": "DOCUMENT-LED",
+    "strategy_rationale": "DTS_FUNC=GOOD (0.645) driver de T-3. DTS_API=TRUSTED (0.820) fuente primaria de endpoints. DTS_ARCH=POOR/ZOMBIE ignorado. Tipos DATA/OPS ausentes — T-1 infiere modelo de datos desde EF Core migrations; estado operacional desde código.",
+    "missing_docs_decision": "TL aprueba avanzar a T-1 sin solicitar documentación adicional de tipos DATA/OPS. T-1 infiere ambos desde el código fuente."
+  },
+
+  "tl_adjustments": [
+    {
+      "timestamp": "2026-04-06T21:30:00Z",
+      "approved_by": "Angel (representante cliente / Tech Lead GT-0)",
+      "adjustments": [
+        {
+          "type": "DTS_CONFIRMED",
+          "target": "API",
+          "detail": "DTS_API=0.820 TRUSTED confirmado sin ajuste. La coherencia interna con manual Oct 2024 es evidencia suficiente de actualidad a pesar de ausencia de fecha explícita en el YAML."
+        },
+        {
+          "type": "ZOMBIE_CONFIRMED",
+          "target": "ARCH",
+          "detail": "arquitectura-2020.md excluida de todos los agentes del pipeline por decisión TL. Referencia histórica únicamente. CODE-ONLY forzado."
+        },
+        {
+          "type": "PIPELINE_DECISION",
+          "target": "DATA/OPS",
+          "detail": "No se solicita documentación adicional de tipos DATA/OPS al cliente. T-1 (Inventory Agent) inferirá el modelo de datos desde EF Core migrations y DbContext. Estado operacional reconstruido desde el código."
+        }
+      ]
+    }
+  ],
+  "gt0_approved_by": "Angel (representante cliente / Tech Lead GT-0)",
+  "gt0_approved_at": "2026-04-06T21:30:00Z"
+}
