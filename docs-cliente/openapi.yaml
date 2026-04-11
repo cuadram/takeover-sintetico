@@ -1,0 +1,312 @@
+openapi: "3.0.1"
+info:
+  title: FacturaFlow API
+  description: API REST para gestión de facturación de RetailCorp S.L.
+  version: "1.4"
+  contact:
+    email: ti@retailcorp.es
+servers:
+  - url: https://api.facturaflow.retailcorp.es/api/v1
+    description: Producción
+  - url: https://api-stg.facturaflow.retailcorp.es/api/v1
+    description: Staging
+
+security:
+  - bearerAuth: []
+
+paths:
+  /clientes:
+    get:
+      summary: Listar todos los clientes
+      operationId: getClientes
+      tags: [Clientes]
+      responses:
+        "200":
+          description: Lista de clientes
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Cliente'
+        "401":
+          description: No autenticado
+
+    post:
+      summary: Crear nuevo cliente
+      operationId: createCliente
+      tags: [Clientes]
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ClienteInput'
+      responses:
+        "201":
+          description: Cliente creado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cliente'
+        "400":
+          description: NIF/CIF duplicado o datos inválidos
+        "403":
+          description: Requiere rol Admin o Comercial
+
+  /clientes/{id}:
+    get:
+      summary: Obtener cliente por ID
+      operationId: getClienteById
+      tags: [Clientes]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Cliente encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cliente'
+        "404":
+          description: Cliente no encontrado
+
+    put:
+      summary: Actualizar cliente
+      operationId: updateCliente
+      tags: [Clientes]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ClienteInput'
+      responses:
+        "204":
+          description: Actualizado correctamente
+        "403":
+          description: Requiere rol Admin o Comercial
+
+  /clientes/{id}/facturas:
+    get:
+      summary: Listar facturas de un cliente
+      operationId: getFacturasCliente
+      tags: [Clientes]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Facturas del cliente
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Factura'
+
+  /facturas:
+    get:
+      summary: Listar facturas con filtro opcional por estado
+      operationId: getFacturas
+      tags: [Facturas]
+      parameters:
+        - name: estado
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: [BORRADOR, EMITIDA, PAGADA, ANULADA]
+      responses:
+        "200":
+          description: Lista de facturas
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Factura'
+
+    post:
+      summary: Crear nueva factura
+      operationId: createFactura
+      tags: [Facturas]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FacturaInput'
+      responses:
+        "201":
+          description: Factura creada en estado BORRADOR
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Factura'
+
+  /facturas/{id}:
+    get:
+      summary: Obtener factura por ID
+      operationId: getFacturaById
+      tags: [Facturas]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Factura encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Factura'
+        "404":
+          description: Factura no encontrada
+
+    delete:
+      summary: Eliminar factura (solo BORRADOR, solo Admin)
+      operationId: deleteFactura
+      tags: [Facturas]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Eliminada
+        "403":
+          description: Requiere rol Admin
+        "404":
+          description: No encontrada
+
+  /facturas/{id}/emitir:
+    put:
+      summary: Emitir factura (BORRADOR → EMITIDA)
+      operationId: emitirFactura
+      tags: [Facturas]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Factura emitida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Factura'
+        "400":
+          description: Solo se pueden emitir facturas en BORRADOR
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    Cliente:
+      type: object
+      properties:
+        id:
+          type: integer
+        razonSocial:
+          type: string
+        nifCif:
+          type: string
+        email:
+          type: string
+        telefono:
+          type: string
+        activo:
+          type: boolean
+        tipoCliente:
+          type: string
+          enum: [NACIONAL, EUROPEO, EXTRACOMUNITARIO]
+        fechaAlta:
+          type: string
+          format: date-time
+
+    ClienteInput:
+      type: object
+      required: [razonSocial, nifCif, email, tipoCliente]
+      properties:
+        razonSocial:
+          type: string
+        nifCif:
+          type: string
+        email:
+          type: string
+        telefono:
+          type: string
+        tipoCliente:
+          type: string
+          enum: [NACIONAL, EUROPEO, EXTRACOMUNITARIO]
+
+    Factura:
+      type: object
+      properties:
+        id:
+          type: integer
+        numero:
+          type: string
+        clienteId:
+          type: integer
+        fechaCreacion:
+          type: string
+          format: date-time
+        fechaEmision:
+          type: string
+          format: date-time
+        fechaVencimiento:
+          type: string
+          format: date-time
+        estado:
+          type: string
+          enum: [BORRADOR, EMITIDA, PAGADA, ANULADA]
+        baseImponible:
+          type: number
+          format: decimal
+        porcentajeIVA:
+          type: number
+        total:
+          type: number
+          format: decimal
+
+    FacturaInput:
+      type: object
+      required: [clienteId, baseImponible]
+      properties:
+        clienteId:
+          type: integer
+        fechaVencimiento:
+          type: string
+          format: date-time
+        baseImponible:
+          type: number
+        porcentajeIVA:
+          type: number
+          default: 21

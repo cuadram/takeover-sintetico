@@ -1,0 +1,314 @@
+{
+  "project": "facturaflow",
+  "client": "RetailCorp S.L. (Laboratorio Sintético SOFIA)",
+  "pipeline_type": "takeover",
+  "pipeline_mode": "evolutivo",
+  "sofia_version": "2.6.25",
+  "sofia_repo": "/Users/cuadram/Library/CloudStorage/OneDrive-Personal/WIP/TakeOverSintetico",
+  "target_repo": "/Users/cuadram/Library/CloudStorage/OneDrive-Personal/WIP/TakeOverSintetico/repo-cliente",
+  "current_sprint": 1,
+  "sprint_closed": false,
+  "status": "gate_pending",
+  "pipeline_step": "4",
+  "pipeline_step_name": "dotnet-developer",
+  "last_skill": "dotnet-developer",
+  "last_skill_output_path": "repo-cliente/",
+  "gate_pending": "G-4",
+  "completed_steps": [
+    "T-0", "T-1", "T-2", "T-3", "T-4", "T-5",
+    "1", "2", "3", "3b", "4"
+  ],
+  "client_docs_provided": true,
+  "takeover_baseline": {
+    "dts_available": true,
+    "dts_completed_at": "2026-04-06T21:15:00Z",
+    "dts_matrix_path": "docs/takeover/T0-DOC-MATRIX.json",
+    "zombie_detected": true,
+    "zombie_types": ["ARCH"],
+    "dts_by_type": {
+      "FUNC": { "dts": 0.645, "level": "GOOD",    "strategy_t3": "DOCUMENT-LED" },
+      "API":  { "dts": 0.82,  "level": "TRUSTED",  "strategy_t3": "DOCUMENT-FIRST" },
+      "ARCH": { "dts": 0.21,  "level": "POOR",     "strategy_t3": "CODE-ONLY", "zombie": true }
+    },
+    "gt0_approved_by": "Angel (Tech Lead GT-0)", "gt0_approved_at": "2026-04-06T21:30:00Z",
+    "stack_detected": true,
+    "gt1_approved_by": "Angel (Tech Lead GT-1)", "gt1_approved_at": "2026-04-07T08:00:00Z",
+    "inventory_path": "docs/takeover/T1-INVENTORY.md",
+    "stack_map_path": "docs/takeover/T1-STACK-MAP.json",
+    "stack": { "backend": ["dotnet"], "frontend": [], "database": ["sql-server"], "messaging": [], "infra": [] },
+    "operability": "PARTIAL",
+    "quality_baseline_completed": true,
+    "gt2_approved_by": "Angel (Tech Lead + PO)", "gt2_approved_at": "2026-04-07T09:30:00Z",
+    "gt2_security_plan": "OPTION-A",
+    "quality_baseline_path": "docs/takeover/T2-QUALITY-BASELINE.md",
+    "quality_semaphore_global": "RED",
+    "cve_critical": 1, "cve_high": 1, "secrets_detected": 2, "passwords_plaintext": true,
+    "debt_tk_total": 14, "debt_tk_mandatory": 7, "debt_tk_mandatory_sp": 26,
+    "fa_reverse_completed": true,
+    "gt3_approved_by": "Angel (PO)", "gt3_approved_at": "2026-04-07T11:00:00Z",
+    "fa_strategy": "DOCUMENT-LED+CODE-VALIDATED",
+    "fa_functionalities": 14, "fa_business_rules": 13,
+    "discrepancies_detected": 4, "discrepancies_resolved": 4, "discrepancies_open": 0,
+    "gr_core_025_satisfied": true,
+    "fa_draft_path": "docs/takeover/T3-FA-DRAFT.md",
+    "fa_gaps_path": "docs/takeover/T3-FA-GAPS.md",
+    "governance_gap_completed": true,
+    "gt4_approved_by": "Angel (PM + PO)", "gt4_approved_at": "2026-04-07T12:00:00Z",
+    "doc_volume_score": 0.47, "doc_quality_score": 0.22,
+    "process_maturity_score": 0.08, "process_maturity_level": "AD-HOC",
+    "cmmi_gap_score": 0.56, "cmmi_level_estimated": "L1-L2", "cmmi_l3_sprint_estimated": "S3",
+    "adoption_overhead_s1_sp": 6,
+    "governance_gap_path": "docs/takeover/T4-GOVERNANCE-GAP.md",
+    "cmmi_assessment_path": "docs/takeover/T4-CMMI-ASSESSMENT.md",
+    "adoption_roadmap_path": "docs/takeover/T4-ADOPTION-ROADMAP.md",
+    "sprint_plan_completed": true, "sprint_plan_completed_at": "2026-04-07T12:30:00Z",
+    "vel_s1_total": 24, "vel_s1_evolutivos": 0, "vel_s1_range": [0, 0],
+    "first_evolutive_sprint": 2,
+    "sprint1_goal": "Estabilizar FacturaFlow resolviendo todos los riesgos de seguridad críticos, establecer CI/CD básico e implantar la infraestructura de gobernanza SOFIA",
+    "baseline_document_path": "docs/takeover/BASELINE-DOCUMENT-v1.0.md",
+    "sprint0_data_path": "docs/sprints/SPRINT-000-data.json",
+    "sprint0_closed_at": "2026-04-07T13:00:00Z",
+    "gt5_approved_by": "Angel — representante RetailCorp S.L. (GT-5 HITL-CLIENTE)",
+    "gt5_approved_at": "2026-04-07T13:00:00Z",
+    "baseline_document_docx": "docs/takeover/BASELINE-DOCUMENT-v1.0.docx",
+    "baseline_document_docx_kb": 20.1,
+    "baseline_docx_generated_at": "2026-04-07T09:32:05Z",
+    "baseline_docx_sofia_version": "2.6.27",
+    "baseline_docx_requires_signature": false,
+    "baseline_docx_signed": true,
+    "baseline_docx_signed_by": ["Angel — PO/PM Experis", "RetailCorp S.L. — cliente"],
+    "baseline_docx_signed_at": "2026-04-10T02:30:00Z",
+    "sprint0_formally_closed": true,
+    "sprint0_formally_closed_at": "2026-04-10T02:30:00Z"
+  },
+  "fa_agent": {
+    "active": true,
+    "last_gate": "T-3",
+    "last_updated": "2026-04-07T10:30:00Z",
+    "index_path": "docs/functional-analysis/fa-index.json",
+    "functionalities": 14, "business_rules": 13,
+    "sprints_covered": "S0-takeover",
+    "doc_version": "0.1",
+    "takeover_mode": true,
+    "discrepancies_open": 0, "gr_core_025_satisfied": true
+  },
+  "artifacts": {
+    "T-0": ["docs/takeover/T0-DOC-MATRIX.json"],
+    "T-1": ["docs/takeover/T1-INVENTORY.md", "docs/takeover/T1-STACK-MAP.json"],
+    "T-2": ["docs/takeover/T2-QUALITY-BASELINE.md"],
+    "T-3": [
+      "docs/functional-analysis/fa-index.json",
+      "docs/takeover/T3-FA-DRAFT.md",
+      "docs/takeover/T3-FA-GAPS.md",
+      "docs/takeover/T3-FUNCTIONAL-DESCRIPTION.md",
+      "docs/functional-analysis/T3-FUNCTIONAL-DESCRIPTION.docx"
+    ],
+    "T-4": [
+      "docs/takeover/T4-GOVERNANCE-GAP.md",
+      "docs/takeover/T4-CMMI-ASSESSMENT.md",
+      "docs/takeover/T4-ADOPTION-ROADMAP.md"
+    ],
+    "T-5": [
+      "docs/takeover/BASELINE-DOCUMENT-v1.0.md",
+      "docs/sprints/SPRINT-000-data.json",
+      "docs/takeover/BASELINE-DOCUMENT-v1.0.docx"
+    ],
+    "3": [
+      "docs/architecture/HLD-SPRINT-001.md",
+      "docs/architecture/LLD-SPRINT-001.md",
+      "docs/architecture/ADR-001-bcrypt-migration-strategy.md",
+      "docs/architecture/ADR-002-net8-upgrade.md",
+      "docs/architecture/ADR-003-secrets-management.md"
+    ],
+    "4": [
+      "repo-cliente/appsettings.json",
+      "repo-cliente/FacturaFlow.Api.csproj",
+      "repo-cliente/Models/Entities.cs",
+      "repo-cliente/Data/AppDbContext.cs",
+      "repo-cliente/Security/JwtSettings.cs",
+      "repo-cliente/Program.cs",
+      "repo-cliente/Migrations/20260410000000_AddPasswordHash.cs",
+      "repo-cliente/scripts/MigratePasswordsToBcrypt.cs",
+      "repo-cliente/.github/workflows/ci.yml",
+      "repo-cliente/.env.example",
+      "repo-cliente/Tests/AuthTests.cs",
+      "repo-cliente/Tests/FacturaTests.cs",
+      "repo-cliente/README.md",
+      "docs/implementation/IMPL-SPRINT-001.md"
+    ]
+  },
+  "open_debts": [
+    {
+      "id": "DEBT-TK-001", "area": "Security", "priority": "CRITICAL",
+      "cvss": "9.1", "cve_id": "CVE-2024-0057",
+      "sprint_target": "S1", "estimated_sp": 5, "mandatory": true,
+      "status": "IN_REVIEW",
+      "implemented_in": "step-4", "implemented_at": "2026-04-10T14:00:00Z",
+      "resolution": "EF Core actualizado a 8.x en FacturaFlow.Api.csproj + .NET 8 upgrade"
+    },
+    {
+      "id": "DEBT-TK-002", "area": "Security", "priority": "HIGH",
+      "cvss": "6.8", "cve_id": "CVE-2024-21319",
+      "sprint_target": "S1", "estimated_sp": 1, "mandatory": true,
+      "status": "IN_REVIEW",
+      "implemented_in": "step-4", "implemented_at": "2026-04-10T14:00:00Z",
+      "resolution": "JwtBearer actualizado a 8.x, coordinado con RT-003"
+    },
+    {
+      "id": "DEBT-TK-003", "area": "Security", "priority": "CRITICAL",
+      "description": "JWT secret hardcodeado",
+      "sprint_target": "INMEDIATO", "estimated_sp": 1, "mandatory": true,
+      "status": "IN_REVIEW",
+      "implemented_in": "step-4", "implemented_at": "2026-04-10T14:00:00Z",
+      "resolution": "appsettings.json limpio; secret desde JWTAUTH__SECRET; ValidateOnStart()"
+    },
+    {
+      "id": "DEBT-TK-004", "area": "Security", "priority": "CRITICAL",
+      "description": "DB password hardcodeada",
+      "sprint_target": "INMEDIATO", "estimated_sp": 1, "mandatory": true,
+      "status": "IN_REVIEW",
+      "implemented_in": "step-4", "implemented_at": "2026-04-10T14:00:00Z",
+      "resolution": "ConnectionString vacía en appsettings.json; desde CONNECTIONSTRINGS__DEFAULTCONNECTION"
+    },
+    {
+      "id": "DEBT-TK-005", "area": "Security", "priority": "CRITICAL",
+      "description": "Passwords usuarios en texto plano",
+      "sprint_target": "S1", "estimated_sp": 5, "mandatory": true,
+      "status": "IN_REVIEW",
+      "implemented_in": "step-4", "implemented_at": "2026-04-10T14:00:00Z",
+      "resolution": "BCrypt.Net-Next 4.x; migración AddPasswordHash; script MigratePasswordsToBcrypt.cs; Password → nullable deprecated"
+    },
+    {
+      "id": "DEBT-TK-006", "area": "Tests", "priority": "HIGH",
+      "description": "Cobertura de tests < 5%",
+      "sprint_target": "S1-S3", "estimated_sp": 8, "mandatory": true,
+      "status": "OPEN",
+      "note": "Mejora parcial en Step-4: 2→7 tests (+5 AuthTests). Target 80% en Sprint 3."
+    },
+    {
+      "id": "DEBT-TK-007", "area": "Ops", "priority": "HIGH",
+      "description": "Sin CI/CD",
+      "sprint_target": "S1", "estimated_sp": 5, "mandatory": true,
+      "status": "IN_REVIEW",
+      "implemented_in": "step-4", "implemented_at": "2026-04-10T14:00:00Z",
+      "resolution": ".github/workflows/ci.yml — build + test en .NET 8, push a main/develop"
+    },
+    {
+      "id": "DEBT-TK-008", "area": "Business", "priority": "HIGH",
+      "description": "DELETE físico facturas — AEAT/GDPR",
+      "sprint_target": "S1", "estimated_sp": 3, "mandatory": false, "status": "OPEN"
+    },
+    {
+      "id": "DEBT-TK-009", "area": "Dependencies", "priority": "MEDIUM",
+      "description": "Newtonsoft.Json 12.0.3 EOL",
+      "sprint_target": "S2", "estimated_sp": 2, "mandatory": false,
+      "status": "RESOLVED",
+      "implemented_in": "step-4", "implemented_at": "2026-04-10T14:00:00Z",
+      "resolution": "Eliminado del .csproj como efecto de RT-003 — System.Text.Json nativo .NET 8"
+    },
+    {
+      "id": "DEBT-TK-010", "area": "Architecture", "priority": "MEDIUM",
+      "description": "Sin Repository Pattern",
+      "sprint_target": "S3-S4", "estimated_sp": 8, "mandatory": false, "status": "OPEN"
+    },
+    {
+      "id": "DEBT-TK-011", "area": "Functional", "priority": "HIGH",
+      "description": "Endpoint /pagar EMITIDA→PAGADA",
+      "sprint_target": "S1", "estimated_sp": 3, "mandatory": false, "status": "OPEN"
+    },
+    {
+      "id": "DEBT-TK-012", "area": "Functional", "priority": "HIGH",
+      "description": "Endpoint /anular EMITIDA→ANULADA",
+      "sprint_target": "S1", "estimated_sp": 2, "mandatory": false, "status": "OPEN"
+    },
+    {
+      "id": "DEBT-TK-013", "area": "Functional", "priority": "MEDIUM",
+      "description": "Informes REST (×3)",
+      "sprint_target": "S3", "estimated_sp": 8, "mandatory": false, "status": "OPEN"
+    },
+    {
+      "id": "DEBT-TK-014", "area": "Code-Recovery", "priority": "HIGH",
+      "description": "Código exportación PDF — recuperar de Miguel Fernández",
+      "sprint_target": "S1-URGENTE", "estimated_sp": 3, "mandatory": false, "status": "OPEN"
+    }
+  ],
+  "gate_history": [
+    { "gate": "GT-0", "step": "T-0", "approved_by": "Angel (Tech Lead)", "approved_at": "2026-04-06T21:30:00Z" },
+    { "gate": "GT-1", "step": "T-1", "approved_by": "Angel (Tech Lead)", "approved_at": "2026-04-07T08:00:00Z" },
+    { "gate": "GT-2", "step": "T-2", "approved_by": "Angel (Tech Lead + PO)", "approved_at": "2026-04-07T09:30:00Z" },
+    { "gate": "GT-3", "step": "T-3", "approved_by": "Angel (PO)", "approved_at": "2026-04-07T11:00:00Z" },
+    { "gate": "GT-4", "step": "T-4", "approved_by": "Angel (PM + PO)", "approved_at": "2026-04-07T12:00:00Z" },
+    {
+      "gate": "GT-5", "step": "T-5", "approved_by": "Angel — representante RetailCorp S.L.",
+      "approved_at": "2026-04-07T13:00:00Z", "sprint": 0, "feature": "TAKEOVER-SPRINT-0",
+      "note": "Baseline Document v1.0 aprobado por el cliente. Sprint 1 autorizado. Servicio Experis iniciado."
+    },
+    { "gate": "G-1", "step": "1", "approved_by": "Angel (PO)", "approved_at": "2026-04-10T05:00:00Z", "sprint": 1, "note": "Sprint Planning Sprint 1 aprobado | 24 SP | 7 issues" },
+    { "gate": "G-2", "step": "2", "approved_by": "Angel (PO)", "approved_at": "2026-04-10T08:00:00Z", "sprint": 1, "note": "SRS Sprint 1 aprobado | RNF Baseline 9 items | 7 RT Gherkin" },
+    { "gate": "G-3", "step": "3", "approved_by": "Angel (Tech Lead)", "approved_at": "2026-04-10T11:00:00Z", "sprint": 1, "note": "HLD + LLD + 3 ADRs aprobados | 6 incidencias auditadas y corregidas | 3b completado" }
+  ],
+  "sprint_history": [
+    {
+      "sprint": 0, "type": "takeover", "status": "CLOSED",
+      "goal": "Due diligence técnico, funcional y de gobernanza del sistema FacturaFlow",
+      "start_date": "2026-04-06", "end_date": "2026-04-07",
+      "closed_at": "2026-04-07T13:00:00Z",
+      "gt5_approved_by": "Angel — representante RetailCorp S.L.",
+      "vel_evolutivos": 0, "artefactos": 12
+    }
+  ],
+  "security": {
+    "semaphore": "RED",
+    "cve_critical": 1, "cve_high": 1,
+    "plan_resolution": "OPTION-A-S1",
+    "step4_implemented": true,
+    "pending_code_review": true,
+    "semaphore_expected_post_review": "AMBER"
+  },
+  "cmmi": {
+    "level": 3, "current_level": "L1-L2", "active": true,
+    "gap_score": 0.56,
+    "pa_scores": { "PP": 1, "PMC": 0, "RSKM": 1, "VER": 1, "VAL": 0, "CM": 1, "PPQA": 0, "REQM": 1, "DAR": 0 },
+    "l3_sprint_estimated": "S3"
+  },
+  "lessons_learned": [
+    { "id": "LA-CORE-001", "type": "process", "description": "MCP config merge sin sobreescribir claude_desktop_config.json", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.161Z" },
+    { "id": "LA-CORE-002", "type": "devops", "description": "realpath() en paths MCP, nunca aliases macOS", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-003", "type": "process", "description": "SOFIA_REPO en CLAUDE.md + GR-CORE-003", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-004", "type": "process", "description": "repo-template estructura canónica docs/ en onboarding", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-005", "type": "process", "description": "verify-persistence.js BLOQUEANTE, GR-013", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-006", "type": "process", "description": "FA documento único incremental, LA-FA-INCR", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-007", "type": "ux", "description": "TOC clickable con w:hyperlink+w:anchor, LA-TOC-CLICK", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-008", "type": "onboarding", "description": "wizard v2.6.11 verifica scripts críticos + inicializa FA-Agent", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-009", "type": "ux", "description": "Prototipo incremental, GR-014", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-010", "type": "process", "description": "Patch First ante correcciones, GR-015", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-011", "type": "ux", "description": "Verificar matriz de roles antes de construir navegación", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-012", "type": "infrastructure", "description": "sofia-shell PROJECT_ROOT dinámico por llamada (v2.0)", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-013", "type": "architecture", "description": "Application handlers NO importan Infrastructure, GR-016", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-014", "type": "infrastructure", "description": "MCP SDK en SOFIA-CORE, no en proyectos cliente (setup-shell-mcp.js)", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-015", "type": "infrastructure", "description": "sofia-shell aislamiento: registrar SOFIA-CORE como entry especial en projects.json", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-016", "type": "dashboard", "description": "org-baseline.json invisible en command center: leer en runtime, no hardcodear", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-017", "type": "analysis", "description": "ORG baseline: leer SOFIA_ORG_PATH canonico, nunca snapshot local del proyecto", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-018", "type": "governance", "description": "HITL obligatorio antes de persistir cualquier LA: aprobacion PO explicita", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-019", "type": "governance", "description": "COMPAT-001: clasificacion PATCH/MINOR/MAJOR obligatoria antes de aplicar cualquier cambio SOFIA-CORE", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-020", "type": "governance", "description": "COMPAT-002: session.json append-only; sin eliminacion ni cambio de tipo en campos existentes", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-021", "type": "governance", "description": "COMPAT-003: nuevos guardrails NO se activan en proyectos existentes sin upgrade explicito", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-022", "type": "governance", "description": "COMPAT-004: org-baseline.json con schema_version versionado; lector backward-compatible", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-023", "type": "governance/takeover", "description": "DTS obligatorio para toda documentacion cliente antes de T-3 FA Reverse; GR-CORE-023", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-024", "type": "governance/takeover", "description": "triangulacion obligatoria contra codigo para afirmaciones con DTS < 0.8; GR-CORE-024", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-025", "type": "governance/takeover", "description": "Gate GT-3 BLOQUEANTE hasta resolucion documentada de todos los flags DISCREPANCY; GR-CORE-025", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-026", "type": "governance", "description": "CONTEXT-ISOLATION: sesion SOFIA-CORE vs proyectos gobernados son contextos mutuamente excluyentes. GR-CORE-026", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-027", "type": "takeover/planning", "description": "T-5 reconcilia con T-4: items S1 postpuestos documentados explicitamente con justificacion antes de cerrar GT-5", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-028", "type": "takeover/process", "description": "NEEDS-VALIDATION de T-3 generan entradas estructuradas en session.json.needs_validation[] con sprint_target y assignee", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-029", "type": "takeover/process", "description": "BUILD_UNKNOWN en T-2 genera DEBT-TK automatico verify-build-day1 (0.5 SP, sprint S1, mandatory:true)", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-030", "type": "takeover/process", "description": "T-5 cierre Sprint 0 sigue checklist BLOQUEANTE: sprint_closed → log → dashboard. GR-CORE-027", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-031", "type": "takeover/governance", "description": "cmmi_l3_sprint_estimated calculado mecanicamente desde PA_scores de T-4; T-5 consume el valor, nunca lo recalcula independientemente", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-032", "type": "takeover/governance", "description": "open_debts incluye campo compliance:true para deudas legales/regulatorias (AEAT, GDPR, PCI-DSS); activa logica diferente en guardrails", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-023-01", "type": "frontend", "description": "desde bank-portal Sprint 23 — En componentes Angular, usar [href] nativo en enlaces internos causa full page r", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.29", "imported_at": "2026-04-07T12:04:57.162Z" },
+    { "id": "LA-CORE-033", "type": "governance", "description": "desde bank-portal Sprint 23 — Al ejecutar la-sync.js (GR-CORE-029), el Orchestrator aplicó el sync solo en los", "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.6.31", "imported_at": "2026-04-07T12:11:06.796Z" },
+    { "id": "LA-CORE-035", "type": "takeover/process", "description": "T-3 FA Reverse Agent no generaba entregables explicativos orientados a equipo/negocio. Solo producia artefactos internos del pipeline.", "correction": "T-3 debe producir ademas T3-FUNCTIONAL-DESCRIPTION.md + T3-FUNCTIONAL-DESCRIPTION.docx. El .docx se deposita manualmente por el operador tras descarga. Ruta canonica: docs/functional-analysis/", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.7", "imported_at": "2026-04-10T02:00:00Z" },
+    { "id": "LA-CORE-036", "type": "infrastructure", "description": "Binarios generados en contenedor Claude no pueden escribirse directamente en SOFIA_REPO. Base64 como puente de escritura es antipatron prohibido.", "correction": "Flujo canonico: generar binario → present_files → operador descarga → operador deposita en SOFIA_REPO. Documentar paso en checklist de cierre de steps que produzcan binarios.", "scope": "SOFIA-CORE", "source": "promoted", "sofia_core_version": "2.7", "imported_at": "2026-04-10T02:00:00Z" }
+  ],
+  "updated_at": "2026-04-10T14:00:00Z",
+  "created_at": "2026-04-06T21:00:00Z"
+}

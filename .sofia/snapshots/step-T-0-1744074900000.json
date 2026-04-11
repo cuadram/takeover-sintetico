@@ -1,0 +1,17 @@
+{
+  "snapshot_type": "step-completed",
+  "step": "T-0",
+  "skill": "documentation-intake-agent",
+  "timestamp": "2026-04-06T21:15:00Z",
+  "pipeline_step": "T-0",
+  "gate_pending": "GT-0",
+  "status": "gate_pending",
+  "completed_steps": ["T-0"],
+  "dts_summary": {
+    "FUNC": { "dts": 0.645, "level": "GOOD",    "strategy_t3": "DOCUMENT-LED" },
+    "API":  { "dts": 0.820, "level": "TRUSTED", "strategy_t3": "DOCUMENT-FIRST" },
+    "ARCH": { "dts": 0.210, "level": "POOR",    "strategy_t3": "CODE-ONLY", "zombie": true }
+  },
+  "zombie_detected": true,
+  "artifacts_at_snapshot": ["docs/takeover/T0-DOC-MATRIX.json"]
+}

@@ -1,0 +1,55 @@
+[2026-04-06T21:15:00Z] [STEP-T-0] [documentation-intake-agent] COMPLETED → DTS_FUNC: 0.645 | DTS_API: 0.820 | DTS_ARCH: 0.210/ZOMBIE | gate_pending: GT-0
+[2026-04-06T21:30:00Z] [GATE-GT-0] [Angel] APPROVED → DTS confirmados | ARCH excluida ZOMBIE
+[2026-04-06T22:00:00Z] [STEP-T-1] [inventory-agent] COMPLETED → stack: .NET 6 / SQL Server | security: CRITICAL | gate_pending: GT-1
+[2026-04-07T08:00:00Z] [GATE-GT-1] [Angel] APPROVED → stack confirmado | inventario correcto
+[2026-04-07T09:00:00Z] [STEP-T-2] [quality-baseline-agent] COMPLETED → semáforo: RED | CVE_CRITICAL: 1 | DEBT-TK: 14 (26 SP mandatory) | gate_pending: GT-2
+[2026-04-07T09:30:00Z] [GATE-GT-2] [Angel] APPROVED → baseline correcto | CVEs reales | OPCIÓN-A S1
+[2026-04-07T10:00:00Z] [STEP-T-3] [fa-reverse-agent] COMPLETED → fa-index v0.1 | FAs: 14 | BRs: 13 | DISCREPANCY: 4 OPEN | gate_pending: GT-3
+[2026-04-07T10:30:00Z] [GT-3-PRE] DISCREPANCIAS RESUELTAS → 4/4 | DEBT-TK-011/012/013/014 generados | discrepancies_open: 0 | GR-CORE-025 SATISFECHO
+[2026-04-07T11:00:00Z] [GATE-GT-3] [Angel (PO)] APPROVED → catálogo funcional correcto | DISCREPANCYs resueltas
+[2026-04-07T11:30:00Z] [STEP-T-4] [governance-gap-agent] COMPLETED → doc_volume: 47% | process_maturity: AD-HOC (0.08) | cmmi: L1-L2 (0.56) | overhead S1: 6 SP | gate_pending: GT-4
+[2026-04-07T12:00:00Z] [GATE-GT-4] [Angel (PM+PO)] APPROVED → gap gobernanza bien dimensionado | overhead S1 realista
+[2026-04-07T12:30:00Z] [STEP-T-5] [stabilization-planner] COMPLETED → BASELINE-DOCUMENT-v1.0.md + SPRINT-000-data.json | vel_s1_evolutivos: 0 | SEV: S2 | gate_pending: GT-5 (HITL-CLIENTE)
+[2026-04-07T13:00:00Z] [GATE-GT-5] [Angel — representante RetailCorp S.L.] HITL-CLIENTE APPROVED → Baseline Document v1.0 aprobado | backlog Sprint 1 aceptado | servicio Experis autorizado
+[2026-04-07T13:00:00Z] [SPRINT-0] [stabilization-planner] CLOSED → GT-5 HITL-CLIENTE aprobado | sprint_closed=true | current_sprint=1 | pipeline_mode=evolutivo | vel_s1_evolutivos=0 | primer_evolutivo=Sprint2 | 12 artefactos producidos
+[2026-04-07T09:32:05Z] [STEP-T-5] [stabilization-planner] BASELINE-DOCUMENT-v1.0.docx GENERADO → 20.1 KB | binario Word real | bloque firma cliente | SOFIA v2.6.27 | LA-CORE-014 (docx desde SOFIA-CORE/node_modules)
+[2026-04-07T09:32:05Z] [STEP-T-5] [stabilization-planner] sprint_closed=true CONFIRMADO → LA-CORE-030 cumplido
+[2026-04-10T00:00:00Z] [POST-SPRINT0] [orchestrator] T3-FUNCTIONAL-DESCRIPTION.md GENERADO → gap detectado: T-3 producia catalogo tecnico interno sin documento explicativo orientado a equipo/negocio | 14 FAs + 13 RNs + ciclo de vida + riesgos funcionales | LA candidato SOFIA-CORE pendiente de promocion
+[2026-04-10T01:00:00Z] [POST-SPRINT0] [orchestrator] T3-FUNCTIONAL-DESCRIPTION.docx GENERADO → 23 KB | Word profesional | portada + TOC + 12 secciones | cabecera/pie pagina | tablas con semaforo | ruta corregida: docs/functional-analysis/
+[2026-04-10T02:00:00Z] [LA-SYNC] [orchestrator] LA-CORE-035 + LA-CORE-036 PROMOVIDAS → aprobadas PO Angel | persistidas en LESSONS_LEARNED_CORE.md (99 LAs) + session.json | SOFIA-CORE v2.7
+[2026-04-10T02:30:00Z] [GOVERNANCE] [hitl-cliente] BASELINE-DOCUMENT-v1.0.docx FIRMADO → firmantes: Angel (PO/PM Experis) + RetailCorp S.L. | Sprint 0 formalmente cerrado | baseline_docx_requires_signature: false | servicio Experis vinculante activo
+[2026-04-10T03:00:00Z] [STEP-1] [scrum-master] STARTED → Sprint 1 arrancado | sprint planning iniciado | 24 SP | 0 evolutivos
+[2026-04-10T03:00:00Z] [STEP-1] [scrum-master] COMPLETED → 7 issues creados en Jira FF-16..FF-22 | 24 SP | goal: estabilizacion seguridad + CI/CD + gobernanza | SPRINT-001-data.json generado | gate_pending: G-1 HITL PO
+[2026-04-10T04:00:00Z] [STEP-1] [scrum-master] JIRA LIMPIO → FF-5..FF-10+FF-22 activos sprint-1 | FF-11..FF-15 done (SETUP S0) | FF-16..FF-21 done+linked (duplicados) | SPRINT-001-data.json corregido keys canonicas
+[2026-04-10T05:00:00Z] [GATE-G-1] [Angel (PO)] APPROVED → Sprint Planning Sprint 1 aprobado | 24 SP | 7 issues | semana1: secrets+CVEs | semana2: passwords+cicd+governance | avanzar Step 2
+[2026-04-10T06:00:00Z] [STEP-2] [requirements-analyst] STARTED → SRS Sprint 1 modo technical-debt-sprint | 7 fichas RT | RNF Baseline primera vez
+[2026-04-10T07:00:00Z] [STEP-2] [requirements-analyst] COMPLETED → docs/requirements/SRS-SPRINT-001.md | 7 RT con Gherkin | RNF Baseline 9 items (RNF-B01..B09) | RTM parcial | DoD Sprint 1 | gate_pending: G-2 HITL PO
+[2026-04-10T08:00:00Z] [GATE-G-2] [Angel (PO)] APPROVED → SRS Sprint 1 aprobado | RNF Baseline establecido | 7 RT con criterios Gherkin | avanzar Step 3 Architect
+[2026-04-10T09:00:00Z] [STEP-3] [architect] STARTED → HLD + LLD + 3 ADRs | monolito .NET 8 | deuda técnica sprint
+[2026-04-10T10:00:00Z] [STEP-3] [architect] COMPLETED → HLD-SPRINT-001.md + LLD-SPRINT-001.md + ADR-001 + ADR-002 + ADR-003 | docs/architecture/ | gate_pending: G-3 HITL Tech Lead
+[2026-04-10T10:30:00Z] [STEP-3] [architect] AUDIT → 6 incidencias corregidas: INC-001 (env var naming SRS), INC-002 (Program.cs CREAR), INC-003 (Xunit .csproj), INC-004 (AutoMapper breaking changes), INC-005 (Solo_Lectura naming), INC-006 (cost factor alignment) | SRS v1.1 + LLD v1.1
+[2026-04-10T11:00:00Z] [GATE-G-3] [Angel (Tech Lead)] APPROVED → HLD + LLD + 3 ADRs aprobados | 6 incidencias auditadas y corregidas | avanzar Step 3b
+[2026-04-10T11:30:00Z] [STEP-3b] [architect] COMPLETED → HLD publicado en Confluence page/11665409 | validate-fa-index PASS 8/8 | completed_steps += 3b | listo para Step 4 Developer
+[2026-04-10T12:00:00Z] [STEP-3b] [architect] GAP-FIXES → LLD: erDiagram + nota OpenAPI | session.json: pipeline_step=3b + artifacts[3]=5 files + gate_history G-1/G-2/G-3 Sprint1 | checklist SKILL PASS 11/11
+[2026-04-10T14:00:00Z] [STEP-4] [dotnet-developer] STARTED → Sprint 1 | tech-debt | 6 RTs implementables + RT-007 gobernanza manual
+[2026-04-10T14:00:00Z] [STEP-4] [dotnet-developer] COMPLETED → 14 artefactos | RT-001..007 implementados | DEBT-TK-001..005,007 IN_REVIEW | DEBT-TK-009 RESOLVED | 7 tests (2→7) | gate_pending: G-4 HITL Tech Lead
+[2026-04-10T14:05:00Z] [STEP-4] [dotnet-developer] AUDIT-FIX INC-S4-001 → FluentAssertions 6.12.* añadido a .csproj (omisión detectada en verificación post-step)
+[2026-04-10T14:06:00Z] [STEP-4] [dotnet-developer] AUDIT-FIX INC-S4-002 → Conteo tests corregido: 8 tests reales (6 AuthTests + 2 FacturaTests), no 7 como se documentó inicialmente
+[2026-04-10T14:10:00Z] [GATE-G-4] [Angel (Tech Lead)] APPROVED → Step 4 dotnet-developer aprobado | 14 artefactos | RT-001..007 IN_REVIEW | INC-S4-001+002 corregidos | avanzar Step 5 Code Reviewer
+[2026-04-10T14:10:00Z] [STEP-5] [code-reviewer] STARTED → Sprint 1 | revisión 14 artefactos | stack .NET 8
+[2026-04-10T14:20:00Z] [STEP-5] [code-reviewer] COMPLETED → CR-SPRINT-001.md | veredicto: APROBADO | 0 bloqueantes | 1 mayor deferred (DEBT-TK-006) | 3 menores | 2 sugerencias | 10 security checks PASS | CVE-2024-0057+CVE-2024-21319 RESUELTOS | gate_pending: G-5 HITL QA Lead
+[2026-04-10T14:25:00Z] [STEP-5] [code-reviewer] META-AUDIT → 4 incidencias corregidas: (1) sección Metadata añadida al CR (2) sección Bloqueantes explicitada (3) veredicto aclarado como APROBADO_CON_DEFERRAL_JUSTIFICADO (4) security.semaphore→AMBER + DEBT-TK-006 nota corregida 7→8 tests
+[2026-04-10T14:30:00Z] [GATE-G-5] [Angel (QA Lead)] APPROVED → CR-SPRINT-001.md aprobado | veredicto APROBADO CON DEFERRAL JUSTIFICADO | avanzar Step 6 QA Tester
+[2026-04-10T14:30:00Z] [STEP-6] [qa-tester] STARTED → Sprint 1 | tech-debt-sprint | 7 RTs con Gherkin | 23 escenarios
+[2026-04-10T14:45:00Z] [STEP-6] [qa-tester] COMPLETED → QA-SPRINT-001.md | 31 TCs | 26 PASS | 5 BLOCKED (entorno) | 0 FAIL | 0 defectos | Gherkin 25/25 (100%) | security 10/10 | GAP: integration tests → DEBT-TK-015 S2 | semáforo AMBER | gate_pending: G-6 HITL PO
+[2026-04-10T14:46:00Z] [STEP-6] [qa-tester] INC-G6-001 corregido → conteo log STARTED: 23→25 escenarios | INC-G6-002 corregido → DEBT-TK-009 CLOSED añadido a QA-SPRINT-001.md
+[2026-04-10T14:50:00Z] [GATE-G-6] [Angel (PO)] APPROVED → QA-SPRINT-001.md aprobado | 31 TCs | 0 defectos | Gherkin 100% | semáforo AMBER | DEBT-TK-015 S2 | avanzar Step 7 DevOps
+[2026-04-10T14:50:00Z] [STEP-7] [devops] STARTED → Sprint 1 | .NET 8 | target: GitHub Actions + FTP→Docker | versión: v0.1.0-sprint1
+[2026-04-10T15:00:00Z] [STEP-7] [devops] COMPLETED → Dockerfile multi-stage + .dockerignore + cd-release.yml (Trivy scan) + RUNBOOK-v0.1.0.md + RELEASE-NOTES-v0.1.0.md | versión: v0.1.0-sprint1 | target: ghcr.io Docker | gate_pending: G-7 HITL DevOps
+[2026-04-10T15:10:00Z] [STEP-7] [devops] META-AUDIT → INC-G7-001 FIXED: Trivy image-ref corregido a fromJSON(meta.outputs.json).tags[0] (mismatch v-prefix semver) | INC-G7-002 FIXED: infra/compose/docker-compose.yml creado (referenciado en runbook pero ausente)
+[2026-04-10T15:15:00Z] [GATE-G-7] [Angel (DevOps Lead)] APPROVED → Dockerfile + cd-release.yml + docker-compose.yml + RUNBOOK + RELEASE-NOTES aprobados | INC-G7-001+002 corregidos | avanzar Step 8 Documentation Agent
+[2026-04-10T15:15:00Z] [STEP-8] [documentation-agent] STARTED → Sprint 1 | Delivery Package | 17 docs (10 Word + 3 Excel + Sprint JSON) | CMMI L3 evidencias
+[2026-04-10T15:45:00Z] [STEP-8] [documentation-agent] COMPLETED → 15 .docx + SPRINT-001-data.json | 180.6 KB | gen-docs-sprint1.js | LA-022-08 COMPLIANT — binarios reales via docx npm 9.6.1 | PENDIENTE: operador deposita en docs/deliverables/sprint-1-STAB-S1/ | gate_pending: G-8 HITL PM
+[2026-04-10T16:00:00Z] [STEP-8] [documentation-agent] META-AUDIT → INC-G8-001 FIXED: Sprint1-Report-PMC.docx nomenclatura RSK-001 corregida (R-S1-001 era incorrecto) | INC-G8-002 FIXED: ProjectPlan-v1.1.docx DEBT-TK-015 añadido explícitamente | LA-022-08: 15/15 binarios reales ZIP+document.xml verificados | 14/16 checks coherencia OK (2 falsos negativos por w:t partidos)
+[2026-04-11T00:00:00Z] [GATE-G-8] [Angel (PM)] APPROVED → Documentation Package aprobado | 15 docx + SPRINT-001-data.json | 180.6 KB | CMMI evidencias incluidas | Sprint 1 STAB-S1 CERRADO
+[2026-04-11T00:00:00Z] [SPRINT-1] [sprint-closure] CLOSED → G-8 HITL-PM aprobado | sprint_closed=true | current_sprint=2 | vel_total=24 SP | vel_evolutivos=0 | debt_tk_resolved: 7 items (TK-001..005,007,009) | version_released: v0.1.0-sprint1 | security_semaphore: AMBER | artefactos: 32 | pipeline_mode=evolutivo | próximo: Sprint 2 — primer sprint con evolutivos disponibles

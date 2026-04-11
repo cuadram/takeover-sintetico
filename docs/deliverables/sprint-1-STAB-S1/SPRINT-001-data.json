@@ -1,0 +1,17 @@
+{
+  "sprint": 1,
+  "sp": 24,
+  "acum": 24,
+  "feat": "STAB-S1",
+  "titulo": "Estabilización de Seguridad — FacturaFlow Sprint 1",
+  "rel": "v0.1.0-sprint1",
+  "tests": 8,
+  "cov": 25,
+  "ncs": 0,
+  "defects": 0,
+  "security_semaphore": "AMBER",
+  "cves_resolved": 2,
+  "secrets_resolved": 2,
+  "bcrypt_implemented": true,
+  "date_closed": "2026-04-10"
+}

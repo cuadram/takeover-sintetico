@@ -1,0 +1,28 @@
+{
+  "snapshot_type": "step-completed",
+  "step": "T-2",
+  "skill": "quality-baseline-agent",
+  "timestamp": "2026-04-07T09:00:00Z",
+  "gate_pending": "GT-2",
+  "status": "gate_pending",
+  "completed_steps": ["T-0", "T-1", "T-2"],
+  "quality_summary": {
+    "semaphore_global": "RED",
+    "security": "RED",
+    "tests": "AMBER",
+    "debt": "AMBER",
+    "build": "AMBER",
+    "cve_critical": 1,
+    "cve_high": 1,
+    "secrets": 2,
+    "debt_tk_total": 10,
+    "debt_tk_mandatory": 7,
+    "debt_tk_mandatory_sp": 26
+  },
+  "artifacts_at_snapshot": [
+    "docs/takeover/T0-DOC-MATRIX.json",
+    "docs/takeover/T1-INVENTORY.md",
+    "docs/takeover/T1-STACK-MAP.json",
+    "docs/takeover/T2-QUALITY-BASELINE.md"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "project": "facturaflow",
+  "client": "RetailCorp S.L.",
+  "pipeline_type": "takeover",
+  "methodology": "Scrumban",
+  "cmmi_level": 3,
+  "client_docs_provided": true,
+  "stack": {},
+  "takeover_config": {
+    "client_docs_path": "docs-cliente/",
+    "target_repo_path": "repo-cliente/",
+    "sprint0_started_at": "2026-04-06T21:00:00Z"
+  },
+  "ma_baseline": {
+    "enabled": false
+  }
+}

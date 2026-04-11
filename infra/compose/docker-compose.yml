@@ -1,0 +1,36 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# docker-compose.yml — FacturaFlow · SOFIA Sprint 1
+# Target: local development / staging
+# Secrets: inyectados desde .env (nunca commitear .env con valores reales)
+# ─────────────────────────────────────────────────────────────────────────────
+services:
+  facturaflow-api:
+    image: ghcr.io/${DOCKER_ORG:-org}/facturaflow-api:${IMAGE_TAG:-latest}
+    container_name: facturaflow-api
+    restart: unless-stopped
+    env_file:
+      - ../../repo-cliente/.env    # JWTAUTH__SECRET + CONNECTIONSTRINGS__DEFAULTCONNECTION
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/health/live"]
+      interval: 30s
+      timeout: 5s
+      start_period: 15s
+      retries: 3
+    # SQL Server: gestionado externamente por RetailCorp S.L.
+    # No se incluye en este compose — usar connection string real via env var
+
+# ─── Uso ────────────────────────────────────────────────────────────────────
+# Arrancar:
+#   IMAGE_TAG=v0.1.0-sprint1 DOCKER_ORG=retailcorp docker compose up -d
+#
+# Verificar:
+#   docker compose ps
+#   curl -f http://localhost:8080/health/live
+#
+# Logs:
+#   docker compose logs -f facturaflow-api
+#
+# Parar:
+#   docker compose down

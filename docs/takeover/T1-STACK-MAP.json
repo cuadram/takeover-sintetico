@@ -1,0 +1,222 @@
+{
+  "_generated_by": "inventory-agent v1.0",
+  "generated_at": "2026-04-06T22:00:00Z",
+  "project": "facturaflow",
+  "client": "RetailCorp S.L. (Laboratorio Sintético SOFIA)",
+  "repository": "/Users/cuadram/Library/CloudStorage/OneDrive-Personal/WIP/TakeOverSintetico/repo-cliente",
+  "commit_hash": "UNKNOWN",
+
+  "components": [
+    {
+      "id": "facturaflow-api",
+      "name": "FacturaFlow.Api",
+      "type": "backend-monolito",
+      "stack": "dotnet",
+      "runtime": "dotnet",
+      "runtime_version": "6.0",
+      "framework": "aspnet-core",
+      "framework_version": "6.0.0",
+      "build_tool": "dotnet-cli",
+      "location": ".",
+      "confidence": "HIGH",
+      "files": {
+        "controllers": 2,
+        "models": 1,
+        "data": 1,
+        "tests": 1,
+        "config": 1,
+        "project_file": 1,
+        "migrations_sql": 1,
+        "total_prod_files": 6,
+        "total_test_files": 1
+      },
+      "dependencies_total": 9,
+      "dependencies_outdated": 8,
+      "dependencies_eol": 1,
+      "dependencies_cve_known_high": 4,
+      "dependencies_cve_suspected": 3,
+      "dependencies_detail": [
+        { "package": "Microsoft.AspNetCore.Authentication.JwtBearer", "version": "6.0.0", "status": "OUTDATED", "cve_risk": "KNOWN_HIGH", "cve_ids": ["CVE-2024-21319"], "cvss": 6.8, "license": "MIT" },
+        { "package": "Microsoft.EntityFrameworkCore", "version": "6.0.0", "status": "OUTDATED", "cve_risk": "KNOWN_HIGH", "cve_ids": ["CVE-2024-0057"], "cvss": 9.1, "license": "MIT" },
+        { "package": "Microsoft.EntityFrameworkCore.SqlServer", "version": "6.0.0", "status": "OUTDATED", "cve_risk": "KNOWN_HIGH", "cve_ids": ["CVE-2024-0057"], "cvss": 9.1, "license": "MIT" },
+        { "package": "Microsoft.EntityFrameworkCore.Tools", "version": "6.0.0", "status": "OUTDATED", "cve_risk": "KNOWN_HIGH", "cve_ids": ["CVE-2024-0057"], "cvss": 9.1, "license": "MIT" },
+        { "package": "AutoMapper", "version": "10.1.1", "status": "OUTDATED", "cve_risk": "SUSPECTED", "license": "MIT" },
+        { "package": "AutoMapper.Extensions.Microsoft.DependencyInjection", "version": "8.1.1", "status": "OUTDATED", "cve_risk": "SUSPECTED", "license": "MIT" },
+        { "package": "Swashbuckle.AspNetCore", "version": "6.2.3", "status": "OUTDATED", "cve_risk": "CLEAN", "license": "MIT" },
+        { "package": "Serilog.AspNetCore", "version": "4.1.0", "status": "OUTDATED", "cve_risk": "SUSPECTED", "license": "Apache-2.0" },
+        { "package": "Newtonsoft.Json", "version": "12.0.3", "status": "EOL", "cve_risk": "SUSPECTED", "license": "MIT", "eol_note": "EOL desde 2022. Migrar a System.Text.Json." }
+      ],
+      "test_framework": "xunit",
+      "test_files_count": 1,
+      "test_cases_count": 2,
+      "prod_files_count": 6,
+      "test_ratio": 0.17,
+      "regression_risk": "HIGH"
+    }
+  ],
+
+  "architecture": {
+    "pattern": "monolito-plano",
+    "pattern_confidence": "HIGH",
+    "layers_separated": false,
+    "domain_layer_detected": false,
+    "application_layer_detected": false,
+    "repository_pattern": false,
+    "god_classes_detected": 0,
+    "direct_db_access_from_controllers": true,
+    "technical_debt_comments": {
+      "TODO": 8,
+      "FIXME": 4,
+      "HACK": 1,
+      "XXX": 1,
+      "total": 14
+    },
+    "entities": ["Factura", "Cliente", "Usuario"],
+    "controllers": ["ClientesController", "FacturasController"],
+    "endpoints_detected": [
+      "GET    /api/v1/clientes",
+      "POST   /api/v1/clientes",
+      "GET    /api/v1/clientes/{id}",
+      "PUT    /api/v1/clientes/{id}",
+      "GET    /api/v1/clientes/{id}/facturas",
+      "GET    /api/v1/facturas",
+      "POST   /api/v1/facturas",
+      "GET    /api/v1/facturas/{id}",
+      "PUT    /api/v1/facturas/{id}/emitir",
+      "DELETE /api/v1/facturas/{id}"
+    ],
+    "endpoints_count": 10,
+    "missing_endpoints_vs_doc": [
+      "PUT /api/v1/facturas/{id}/pagar  → documentado en manual-funcional.md §4, NO implementado",
+      "PUT /api/v1/facturas/{id}/anular → documentado en manual-funcional.md §4, NO implementado"
+    ],
+    "persistence": {
+      "database": "sql-server",
+      "database_source": "appsettings.json + Microsoft.EntityFrameworkCore.SqlServer",
+      "orm": "ef-core",
+      "orm_version": "6.0.0",
+      "migrations": "sql-manual",
+      "migration_files_count": 1,
+      "migration_oldest": "2022-03-15",
+      "migration_newest": "2022-03-15",
+      "migration_note": "Un único fichero SQL de migración inicial. NO son EF Migrations (.cs). Sin historial de versiones.",
+      "tables": ["Clientes", "Facturas", "Usuarios"],
+      "cache": "none",
+      "messaging": "none"
+    },
+    "security_issues": [
+      {
+        "id": "SEC-001",
+        "severity": "CRITICAL",
+        "type": "PLAINTEXT_PASSWORDS",
+        "description": "Columna Password en tabla Usuarios almacena contraseñas en texto plano",
+        "location": "Models/Entities.cs + Migrations/20220315_InitialCreate.sql",
+        "value_exposed": false
+      },
+      {
+        "id": "SEC-002",
+        "severity": "CRITICAL",
+        "type": "HARDCODED_SECRET",
+        "description": "JWT secret hardcodeado en appsettings.json commiteado en repositorio",
+        "location": "appsettings.json → JwtSettings.Secret",
+        "value_exposed": false
+      },
+      {
+        "id": "SEC-003",
+        "severity": "CRITICAL",
+        "type": "HARDCODED_CREDENTIALS",
+        "description": "Contraseña de base de datos hardcodeada en cadena de conexión en appsettings.json",
+        "location": "appsettings.json → ConnectionStrings.DefaultConnection",
+        "value_exposed": false
+      }
+    ]
+  },
+
+  "infra": {
+    "docker": false,
+    "docker_compose": false,
+    "ci_cd": false,
+    "ci_cd_tool": "none",
+    "iac": false,
+    "deploy_method": "FTP manual",
+    "deploy_note": "Deploy manual FTP a servidor 192.168.1.100 según README. Conocimiento tácito en Miguel Fernández (TI)."
+  },
+
+  "operability": {
+    "score": "PARTIAL",
+    "readme_quality": "PARTIAL",
+    "env_documented": false,
+    "secrets_hardcoded": true,
+    "secrets_hardcoded_count": 2,
+    "secrets_types": ["jwt_secret", "db_password"],
+    "runbook_exists": false,
+    "runbook_note": "PARTIAL — instrucciones FTP en README con contacto personal. Sin procedimiento formal.",
+    "api_documented": true,
+    "api_doc_source": "Swashbuckle/Swagger en /swagger + openapi.yaml cliente (DTS=0.820 TRUSTED)",
+    "seed_data": false
+  },
+
+  "discrepancies_vs_t0_docs": [
+    {
+      "id": "DISC-01",
+      "type": "DISCREPANCY-API",
+      "doc_source": "openapi.yaml (DTS=0.820 TRUSTED)",
+      "description": "openapi.yaml implica endpoint /facturas/{id}/pagar — no existe en FacturasController.cs",
+      "severity": "MEDIUM",
+      "resolution": "T-3 debe catalogar PAGADA como FA pendiente de implementación"
+    },
+    {
+      "id": "DISC-02",
+      "type": "DISCREPANCY-API",
+      "doc_source": "openapi.yaml (DTS=0.820 TRUSTED)",
+      "description": "openapi.yaml omite /pagar y /anular; manual-funcional.md §4 los documenta como transiciones. Ni la spec ni el código los implementan — deuda funcional consistente.",
+      "severity": "MEDIUM",
+      "resolution": "T-3 documenta como FA pendiente. Coherente entre doc y código (ambos incompletos)."
+    },
+    {
+      "id": "DISC-03",
+      "type": "DISCREPANCY-FUNC",
+      "doc_source": "manual-funcional.md §4 (DTS=0.645 GOOD)",
+      "description": "Transición EMITIDA→PAGADA (acción 'Registrar pago', solo Contabilidad/Admin) documentada pero no implementada",
+      "severity": "MEDIUM",
+      "resolution": "T-3 FA pendiente de implementación"
+    },
+    {
+      "id": "DISC-04",
+      "type": "CONFIRMED-ZOMBIE",
+      "doc_source": "arquitectura-2020.md (DTS=0.210 ZOMBIE)",
+      "description": "Arquitectura Java 11 microservicios confirmada como ZOMBIE. Sistema real: monolito .NET 6 + SQL Server. Decisión GT-0 correcta.",
+      "severity": "INFO",
+      "resolution": "Confirmado. Archivo excluido de todos los agentes."
+    }
+  ],
+
+  "risk_summary": {
+    "overall": "HIGH",
+    "security_risk": "CRITICAL",
+    "dependency_risk": "HIGH",
+    "architecture_risk": "MEDIUM",
+    "operability_risk": "HIGH",
+    "regression_risk": "HIGH"
+  },
+
+  "unknowns_count": 6,
+  "unknowns": [
+    { "item": "Hash de commit / versión en producción", "reason": "Sin metadata git disponible", "resolution_source": "Miguel Fernández (TI)" },
+    { "item": "Estado real de la BD en producción", "reason": "Sin acceso a SQL Server — solo análisis estático", "resolution_source": "Miguel Fernández / acceso BD lectura" },
+    { "item": "Entorno de staging real", "reason": "README no menciona staging; openapi.yaml sí incluye URL staging", "resolution_source": "Miguel Fernández" },
+    { "item": "Override de variables de entorno en producción", "reason": "appsettings.json tiene secrets — ¿hay mecanismo de override en servidor?", "resolution_source": "Miguel Fernández — URGENTE" },
+    { "item": "Endpoint exportación PDF", "reason": "Manual §3.3 confirma existencia, no detectado en controllers", "resolution_source": "Miguel Fernández / logs producción" },
+    { "item": "Endpoints de Informes", "reason": "Manual §6.1 confirma existencia, no detectados en controllers", "resolution_source": "Ídem" }
+  ],
+
+  "sofia_config_update": {
+    "stack": {
+      "backend": ["dotnet"],
+      "frontend": [],
+      "database": ["sql-server"],
+      "messaging": [],
+      "infra": []
+    }
+  }
+}
