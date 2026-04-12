@@ -978,9 +978,41 @@
       "registered_at": "2026-04-11T14:19:28.899Z",
       "sprint": 0,
       "title": "Branching model SOFIA no aplicado desde inicio — deuda git acumulada y saneada"
+    },
+    {
+      "id": "LA-CORE-034",
+      "type": "governance",
+      "description": "CONTEXT-ISOLATION enforcement: en sesion SOFIA-CORE Continuar=framework; NUNCA leer session.json proyectos; contexto ambiguo=PREGUNTAR (refuerza GR-CORE-026)",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.37",
+      "imported_at": "2026-04-12T17:47:31.944Z"
+    },
+    {
+      "id": "LA-CORE-037",
+      "type": "dashboard",
+      "description": "datos del dashboard SIEMPRE desde session.json en disco de cada proyecto registrado; nunca desde memoria o conversación anterior",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.37",
+      "imported_at": "2026-04-12T17:47:31.944Z"
     }
   ],
-  "updated_at": "2026-04-11T00:00:00Z",
+  "git_repository": {
+    "remote": "https://github.com/cuadram/takeover-sintetico.git",
+    "visibility": "public",
+    "branches": [
+      "main",
+      "develop"
+    ],
+    "branch_protection_main": true,
+    "branch_protection_type": "classic",
+    "gr_core_030_satisfied": true,
+    "gr_core_030_satisfied_at": "2026-04-11T00:00:00Z"
+  },
+  "updated_at": "2026-04-12T17:47:31.952Z",
   "created_at": "2026-04-06T21:00:00Z",
   "code_review": {
     "sprint": 1,

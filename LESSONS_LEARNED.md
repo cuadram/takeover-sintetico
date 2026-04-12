@@ -1,7 +1,19 @@
 # LESSONS LEARNED — facturaflow
 
-> Generado: 2026-04-07T12:11:06.804Z | Total: 34 LAs
-> LAs proyecto: 0 | LAs SOFIA-CORE integradas: 34
+> Generado: 2026-04-12T17:47:31.952Z | Total: 39 LAs
+> LAs proyecto: 1 | LAs SOFIA-CORE integradas: 38
+
+## LAs del Proyecto
+
+### LA-TO-001-01 · governance/git
+
+**Descripción:** Los tres proyectos gobernados (BankPortal, ExperisTracker, TakeOverSintetico) iniciaron sin un modelo de ramas git definido ni repositorios remotos configurados. BankPortal acumuló 11 ramas feature huérfanas nunca mergeadas a develop ni main; Sprint 23 se ejecutó sobre rama de Sprint 15. ExperisTracker trabajó directamente en main durante 3 sprints sin rama feature. TakeOverSintetico careció de git init durante toda la fase de Takeover Sprint 0. Resultado: main y develop desactualizados en todos los proyectos, trazabilidad remota nula y commits de sprints activos sobre ramas incorrectas.
+
+**Corrección:** REGLA PERMANENTE: al inicializar cualquier proyecto SOFIA, el primer paso obligatorio es (1) git init, (2) crear estructura main+develop, (3) push a remote. Cada sprint crea rama feature/FEAT-XXX-sprintYY desde develop. Al cerrar sprint: merge --no-ff feature → develop → push. Al crear release: merge --no-ff develop → main + tag vX.Y.0 → push. El branching model debe verificarse en Gate 1 (Setup) como precondición bloqueante.
+
+_Registrada: 2026-04-11T14:19:28.899Z_
+
+---
 
 ## LAs SOFIA-CORE Integradas
 
@@ -348,11 +360,43 @@ _SOFIA-CORE v2.6.31 · Importada: 2026-04-07T12:11:06.796Z_
 
 ---
 
+### LA-CORE-035 · takeover/process ⭐ CORE
 
-## LA-TO-001-01 — Branching model SOFIA no aplicado desde inicio — deuda git acumulada y saneada
-- **Fecha:** 2026-04-11
-- **Tipo:** governance/git
-- **Scope:** project
-- **Problema:** Proyectos iniciados sin modelo de ramas git. BankPortal: 11 ramas huérfanas, Sprint 23 en rama de Sprint 15. ExperisTracker: desarrollo directo en main 3 sprints. TakeOverSintetico: sin git init durante Takeover Sprint 0.
-- **Corrección:** REGLA PERMANENTE — git init + main+develop en Gate 1. Cada sprint: rama feature/FEAT-XXX-sprintYY desde develop. Cierre sprint: merge --no-ff feature→develop→push. Release: merge --no-ff develop→main + tag vX.Y.0.
-- **Aprobado por:** Product Owner | 2026-04-11
+**Descripción:** T-3 FA Reverse Agent no generaba entregables explicativos orientados a equipo/negocio. Solo producia artefactos internos del pipeline.
+
+**Corrección:** T-3 debe producir ademas T3-FUNCTIONAL-DESCRIPTION.md + T3-FUNCTIONAL-DESCRIPTION.docx. El .docx se deposita manualmente por el operador tras descarga. Ruta canonica: docs/functional-analysis/
+
+_SOFIA-CORE v2.7 · Importada: 2026-04-10T02:00:00Z_
+
+---
+
+### LA-CORE-036 · infrastructure ⭐ CORE
+
+**Descripción:** Binarios generados en contenedor Claude no pueden escribirse directamente en SOFIA_REPO. Base64 como puente de escritura es antipatron prohibido.
+
+**Corrección:** Flujo canonico: generar binario → present_files → operador descarga → operador deposita en SOFIA_REPO. Documentar paso en checklist de cierre de steps que produzcan binarios.
+
+_SOFIA-CORE v2.7 · Importada: 2026-04-10T02:00:00Z_
+
+---
+
+### LA-CORE-034 · governance ⭐ CORE
+
+**Descripción:** CONTEXT-ISOLATION enforcement: en sesion SOFIA-CORE Continuar=framework; NUNCA leer session.json proyectos; contexto ambiguo=PREGUNTAR (refuerza GR-CORE-026)
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.6.37 · Importada: 2026-04-12T17:47:31.944Z_
+
+---
+
+### LA-CORE-037 · dashboard ⭐ CORE
+
+**Descripción:** datos del dashboard SIEMPRE desde session.json en disco de cada proyecto registrado; nunca desde memoria o conversación anterior
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.6.37 · Importada: 2026-04-12T17:47:31.944Z_
+
+---
+
