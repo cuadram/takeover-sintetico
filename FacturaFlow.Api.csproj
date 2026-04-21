@@ -38,4 +38,14 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.*" />
     <PackageReference Include="FluentAssertions" Version="6.12.*" />
   </ItemGroup>
+
+  <!-- DEBT-TK-011: scripts/ contiene utilidades one-shot (dotnet script) con top-level
+       statements propios (e.g. MigratePasswordsToBcrypt.cs). Excluidas del ensamblado
+       principal para evitar CS8802 (solo Program.cs puede tener top-level statements).
+       Se ejecutan standalone con 'dotnet script scripts/<nombre>.cs'. -->
+  <ItemGroup>
+    <Compile Remove="scripts/**/*.cs" />
+    <None Include="scripts/**/*.cs" />
+  </ItemGroup>
+
 </Project>
