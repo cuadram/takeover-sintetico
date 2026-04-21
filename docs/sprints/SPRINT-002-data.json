@@ -1,0 +1,328 @@
+{
+  "sprint": 2,
+  "type": "evolutive-mixed",
+  "status": "planning",
+  "sprint_goal": "Habilitar ciclo de vida completo de factura (pagar/anular/borrar lógico) cumpliendo AEAT/GDPR, y consolidar la base de testing e integración como cimiento para la certificación CMMI L3 en S3",
+  "project": "facturaflow",
+  "client": "RetailCorp S.L. (Laboratorio Sintético SOFIA)",
+  "sofia_version": "2.6.25",
+  "profile": "BALANCEADO (IT + endpoints + compliance)",
+  "pipeline_mode": "evolutivo",
+  "start_date": "2026-04-21",
+  "end_date": "2026-05-05",
+  "duration_weeks": 2,
+  "sprint_opened_at": null,
+  "sprint_opened_by": null,
+  "planning_opened_at": "2026-04-20T05:45:00Z",
+  "planned_by": "Angel (SM/PM/PO)",
+  "capacity": {
+    "total_sp_planned": 23,
+    "total_sp_committed": 23,
+    "total_sp_contingent": 3,
+    "total_sp_upper_bound": 26,
+    "evolutivos_sp": 8,
+    "compliance_sp": 3,
+    "tests_infra_sp": 5,
+    "tests_coverage_sp": 5,
+    "governance_prep_l3_sp": 2,
+    "contingent_recovery_sp": 3,
+    "note": "Baseline = velocidad histórica S1 (24 SP × 1.0). Perfil balanceado con 8 SP evolutivos reales — primer sprint con entrega de valor funcional al negocio tras 2 sprints de deuda. DEBT-TK-014 contingente: entra si Miguel Fdez entrega código antes de día 3."
+  },
+  "capacity_breakdown": {
+    "rationale": "Working days = 10 · horas/día = 7 · personas = 1 (modo laboratorio) · capacidad bruta = 70h",
+    "bruta_h": 70,
+    "reducciones": {
+      "ceremonias_h": 4,
+      "buffer_impedimentos_h": 7,
+      "refinamiento_FEAT_evolutivo_h": 4
+    },
+    "neta_h": 55,
+    "ratio_sp_por_hora_s1": 0.436,
+    "sp_teoricos_neta": 24,
+    "committed_sp": 23,
+    "margen_seguridad_sp": 1
+  },
+  "backlog": [
+    {
+      "debt_id": "DEBT-TK-015",
+      "jira_key_expected": "FF-23",
+      "summary": "TK-015 · Integration Tests con Testcontainers — IntegrationTestBase, ContextLoadsIT, DatabaseSchemaIT, AuthIT",
+      "priority": "HIGH",
+      "mandatory": true,
+      "sp": 5,
+      "area": "Tests/Integration",
+      "epic_expected": "FF-4-TESTS",
+      "sprint_target": "S2-semana1",
+      "rationale": "Mandatory S2 · generado por QA en Step-6 S1 · precondición PA VAL para CMMI L3 · desbloquea cobertura E2E"
+    },
+    {
+      "debt_id": "DEBT-TK-011",
+      "jira_key_expected": "FF-24",
+      "summary": "TK-011 · Endpoint POST /facturas/{id}/pagar — transición EMITIDA → PAGADA",
+      "priority": "HIGH",
+      "mandatory": false,
+      "sp": 3,
+      "area": "Functional",
+      "epic_expected": "FF-5-FACTURACION",
+      "sprint_target": "S2-semana1",
+      "rationale": "Funcional crítico arrastrado de S1 · primer evolutivo real del proyecto · base para informes S3"
+    },
+    {
+      "debt_id": "DEBT-TK-012",
+      "jira_key_expected": "FF-25",
+      "summary": "TK-012 · Endpoint POST /facturas/{id}/anular — transición EMITIDA → ANULADA",
+      "priority": "HIGH",
+      "mandatory": false,
+      "sp": 2,
+      "area": "Functional",
+      "epic_expected": "FF-5-FACTURACION",
+      "sprint_target": "S2-semana1",
+      "rationale": "Funcional crítico arrastrado de S1 · complementa TK-011 en máquina de estados de Factura"
+    },
+    {
+      "debt_id": "DEBT-TK-008",
+      "jira_key_expected": "FF-26",
+      "summary": "TK-008 · Borrado lógico de facturas (soft-delete) — cumplimiento AEAT/GDPR",
+      "priority": "HIGH",
+      "mandatory": false,
+      "compliance": true,
+      "sp": 3,
+      "area": "Compliance",
+      "epic_expected": "FF-6-COMPLIANCE",
+      "sprint_target": "S2-semana2",
+      "rationale": "Legal/regulatorio · AEAT obliga retención 4 años · GDPR compatible con soft-delete + anonimización tardía · bloqueante para auditoría externa"
+    },
+    {
+      "debt_id": "DEBT-TK-006-S2",
+      "jira_key_expected": "FF-27",
+      "summary": "TK-006 (split-S2) · Ampliar cobertura de tests unitarios — objetivo incremental 20% → 45%",
+      "priority": "HIGH",
+      "mandatory": false,
+      "parent_debt": "DEBT-TK-006",
+      "sp": 5,
+      "area": "Tests",
+      "epic_expected": "FF-4-TESTS",
+      "sprint_target": "S2-semana2",
+      "rationale": "TK-006 total = 8 SP (S1-S3) · split S2 = 5 SP · objetivo 80% en S3 · cubre servicios FacturasService y ClientesService"
+    },
+    {
+      "debt_id": "GOV-S2-L3-PREP",
+      "jira_key_expected": "FF-28",
+      "summary": "GOV-S2 · Preparación certificación CMMI L3 — activación PA PPQA + VAL + DAR baseline",
+      "priority": "MEDIUM",
+      "mandatory": false,
+      "cmmi": true,
+      "sp": 2,
+      "area": "Governance",
+      "epic_expected": "FF-3-GOVERNANCE",
+      "sprint_target": "S2-semana2",
+      "rationale": "L3 objetivo S3 · S2 prepara 3 PA críticos (actualmente pa_scores: PPQA=0, VAL=0, DAR=0) · define procedimientos y plantillas, sin ejecución todavía"
+    }
+  ],
+  "contingent_backlog": [
+    {
+      "debt_id": "DEBT-TK-014",
+      "jira_key_expected": "FF-29",
+      "summary": "TK-014 · Recuperar código exportación PDF de Miguel Fernández (TI RetailCorp)",
+      "priority": "HIGH",
+      "sp": 3,
+      "area": "Code-Recovery",
+      "epic_expected": "FF-5-FACTURACION",
+      "condition": "Entra en sprint SOLO si Miguel Fernández entrega código antes del día 3 del sprint (2026-04-23 EOD)",
+      "decision_deadline": "2026-04-23T18:00:00Z",
+      "responsible": "Angel (PM) — contacto día 1",
+      "fallback_if_missed": "Queda en backlog para S3 · SM escala a PM RetailCorp si día 5 sin entrega · re-evalúa desarrollo from-scratch con PO",
+      "risk_link": "R-S1-001"
+    }
+  ],
+  "deferred_to_future": [
+    {
+      "debt_id": "FEAT-TBD-EVOLUTIVO-NUEVO",
+      "note": "FEAT evolutivo definido por negocio — se refina tras este planning (decisión Angel 2026-04-20) · candidato a entrar en S2 mid-sprint vía protocolo change-scope si PM aprueba · por defecto S3",
+      "status": "pending_refinement"
+    },
+    {
+      "debt_id": "DEBT-TK-010",
+      "note": "Repository Pattern · 8 SP · S3-S4 · no entra en S2 por capacidad",
+      "status": "backlog"
+    },
+    {
+      "debt_id": "DEBT-TK-013",
+      "note": "Informes REST ×3 · 8 SP · target S3 · depende de TK-011 completado",
+      "status": "backlog"
+    },
+    {
+      "debt_id": "DEBT-TK-006-S3",
+      "note": "TK-006 split-S3 · 3 SP restantes · objetivo cobertura 45% → 80%",
+      "status": "backlog_S3"
+    }
+  ],
+  "sequencing": {
+    "week_1": [
+      "FF-23 (TK-015 Integration Tests — fundación)",
+      "FF-24 (TK-011 /pagar — en paralelo)",
+      "FF-25 (TK-012 /anular — dependencia soft de FF-24)",
+      "FF-29 (TK-014 PDF — contingente, decisión día 3)"
+    ],
+    "week_2": [
+      "FF-26 (TK-008 soft-delete AEAT/GDPR)",
+      "FF-27 (TK-006-S2 cobertura unitaria)",
+      "FF-28 (GOV-S2 preparación L3)"
+    ],
+    "rationale": "Semana 1 — fundamentos (IT como base de calidad) + primeros evolutivos reales (pagar/anular). Semana 2 — compliance legal + densificación de tests + preparación gobernanza L3. IT primero porque desbloquea validación E2E de los endpoints nuevos."
+  },
+  "risks": [
+    {
+      "id": "R-S2-001",
+      "description": "Miguel Fernández no entrega código PDF export en plazo (día 3) — bloquea DEBT-TK-014",
+      "category": "Externo",
+      "probability": "M",
+      "impact": "M",
+      "exposure": "M",
+      "status": "Abierto",
+      "action": "Contacto día 1 · escalada PM RetailCorp día 3 si silencio · fallback documentado: diferir a S3 con desarrollo from-scratch",
+      "inherited_from": "R-S1-001",
+      "owner": "Angel (PM)"
+    },
+    {
+      "id": "R-S2-002",
+      "description": "Testcontainers requiere Docker en runner GitHub Actions — posible friction en CI por límites del runner free",
+      "category": "Técnico",
+      "probability": "M",
+      "impact": "M",
+      "exposure": "M",
+      "status": "Abierto",
+      "action": "Validar en día 1 que workflow ci.yml acepta Testcontainers · fallback: self-hosted runner o testcontainers-cloud",
+      "owner": "Angel (Tech Lead)"
+    },
+    {
+      "id": "R-S2-003",
+      "description": "Máquina de estados Factura mal definida en FA puede generar rework en endpoints /pagar y /anular",
+      "category": "Técnico",
+      "probability": "B",
+      "impact": "A",
+      "exposure": "M",
+      "status": "Abierto",
+      "action": "Validar diagrama de estados en Step 2 (SRS) antes de implementar · revisar 13 BRs del FA y añadir BR nueva si falta transición",
+      "owner": "Angel (PO)"
+    },
+    {
+      "id": "R-S2-004",
+      "description": "Soft-delete (TK-008) interacciona con EF Core Global Query Filters — riesgo de leak de facturas borradas en queries existentes",
+      "category": "Técnico",
+      "probability": "M",
+      "impact": "A",
+      "exposure": "A",
+      "status": "Abierto",
+      "action": "ADR obligatorio sobre Global Query Filter strategy en Step 3 · QA define caso específico de verificación en Step 6 · revisar TODOS los queries existentes",
+      "owner": "Angel (Tech Lead)"
+    },
+    {
+      "id": "R-S2-005",
+      "description": "FEAT evolutivo nuevo (post-refinamiento) solicitado mid-sprint puede romper Sprint Goal si no se gestiona vía change-scope",
+      "category": "Negocio",
+      "probability": "M",
+      "impact": "M",
+      "exposure": "M",
+      "status": "Abierto",
+      "action": "Aplicar protocolo change-scope scrum-master · cualquier inclusión requiere aprobación PM + salida de item equivalente SP",
+      "owner": "Angel (PM)"
+    }
+  ],
+  "exit_criteria": [
+    "FF-23: IntegrationTestBase + 3 ITs (ContextLoads/DatabaseSchema/Auth) verdes en CI con Testcontainers",
+    "FF-24: POST /facturas/{id}/pagar transiciona EMITIDA → PAGADA · rechaza otras transiciones · audit trail registrado",
+    "FF-25: POST /facturas/{id}/anular transiciona EMITIDA → ANULADA · rechaza otras transiciones · audit trail registrado",
+    "FF-26: Soft-delete activo con IsDeleted + DeletedAt · Global Query Filter excluye borradas · endpoint restore para admin · test verifica no-leak en queries existentes",
+    "FF-27: Cobertura unitaria ≥ 45% (baseline S1 ~20%) · FacturasService y ClientesService cubiertos · reporte coverlet en CI",
+    "FF-28: Plantillas PPQA + VAL + DAR publicadas en Confluence · procedimientos descritos · PA scores actualizados: PPQA 0→1, VAL 0→1, DAR 0→1",
+    "FF-29 (si entra): Código PDF integrado + test smoke · si no entra, diferido formal a S3",
+    "Semáforo global de calidad: AMBER · sin regresión de seguridad (0 CVEs críticos, 0 secrets)",
+    "Velocidad real entre 20-26 SP (banda ±15% sobre committed 23)"
+  ],
+  "jira_issues_expected": {
+    "FF-23": "DEBT-TK-015",
+    "FF-24": "DEBT-TK-011",
+    "FF-25": "DEBT-TK-012",
+    "FF-26": "DEBT-TK-008",
+    "FF-27": "DEBT-TK-006-S2",
+    "FF-28": "GOV-S2-L3-PREP",
+    "FF-29": "DEBT-TK-014 (CONDICIONAL)"
+  },
+  "jira_epics_expected": [
+    {
+      "key_expected": "FF-4-TESTS",
+      "name": "Testing Infrastructure",
+      "issues": [
+        "FF-23",
+        "FF-27"
+      ]
+    },
+    {
+      "key_expected": "FF-5-FACTURACION",
+      "name": "Ciclo de vida factura",
+      "issues": [
+        "FF-24",
+        "FF-25",
+        "FF-29"
+      ]
+    },
+    {
+      "key_expected": "FF-6-COMPLIANCE",
+      "name": "AEAT/GDPR compliance",
+      "issues": [
+        "FF-26"
+      ]
+    },
+    {
+      "key_expected": "FF-3-GOVERNANCE",
+      "name": "Gobernanza SOFIA & CMMI",
+      "issues": [
+        "FF-28"
+      ]
+    }
+  ],
+  "cmmi_focus_s2": {
+    "pa_active_pre_sprint": [
+      "PP=1",
+      "RSKM=1",
+      "VER=1",
+      "CM=1",
+      "REQM=1"
+    ],
+    "pa_scores_target_post_sprint": {
+      "PP": 1,
+      "PMC": 1,
+      "RSKM": 1,
+      "VER": 1,
+      "VAL": 1,
+      "CM": 1,
+      "PPQA": 1,
+      "REQM": 1,
+      "DAR": 1
+    },
+    "rationale": "S2 lleva todas las PA a ≥1 (L2 consolidado) · S3 las sube a ≥2 para certificar L3"
+  },
+  "guardrails_activos_s2": [
+    "GR-CORE-030: branching model feature/FEAT-XXX-sprint02",
+    "GR-CORE-025: sin DISCREPANCYs abiertas antes de Gate G-3",
+    "LA-025-02: gen-fa-document.py BLOQUEANTE en Gate G-2b",
+    "LA-CORE-043: fidelidad prototipo BLOQUEANTE en G-4 (N/A backend-only, pero documentar si aparece UI)",
+    "LA-CORE-051: current_step + gate_pending escritura atómica en cada gate",
+    "LA-CORE-046: Step 9 Workflow Manager sincronización Jira con JQL completo",
+    "LA-CORE-047: gen-global-dashboard.js tras cada gate"
+  ],
+  "dependencies": {
+    "external": [
+      "Miguel Fernández (TI RetailCorp) para R-S2-001/DEBT-TK-014"
+    ],
+    "internal": [
+      "FF-25 soft-depende de FF-24 (máquina estados compartida)",
+      "FF-26 depende de FF-23 para tener IT de verificación no-leak",
+      "FF-27 depende de código estable post-FF-24/25"
+    ]
+  },
+  "artifacts": [],
+  "sprint_closed": false,
+  "sprint_closed_at": null
+}

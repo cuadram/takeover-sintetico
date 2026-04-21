@@ -3,7 +3,7 @@
   "client": "RetailCorp S.L. (Laboratorio Sintético SOFIA)",
   "pipeline_type": "takeover",
   "pipeline_mode": "evolutivo",
-  "sofia_version": "2.6.25",
+  "sofia_version": "2.6.65",
   "sofia_repo": "/Users/cuadram/Library/CloudStorage/OneDrive-Personal/WIP/TakeOverSintetico",
   "target_repo": "/Users/cuadram/Library/CloudStorage/OneDrive-Personal/WIP/TakeOverSintetico/repo-cliente",
   "current_sprint": 2,
@@ -275,7 +275,9 @@
       "implemented_in": "step-4",
       "implemented_at": "2026-04-10T14:00:00Z",
       "resolution": "EF Core actualizado a 8.x en FacturaFlow.Api.csproj + .NET 8 upgrade",
-      "verified_at": "2026-04-10T14:45:00Z"
+      "verified_at": "2026-04-10T14:45:00Z",
+      "registered_at": "2026-04-11T00:00:00Z",
+      "registered_by": "product-owner"
     },
     {
       "id": "DEBT-TK-002",
@@ -290,7 +292,9 @@
       "implemented_in": "step-4",
       "implemented_at": "2026-04-10T14:00:00Z",
       "resolution": "JwtBearer actualizado a 8.x, coordinado con RT-003",
-      "verified_at": "2026-04-10T14:45:00Z"
+      "verified_at": "2026-04-10T14:45:00Z",
+      "registered_at": "2026-04-11T00:00:00Z",
+      "registered_by": "product-owner"
     },
     {
       "id": "DEBT-TK-003",
@@ -304,7 +308,9 @@
       "implemented_in": "step-4",
       "implemented_at": "2026-04-10T14:00:00Z",
       "resolution": "appsettings.json limpio; secret desde JWTAUTH__SECRET; ValidateOnStart()",
-      "verified_at": "2026-04-10T14:45:00Z"
+      "verified_at": "2026-04-10T14:45:00Z",
+      "registered_at": "2026-04-11T00:00:00Z",
+      "registered_by": "product-owner"
     },
     {
       "id": "DEBT-TK-004",
@@ -318,7 +324,9 @@
       "implemented_in": "step-4",
       "implemented_at": "2026-04-10T14:00:00Z",
       "resolution": "ConnectionString vacía en appsettings.json; desde CONNECTIONSTRINGS__DEFAULTCONNECTION",
-      "verified_at": "2026-04-10T14:45:00Z"
+      "verified_at": "2026-04-10T14:45:00Z",
+      "registered_at": "2026-04-11T00:00:00Z",
+      "registered_by": "product-owner"
     },
     {
       "id": "DEBT-TK-005",
@@ -332,7 +340,9 @@
       "implemented_in": "step-4",
       "implemented_at": "2026-04-10T14:00:00Z",
       "resolution": "BCrypt.Net-Next 4.x; migración AddPasswordHash; script MigratePasswordsToBcrypt.cs; Password → nullable deprecated",
-      "verified_at": "2026-04-10T14:45:00Z"
+      "verified_at": "2026-04-10T14:45:00Z",
+      "registered_at": "2026-04-11T00:00:00Z",
+      "registered_by": "product-owner"
     },
     {
       "id": "DEBT-TK-006",
@@ -343,7 +353,10 @@
       "estimated_sp": 8,
       "mandatory": true,
       "status": "OPEN",
-      "note": "Mejora parcial en Step-4: 2→8 tests (+6 AuthTests). Target 80% en Sprint 3."
+      "note": "Mejora parcial en Step-4: 2→8 tests (+6 AuthTests). Target 80% en Sprint 3.",
+      "desc": "Cobertura tests: elevar cobertura global del codigo. S2 target 20%->45% (FF-27, 5 SP). S3 target 45%->80%. Parte del camino hacia CMMI L3 en PA VER.",
+      "registered_at": "2026-04-11T00:00:00Z",
+      "registered_by": "product-owner"
     },
     {
       "id": "DEBT-TK-007",
@@ -357,7 +370,9 @@
       "implemented_in": "step-4",
       "implemented_at": "2026-04-10T14:00:00Z",
       "resolution": ".github/workflows/ci.yml — build + test en .NET 8, push a main/develop",
-      "verified_at": "2026-04-10T14:45:00Z"
+      "verified_at": "2026-04-10T14:45:00Z",
+      "registered_at": "2026-04-11T00:00:00Z",
+      "registered_by": "product-owner"
     },
     {
       "id": "DEBT-TK-008",
@@ -367,7 +382,10 @@
       "sprint_target": "S1",
       "estimated_sp": 3,
       "mandatory": false,
-      "status": "OPEN"
+      "status": "OPEN",
+      "desc": "Soft-delete de facturas cumpliendo AEAT/GDPR: eliminacion logica con audit trail. EF Core Global Query Filter. Endpoint restore admin. Test no-leak en queries existentes. (FF-26 S2, 3 SP).",
+      "registered_at": "2026-04-11T00:00:00Z",
+      "registered_by": "product-owner"
     },
     {
       "id": "DEBT-TK-009",
@@ -380,7 +398,9 @@
       "status": "CLOSED",
       "implemented_in": "step-4",
       "implemented_at": "2026-04-10T14:00:00Z",
-      "resolution": "Eliminado del .csproj como efecto de RT-003 — System.Text.Json nativo .NET 8"
+      "resolution": "Eliminado del .csproj como efecto de RT-003 — System.Text.Json nativo .NET 8",
+      "registered_at": "2026-04-11T00:00:00Z",
+      "registered_by": "product-owner"
     },
     {
       "id": "DEBT-TK-010",
@@ -390,7 +410,10 @@
       "sprint_target": "S3-S4",
       "estimated_sp": 8,
       "mandatory": false,
-      "status": "OPEN"
+      "status": "OPEN",
+      "desc": "Repository Pattern: encapsular EF Core DbContext detras de repositorios para mejorar testabilidad y separacion de capas. Diferido a S3-S4, 8 SP.",
+      "registered_at": "2026-04-11T00:00:00Z",
+      "registered_by": "product-owner"
     },
     {
       "id": "DEBT-TK-011",
@@ -400,7 +423,10 @@
       "sprint_target": "S1",
       "estimated_sp": 3,
       "mandatory": false,
-      "status": "OPEN"
+      "status": "OPEN",
+      "desc": "Endpoint POST /facturas/{id}/pagar: transicion maquina estados EMITIDA->PAGADA con validacion y audit trail. (FF-24 S2, 3 SP).",
+      "registered_at": "2026-04-11T00:00:00Z",
+      "registered_by": "product-owner"
     },
     {
       "id": "DEBT-TK-012",
@@ -410,7 +436,10 @@
       "sprint_target": "S1",
       "estimated_sp": 2,
       "mandatory": false,
-      "status": "OPEN"
+      "status": "OPEN",
+      "desc": "Endpoint POST /facturas/{id}/anular: transicion maquina estados EMITIDA->ANULADA con validacion y audit trail. Comparte maquina de estados con /pagar. (FF-25 S2, 2 SP).",
+      "registered_at": "2026-04-11T00:00:00Z",
+      "registered_by": "product-owner"
     },
     {
       "id": "DEBT-TK-013",
@@ -420,7 +449,10 @@
       "sprint_target": "S3",
       "estimated_sp": 8,
       "mandatory": false,
-      "status": "OPEN"
+      "status": "OPEN",
+      "desc": "Informes REST: endpoints de reporting (facturacion por periodo, resumen por cliente, etc). Diferido a S3, 8 SP.",
+      "registered_at": "2026-04-11T00:00:00Z",
+      "registered_by": "product-owner"
     },
     {
       "id": "DEBT-TK-014",
@@ -430,7 +462,10 @@
       "sprint_target": "S1-URGENTE",
       "estimated_sp": 3,
       "mandatory": false,
-      "status": "OPEN"
+      "status": "OPEN",
+      "desc": "Recuperar PDF export de Miguel Fernandez (dev original). Codigo offline pendiente de entrega. Contingente S2: entra si codigo llega antes 2026-04-23 18:00 UTC. Fallback: defer a S3. (FF-29, 3 SP).",
+      "registered_at": "2026-04-11T00:00:00Z",
+      "registered_by": "product-owner"
     },
     {
       "id": "DEBT-TK-015",
@@ -442,7 +477,10 @@
       "mandatory": true,
       "status": "OPEN",
       "generated_by": "qa-tester Step-6",
-      "generated_at": "2026-04-10T14:45:00Z"
+      "generated_at": "2026-04-10T14:45:00Z",
+      "desc": "Integration Tests con Testcontainers sobre SQL Server: fundacion de la suite IT (Nivel 5 qa-tester). Bloquea validacion E2E y es prerequisito para CMMI L3 en PA VAL. MANDATORY S2. (FF-23, 5 SP HIGH).",
+      "registered_at": "2026-04-11T00:00:00Z",
+      "registered_by": "product-owner"
     }
   ],
   "gate_history": [
@@ -542,14 +580,6 @@
       "note": "DevOps aprobado | Dockerfile multi-stage + Trivy scan + docker-compose.yml + RUNBOOK + RELEASE-NOTES | INC-G7-001+002 corregidos"
     },
     {
-      "gate": "G-7",
-      "step": "7",
-      "approved_by": "Angel (DevOps Lead)",
-      "approved_at": "2026-04-10T15:15:00Z",
-      "sprint": 1,
-      "note": "DevOps aprobado | Dockerfile + CD pipeline + docker-compose.yml + RUNBOOK + RELEASE-NOTES | INC-G7-001+002 corregidos"
-    },
-    {
       "gate": "G-8",
       "step": "8",
       "approved_by": "Angel (PM)",
@@ -569,7 +599,11 @@
       "closed_at": "2026-04-07T13:00:00Z",
       "gt5_approved_by": "Angel — representante RetailCorp S.L.",
       "vel_evolutivos": 0,
-      "artefactos": 12
+      "artefactos": 12,
+      "tests": 0,
+      "cov": 0,
+      "defects": 0,
+      "ncs": 0
     },
     {
       "sprint": 1,
@@ -593,7 +627,12 @@
       ],
       "security_semaphore": "AMBER",
       "version_released": "v0.1.0-sprint1",
-      "artefactos": 32
+      "artefactos": 32,
+      "tests": 41,
+      "tests_acum": 41,
+      "cov": 20,
+      "defects": 0,
+      "ncs": 0
     }
   ],
   "security": {
@@ -623,7 +662,18 @@
       "REQM": 1,
       "DAR": 0
     },
-    "l3_sprint_estimated": "S3"
+    "l3_sprint_estimated": "S3",
+    "process_areas": [
+      "PP",
+      "PMC",
+      "RSKM",
+      "VER",
+      "VAL",
+      "CM",
+      "PPQA",
+      "REQM",
+      "DAR"
+    ]
   },
   "lessons_learned": [
     {
@@ -1348,7 +1398,7 @@
     "gr_core_030_satisfied": true,
     "gr_core_030_satisfied_at": "2026-04-11T00:00:00Z"
   },
-  "updated_at": "2026-04-21T05:37:38.862Z",
+  "updated_at": "2026-04-21T18:05:41.617353Z",
   "created_at": "2026-04-06T21:00:00Z",
   "code_review": {
     "sprint": 1,
@@ -1418,5 +1468,45 @@
     "active_branch": "main",
     "branching_model": "feature/FEAT-XXX-sprintYY",
     "guardrail": "GR-CORE-030"
-  }
+  },
+  "metrics": {
+    "total_sp": 24,
+    "sprints_closed": 2,
+    "total_tests": 41,
+    "total_tests_unit": 8,
+    "total_tests_functional": 31,
+    "total_tests_security": 10,
+    "total_tests_integration": 0,
+    "coverage": 20,
+    "coverage_target_s2": 45,
+    "coverage_target_s3": 80,
+    "open_debts_total": 15,
+    "open_debts_open": 8,
+    "open_debts_qa_verified": 6,
+    "open_debts_closed": 1,
+    "cmmi_current_level": "L1-L2",
+    "cmmi_target_level": 3,
+    "cmmi_gap_score": 0.56,
+    "updated_at": "2026-04-21T17:55:04Z",
+    "source": "S1 QA-SPRINT-001.md + SPRINT-002-PLANNING.md - estabilizacion 2026-04-21"
+  },
+  "qa": {
+    "test_cases_total": 49,
+    "test_cases_pass": 44,
+    "test_cases_fail": 0,
+    "test_cases_blocked": 5,
+    "coverage_unit": "85%",
+    "coverage_global": "20%",
+    "coverage_target_s2": "45%",
+    "coverage_target_s3": "80%",
+    "integration_tests": 0,
+    "integration_tests_gap": "DEBT-TK-015 target S2 - Testcontainers mandatory",
+    "defects_open": 0,
+    "defects_production": 0,
+    "semaphore": "AMBER",
+    "semaphore_reason": "IT Gap + 1 CVE-crit + 1 CVE-high pendientes (ver security block)",
+    "updated_at": "2026-04-21T17:55:04Z",
+    "source": "QA-SPRINT-001.md consolidado - estabilizacion 2026-04-21"
+  },
+  "resume_next": "Sprint 2 pipeline iniciado - Step 1 (scrum-master) con Gate G-1 pendiente. Planning S2 completado (23 SP committed, DEBT-TK-015 mandatory). Siguiente accion: aprobacion PO del planning + arranque Step 2 (fa-agent). Deudas OPEN clave: DEBT-TK-015 (IT Testcontainers, S2 mandatory), DEBT-TK-006 (cobertura S2 45%), DEBT-TK-011/012/008/014 features S2."
 }
