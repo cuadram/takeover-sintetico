@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using FacturaFlow.Models;
 using FacturaFlow.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace FacturaFlow.Controllers
 {
