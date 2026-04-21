@@ -8,12 +8,12 @@
   "target_repo": "/Users/cuadram/Library/CloudStorage/OneDrive-Personal/WIP/TakeOverSintetico/repo-cliente",
   "current_sprint": 2,
   "sprint_closed": true,
-  "status": "sprint_closed",
-  "pipeline_step": "sprint-1-closed",
-  "pipeline_step_name": "sprint-closure",
-  "last_skill": "documentation-agent",
-  "last_skill_output_path": "docs/deliverables/sprint-1-STAB-S1/",
-  "gate_pending": null,
+  "status": "gate_pending",
+  "pipeline_step": "1",
+  "pipeline_step_name": "scrum-master",
+  "last_skill": "scrum-master",
+  "last_skill_output_path": "docs/backlog/",
+  "gate_pending": "G-1",
   "completed_steps": [
     "T-0",
     "T-1",
@@ -148,15 +148,25 @@
   "fa_agent": {
     "active": true,
     "last_gate": "T-3",
-    "last_updated": "2026-04-07T10:30:00Z",
+    "last_updated": "2026-04-16T12:59:38.493Z",
     "index_path": "docs/functional-analysis/fa-index.json",
     "functionalities": 14,
     "business_rules": 13,
-    "sprints_covered": "S0-takeover",
-    "doc_version": "0.1",
+    "sprints_covered": "S0-takeover + S1-stabilization",
+    "doc_version": "0.2",
     "takeover_mode": true,
     "discrepancies_open": 0,
-    "gr_core_025_satisfied": true
+    "gr_core_025_satisfied": true,
+    "doc_path": "docs/functional-analysis/FA-factura-flow-RetailCorp.docx",
+    "doc_size_kb": 37.7,
+    "docx_size_kb": 37.7,
+    "docx_verified": true,
+    "generator": "python-docx",
+    "last_sprint_consolidated": 1,
+    "last_feat": "TAKEOVER-S0",
+    "la_applied": "LA-025-02 LA-025-02",
+    "skill_version": "2.8",
+    "skill_updated_at": "2026-04-16T13:12:40.778Z"
   },
   "artifacts": {
     "3": [
@@ -240,6 +250,15 @@
       "docs/takeover/BASELINE-DOCUMENT-v1.0.md",
       "docs/sprints/SPRINT-000-data.json",
       "docs/takeover/BASELINE-DOCUMENT-v1.0.docx"
+    ],
+    "2b_s1": [
+      "fa-index.json corregido — feat:TAKEOVER-S0 en 14 func — last_sprint:1",
+      "FA-factura-flow-RetailCorp.docx v0.2 — 37.7KB — docs/functional-analysis/ — inicialización FA gobernado (LA-025-02)",
+      "Cubre: S0-Takeover (14 func · 13 BRs) + S1-Estabilización (0 func evolutivas · 7 DEBTs cerrados)"
+    ],
+    "1_s2": [
+      "docs/sprints/SPRINT-002-data.json",
+      "docs/backlog/SPRINT-002-PLANNING.md"
     ]
   },
   "open_debts": [
@@ -978,9 +997,358 @@
       "registered_at": "2026-04-11T14:19:28.899Z",
       "sprint": 0,
       "title": "Branching model SOFIA no aplicado desde inicio — deuda git acumulada y saneada"
+    },
+    {
+      "id": "LA-CORE-034",
+      "type": "governance",
+      "description": "CONTEXT-ISOLATION enforcement: en sesion SOFIA-CORE Continuar=framework; NUNCA leer session.json proyectos; contexto ambiguo=PREGUNTAR (refuerza GR-CORE-026)",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.37",
+      "imported_at": "2026-04-12T17:47:31.944Z"
+    },
+    {
+      "id": "LA-CORE-037",
+      "type": "dashboard",
+      "description": "datos del dashboard SIEMPRE desde session.json en disco de cada proyecto registrado; nunca desde memoria o conversación anterior",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.37",
+      "imported_at": "2026-04-12T17:47:31.944Z"
+    },
+    {
+      "id": "LA-CORE-038",
+      "type": "testing/configuration",
+      "description": "Audit @Value sin default obligatorio antes de crear perfil IT; grep exhaustivo previo a primera ejecucion",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.40",
+      "imported_at": "2026-04-16T05:16:48.143Z"
+    },
+    {
+      "id": "LA-CORE-039",
+      "type": "testing/design",
+      "description": "Fixtures idempotentes ON CONFLICT DO NOTHING con UUIDs fijos para ITs con FK constraints; patron BizumIntegrationTestBase",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.40",
+      "imported_at": "2026-04-16T05:16:48.143Z"
+    },
+    {
+      "id": "LA-CORE-040",
+      "type": "testing/jpa",
+      "description": "Bulk JPQL UPDATE bypassa Hibernate first-level cache; em.flush()+em.clear() obligatorio antes de findById() en tests @Transactional",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.40",
+      "imported_at": "2026-04-16T05:16:48.143Z"
+    },
+    {
+      "id": "LA-CORE-041",
+      "type": "process/frontend",
+      "description": "Developer Agent debe leer prototipo HTML pantalla a pantalla ANTES de escribir template Angular; verificación previa, no reactiva",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.40",
+      "imported_at": "2026-04-16T05:16:48.143Z"
+    },
+    {
+      "id": "LA-CORE-042",
+      "type": "process/frontend",
+      "description": "Auditar model.ts + service.ts + component.ts antes de escribir template Angular; solo referenciar lo que existe en el .ts",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.40",
+      "imported_at": "2026-04-16T05:16:48.143Z"
+    },
+    {
+      "id": "LA-CORE-043",
+      "type": "process/governance",
+      "description": "LA-023-02 fidelidad prototipo aplica en G-4 como checklist BLOQUEANTE de entrada, no como corrección reactiva tras despliegue",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.40",
+      "imported_at": "2026-04-16T05:16:48.143Z"
+    },
+    {
+      "id": "LA-CORE-044",
+      "type": "process/devops",
+      "description": "DevOps Agent Step 7 debe publicar Runbook MD en docs/runbooks/ como entrega BLOQUEANTE en G-7",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.40",
+      "imported_at": "2026-04-16T05:16:48.143Z"
+    },
+    {
+      "id": "LA-CORE-045",
+      "type": "process/documentation",
+      "description": "Documentation Agent Step 8 debe sincronizar MD fuente a rutas canonicas docs/releases/ y docs/runbooks/; audit CMMI L3 obligatorio antes de declarar step completo",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.40",
+      "imported_at": "2026-04-16T05:16:48.143Z"
+    },
+    {
+      "id": "LA-CORE-046",
+      "type": "process/governance",
+      "description": "Step 9 Workflow Manager: sincronizacion Jira con JQL completo del sprint, nunca rango fijo de keys; checklist G-9 bloqueante: 0 issues fuera de Finalizada",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.41",
+      "imported_at": "2026-04-16T12:48:20.096Z"
+    },
+    {
+      "id": "LA-CORE-047",
+      "type": "process/dashboard",
+      "description": "Orchestrator invoca gen-global-dashboard.js tras CADA gate como parte atomica del protocolo de aprobacion; GR-011 bloqueante verificado en guardrail-pre-gate.js; sin excepcion por velocidad del pipeline",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.42",
+      "imported_at": "2026-04-16T12:48:20.096Z"
+    },
+    {
+      "id": "LA-CORE-048",
+      "type": "process/governance",
+      "description": "Gate no persistido atomicamente + validate-fa-index CHECK 8 usaba idx.last_feat en lugar de session.current_feature + FA-Agent omitia campo feat en funcionalidades nuevas",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "origin": "LA-025-01 BankPortal Sprint 25",
+      "sofia_core_version": "2.6.43",
+      "imported_at": "2026-04-16T12:48:20.096Z"
+    },
+    {
+      "id": "LA-025-02",
+      "sprint": 25,
+      "type": "process/fa-agent",
+      "scope": "SOFIA-CORE",
+      "description": "Step 2b debe invocar gen-fa-document.py para actualizar el FA Word consolidado además de actualizar fa-index.json y ejecutar validate-fa-index. El .docx es el entregable formal del FA-Agent en Gate 2b. Detectado en 3 proyectos: BankPortal S25 (solo draft .md, sin docx), ExperisTracker (docx actualizado en 8b no en 2b), TakeOverSintetico (FA global inexistente, Sprint 1 sin consolidar).",
+      "correction": "REGLA PERMANENTE: Step 2b checklist obligatorio: (1) actualizar fa-index.json con funcionalidades+BRs de la feature activa con campo feat, (2) validate-fa-index PASS 8/8, (3) invocar gen-fa-document.py → .docx actualizado, (4) registrar los 3 en artifacts[2b_sNN]. El .docx es BLOQUEANTE para Gate G-2b — sin él el gate no se aprueba.",
+      "registered_at": "2026-04-16T13:00:02.547Z",
+      "approved_by": "product-owner",
+      "approved_at": "2026-04-16T13:00:02.549Z",
+      "fixes_applied": [
+        "BankPortal: gen-fa-document.py invocado → FA v0.7 81.6KB FEAT-023 incorporado",
+        "ExperisTracker: gen-fa-document.py invocado → FA v2.11 53.4KB FEAT-003 + FA-FEAT-003-Sprint3.docx individual",
+        "TakeOverSintetico: FA global inicializado → FA-factura-flow-RetailCorp.docx v0.2 37.7KB S0+S1"
+      ]
+    },
+    {
+      "id": "LA-CORE-049",
+      "type": "process/fa-agent",
+      "description": "Step 2b gen-fa-document.py OBLIGATORIO actualizacion FA Word consolidado cada sprint; G-2b bloqueante sin docx",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.45",
+      "imported_at": "2026-04-16T14:45:33.116Z"
+    },
+    {
+      "id": "LA-CORE-050",
+      "type": "ux/process",
+      "description": "PASO 0 herencia prototipo sprint-a-sprint obligatoria; cp archivo anterior + verificacion token portal real bloqueante G-2c",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.45",
+      "imported_at": "2026-04-16T14:45:33.116Z"
+    },
+    {
+      "id": "LA-CORE-051",
+      "type": "process/governance",
+      "description": "current_step y pipeline_step escritura atomica obligatoria en cada gate; gate_pending solo valores canonicos GATE_ROLES — valores inventados rompen dashboard",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.47",
+      "imported_at": "2026-04-16T17:58:40.384Z"
+    },
+    {
+      "id": "LA-025-01",
+      "type": "process/governance",
+      "description": "desde bank-portal Sprint 25 — Gate G-2 Sprint 25 aprobado explícitamente por el PO pero no persistido en sessi",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.52",
+      "imported_at": "2026-04-16T18:07:37.196Z"
+    },
+    {
+      "id": "LA-025-03",
+      "type": "ux/process",
+      "description": "desde bank-portal Sprint 25 — UX/UI Designer Agent generó PROTO-FEAT-023-sprint25 desde el scaffold genérico d",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.52",
+      "imported_at": "2026-04-16T18:07:37.196Z"
+    },
+    {
+      "id": "LA-025-04",
+      "type": "process/governance",
+      "description": "desde bank-portal Sprint 25 — current_step en session.json no se actualizaba al avanzar entre steps — quedó en",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.52",
+      "imported_at": "2026-04-16T18:07:37.196Z"
+    },
+    {
+      "id": "LA-CORE-052",
+      "type": "process/governance",
+      "description": "Orchestrator no puede auto-aprobar LAs en session.json — la-promote.js + sofia-contribute.py --accept son BLOQUEANTES antes de approved_by; bypasear GR-CORE-028 deja la-promotion-log.json desactualizado e invisible al PO",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.52",
+      "imported_at": "2026-04-16T18:07:37.196Z"
+    },
+    {
+      "id": "LA-CORE-053",
+      "type": "backend/jdbc",
+      "description": "schema-drift-sql-native: verificar nombres de columna de tablas previas con \\d tabla o Flyway migration antes de escribir queries SQL nativas. GR-SQL-001 en G-4b.",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.52",
+      "imported_at": "2026-04-16T21:24:09.034Z"
+    },
+    {
+      "id": "LA-CORE-054",
+      "type": "backend/jdbc",
+      "description": "instant-timestamptz-binding: JdbcClient no puede bindear Instant directo a TIMESTAMPTZ. Usar Timestamp.from(instant). GR-JDBC-001 en G-4b. Complementa LA-019-13.",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.52",
+      "imported_at": "2026-04-16T21:24:09.034Z"
+    },
+    {
+      "id": "LA-CORE-055",
+      "type": "frontend/angular",
+      "description": "sign-contract-backend: backend devuelve CARGO con signo negativo; frontend aplica Math.abs() en todos los mapeos. Documentar en LLD. Mocks con valores negativos. GR-API-001 en G-4b.",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.52",
+      "imported_at": "2026-04-16T21:24:09.034Z"
+    },
+    {
+      "id": "LA-CORE-056",
+      "type": "frontend/process",
+      "description": "prototype-fidelity-visual-review: 36 bugs por no leer prototipo pantalla a pantalla. Checklist fidelidad BLOQUEANTE en G-4 para cada pantalla. PO hace screenshot comparison antes de G-4b. Refuerza LA-CORE-041/043.",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.52",
+      "imported_at": "2026-04-16T21:24:09.034Z"
+    },
+    {
+      "id": "LA-CORE-057",
+      "type": "frontend/angular",
+      "description": "select-twoway-binding-reset: (change) unidireccional no sincroniza DOM en reset programático. Usar [(ngModel)] + FormsModule en controles con reset. GR-ANGULAR-001 en G-4.",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.52",
+      "imported_at": "2026-04-16T21:24:09.034Z"
+    },
+    {
+      "id": "LA-025-09",
+      "type": "process/tooling",
+      "description": "desde bank-portal Sprint 25 — .sofia/scripts/gen-global-dashboard.js espera session.completed_steps como Array",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.61",
+      "imported_at": "2026-04-21T05:37:38.854Z"
+    },
+    {
+      "id": "LA-025-10",
+      "type": "process/tooling",
+      "description": "desde bank-portal Sprint 25 — Las herramientas MCP Atlassian disponibles (searchJiraIssuesUsingJql, getJiraIss",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.61",
+      "imported_at": "2026-04-21T05:37:38.854Z"
+    },
+    {
+      "id": "LA-025-12",
+      "type": "process/governance/git",
+      "description": "desde bank-portal Sprint 25 — SOFIA ejecutó una sesión de arranque completa (lectura session.json, skill loade",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.61",
+      "imported_at": "2026-04-21T05:37:38.854Z"
+    },
+    {
+      "id": "LA-CORE-058",
+      "type": "infrastructure/governance",
+      "description": "repo-redundancy-via-github-not-onedrive: sistemas críticos SOFIA no pueden depender de OneDrive como única copia redundada. Remote git obligatorio para Tipo S (framework) y Tipo A (flujo git intensivo). OneDrive es sync, no backup transaccional. GR-INFRA-001.",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.61",
+      "imported_at": "2026-04-21T05:37:38.854Z"
+    },
+    {
+      "id": "LA-CORE-059",
+      "type": "process/tooling",
+      "description": "dashboard-completed-steps-schema: gen-global-dashboard.js asume Array en session.completed_steps pero el schema real es {sprint, feature, steps:[]}; normalizar al cargar. Bug cosmético adicional: banner concatena GATE-${step} cuando step ya es G-N (produce GATE-G-8). Refactor + tests de regresión. GR-DASH-002.",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.61",
+      "imported_at": "2026-04-21T05:37:38.854Z"
+    },
+    {
+      "id": "LA-CORE-060",
+      "type": "process/tooling",
+      "description": "mcp-atlassian-sprint-lifecycle-gap: las herramientas MCP Atlassian (searchJiraIssues, transitionJiraIssue) no exponen endpoints para abrir/cerrar sprints. Step 9 Workflow Manager debe registrar acción manual pendiente en Jira UI cuando MCP no cubre sprint lifecycle. GR-ATLASSIAN-001.",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.61",
+      "imported_at": "2026-04-21T05:37:38.854Z"
+    },
+    {
+      "id": "LA-CORE-061",
+      "type": "process/governance/git",
+      "description": "working-tree-git-divergence-undetected: Orchestrator arrancó sesión completa sin detectar 842 ficheros borrados del working tree. Añadir PASO 0 de verificación de integridad: git status --porcelain | grep '^ D' | wc -l; si > 0, bloquear. Verificar existencia de pom.xml/package.json. Registrar hash HEAD en sofia.log al arrancar. GR-GIT-001.",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.6.61",
+      "imported_at": "2026-04-21T05:37:38.854Z"
     }
   ],
-  "updated_at": "2026-04-11T00:00:00Z",
+  "git_repository": {
+    "remote": "https://github.com/cuadram/takeover-sintetico.git",
+    "visibility": "public",
+    "branches": [
+      "main",
+      "develop"
+    ],
+    "branch_protection_main": true,
+    "branch_protection_type": "classic",
+    "gr_core_030_satisfied": true,
+    "gr_core_030_satisfied_at": "2026-04-11T00:00:00Z"
+  },
+  "updated_at": "2026-04-21T05:37:38.862Z",
   "created_at": "2026-04-06T21:00:00Z",
   "code_review": {
     "sprint": 1,
