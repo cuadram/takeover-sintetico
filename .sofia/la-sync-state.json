@@ -1,6 +1,6 @@
 {
-  "last_sync_at": "2026-04-12T17:47:31.944Z",
-  "last_core_version": "2.6.37",
+  "last_sync_at": "2026-04-21T05:37:38.854Z",
+  "last_core_version": "2.6.61",
   "imported_la_ids": [
     "LA-CORE-001",
     "LA-CORE-002",
@@ -37,7 +37,34 @@
     "LA-023-01",
     "LA-CORE-033",
     "LA-CORE-034",
-    "LA-CORE-037"
+    "LA-CORE-037",
+    "LA-CORE-038",
+    "LA-CORE-039",
+    "LA-CORE-040",
+    "LA-CORE-041",
+    "LA-CORE-042",
+    "LA-CORE-043",
+    "LA-CORE-044",
+    "LA-CORE-045",
+    "LA-CORE-049",
+    "LA-CORE-050",
+    "LA-CORE-051",
+    "LA-025-01",
+    "LA-025-03",
+    "LA-025-04",
+    "LA-CORE-052",
+    "LA-CORE-053",
+    "LA-CORE-054",
+    "LA-CORE-055",
+    "LA-CORE-056",
+    "LA-CORE-057",
+    "LA-025-09",
+    "LA-025-10",
+    "LA-025-12",
+    "LA-CORE-058",
+    "LA-CORE-059",
+    "LA-CORE-060",
+    "LA-CORE-061"
   ],
   "skipped_la_ids": [],
   "sync_history": [
@@ -97,6 +124,88 @@
       "new_las": [
         "LA-CORE-034",
         "LA-CORE-037"
+      ],
+      "skills_updated": [],
+      "mode": "delta"
+    },
+    {
+      "synced_at": "2026-04-16T05:16:48.143Z",
+      "core_version": "2.6.40",
+      "new_las": [
+        "LA-CORE-038",
+        "LA-CORE-039",
+        "LA-CORE-040",
+        "LA-CORE-041",
+        "LA-CORE-042",
+        "LA-CORE-043",
+        "LA-CORE-044",
+        "LA-CORE-045"
+      ],
+      "skills_updated": [],
+      "mode": "delta"
+    },
+    {
+      "synced_at": "2026-04-16T14:45:33.116Z",
+      "core_version": "2.6.45",
+      "new_las": [
+        "LA-CORE-049",
+        "LA-CORE-050"
+      ],
+      "skills_updated": [],
+      "mode": "delta"
+    },
+    {
+      "synced_at": "2026-04-16T17:57:34.134Z",
+      "core_version": "2.6.45",
+      "new_las": [],
+      "skills_updated": [],
+      "mode": "delta"
+    },
+    {
+      "synced_at": "2026-04-16T17:58:40.384Z",
+      "core_version": "2.6.47",
+      "new_las": [
+        "LA-CORE-051"
+      ],
+      "skills_updated": [],
+      "mode": "delta"
+    },
+    {
+      "synced_at": "2026-04-16T18:07:37.196Z",
+      "core_version": "2.6.52",
+      "new_las": [
+        "LA-025-01",
+        "LA-025-03",
+        "LA-025-04",
+        "LA-CORE-052"
+      ],
+      "skills_updated": [],
+      "mode": "delta"
+    },
+    {
+      "synced_at": "2026-04-16T21:24:09.035Z",
+      "core_version": "2.6.52",
+      "new_las": [
+        "LA-CORE-053",
+        "LA-CORE-054",
+        "LA-CORE-055",
+        "LA-CORE-056",
+        "LA-CORE-057"
+      ],
+      "skills_updated": [],
+      "mode": "delta"
+    },
+    {
+      "synced_at": "2026-04-21T05:37:38.854Z",
+      "core_version": "2.6.61",
+      "new_las": [
+        "LA-025-09",
+        "LA-025-10",
+        "LA-025-12",
+        "LA-CORE-058",
+        "LA-CORE-059",
+        "LA-CORE-060",
+        "LA-CORE-061"
       ],
       "skills_updated": [],
       "mode": "delta"
