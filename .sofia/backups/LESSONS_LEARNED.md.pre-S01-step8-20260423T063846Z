@@ -1,7 +1,7 @@
 # LESSONS LEARNED — facturaflow
 
-> Generado: 2026-04-23T06:40:04.616Z | Total: 78 LAs
-> LAs proyecto: 1 | LAs SOFIA-CORE integradas: 77
+> Generado: 2026-04-21T05:37:38.864Z | Total: 70 LAs
+> LAs proyecto: 1 | LAs SOFIA-CORE integradas: 69
 
 ## LAs del Proyecto
 
@@ -707,86 +707,6 @@ _SOFIA-CORE v2.6.61 · Importada: 2026-04-21T05:37:38.854Z_
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
 _SOFIA-CORE v2.6.61 · Importada: 2026-04-21T05:37:38.854Z_
-
----
-
-### LA-CORE-062 · process/tooling - session-sprint-history-schema-drift: schema dict vs list en sprint_history incompatible entre proyectos - patron defensivo obligatorio ⭐ CORE
-
-**Descripción:** 
-
-**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
-
-_SOFIA-CORE v2.6.68 · Importada: 2026-04-23T06:40:04.607Z_
-
----
-
-### LA-CORE-063 · process/tooling - session-json-falsy-and-schema-derivation: dos bugs defensivos (sprint=0 falsy + process_areas ausente) en consumidores de session.json - patron hermano de LA-CORE-062 ⭐ CORE
-
-**Descripción:** 
-
-**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
-
-_SOFIA-CORE v2.6.68 · Importada: 2026-04-23T06:40:04.607Z_
-
----
-
-### LA-CORE-064 · qa/devops/process ⭐ CORE
-
-**Descripción:** smoke-test-references-non-existent-endpoint: smoke test aprobado en G-7 con check contra PUT /api/v1/pfm/budgets/{id}/alert (endpoint inexistente en PfmController). 2 defectos hermanos: SM-05 leia id vs accountId, SM-09 no aceptaba 409 en re-ejecucion. Corregido via grep cruzado URL-vs-@RequestMapping obligatorio pre-G-7. GR-SMOKE-001.
-
-**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
-
-_SOFIA-CORE v2.6.68 · Importada: 2026-04-23T06:40:04.607Z_
-
----
-
-### LA-CORE-065 · process/governance/audit ⭐ CORE
-
-**Descripción:** gate-history-mixes-pending-and-approved: gate_history mezcla gates HITL aprobados con marcadores -pending del dashboard. Refactor a gate_history (aprobados) + gate_history_pending (intermedios). Eliminar duplicados por clave gate+sprint+step. GR-AUDIT-001.
-
-**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
-
-_SOFIA-CORE v2.6.68 · Importada: 2026-04-23T06:40:04.607Z_
-
----
-
-### LA-CORE-066 · process/governance/cmmi ⭐ CORE
-
-**Descripción:** cmmi-process-areas-incomplete-declaration: session.cmmi declaraba 9 PAs vs 16 canonicas L3. Schema obligatorio {project:[9], org:[4], engineering:[3], coverage_strategy, coverage_matrix_path}. Crear docs/cmmi/CMMI-COVERAGE-MATRIX.md mantenida en Step 9. GR-CMMI-001 bloquea G-9 si incompleto.
-
-**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
-
-_SOFIA-CORE v2.6.68 · Importada: 2026-04-23T06:40:04.607Z_
-
----
-
-### LA-CORE-067 · tooling/mcp/recovery ⭐ CORE
-
-**Descripción:** mcp-shell-stdio-buffer-limit-large-payloads: MCP shell timeout en payloads >16KB como argumento. Patron: fs.appendFileSync en bloques <=6KB para artefactos >8KB. Helper write-large-artifact.js opcional. GR-MCP-001.
-
-**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
-
-_SOFIA-CORE v2.6.68 · Importada: 2026-04-23T06:40:04.607Z_
-
----
-
-### LA-CORE-068 · frontend/angular - nunca usar [href] nativo para navegacion interna en Angular (causa full page reload + ShellComponent desaparece). Usar router.navigateByUrl() para URLs dinamicas o [routerLink] para estaticas. Seeds de notificaciones deben referenciar SOLO rutas registradas en app-routing.module.ts. Checklist G-4/G-5 bloqueante: grep -r '[href]' src/app/features/ (GR-ANGULAR-HREF-001). ⭐ CORE
-
-**Descripción:** 
-
-**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
-
-_SOFIA-CORE v2.6.68 · Importada: 2026-04-23T06:40:04.607Z_
-
----
-
-### LA-CORE-070 · takeover/process - T-3 FA Reverse Agent debe producir T3-FUNCTIONAL-DESCRIPTION.md + T3-FUNCTIONAL-DESCRIPTION.docx como entregables explicativos del sistema heredado, ademas de los artefactos internos del pipeline (fa-index.json, fa-baseline, etc.). Sin estos entregables, el analisis funcional no queda accesible fuera del pipeline. ⭐ CORE
-
-**Descripción:** 
-
-**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
-
-_SOFIA-CORE v2.6.68 · Importada: 2026-04-23T06:40:04.607Z_
 
 ---
 
