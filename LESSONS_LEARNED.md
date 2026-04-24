@@ -1,7 +1,7 @@
 # LESSONS LEARNED — facturaflow
 
-> Generado: 2026-04-23T06:40:04.616Z | Total: 78 LAs
-> LAs proyecto: 1 | LAs SOFIA-CORE integradas: 77
+> Generado: 2026-04-24T13:03:43.111Z | Total: 81 LAs
+> LAs proyecto: 1 | LAs SOFIA-CORE integradas: 80
 
 ## LAs del Proyecto
 
@@ -787,6 +787,36 @@ _SOFIA-CORE v2.6.68 · Importada: 2026-04-23T06:40:04.607Z_
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
 _SOFIA-CORE v2.6.68 · Importada: 2026-04-23T06:40:04.607Z_
+
+---
+
+### LA-CORE-071 · process/governance ⭐ CORE
+
+**Descripción:** desde SOFIA-CORE Sprint 1 (orig LA-001-09) — En Sprint S01 Mini A Step 9, el Orchestrator ejecuto la secuencia de cierre form
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.7.3 · Importada: 2026-04-24T13:03:43.102Z_
+
+---
+
+### LA-CORE-072 · process/tooling ⭐ CORE
+
+**Descripción:** desde SOFIA-CORE Sprint 1 (orig LA-001-03) — En Sprint S01 Mini A Step 6 Fase 2 (propagacion de LAs reformateadas H3->H2 a lo
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.7.3 · Importada: 2026-04-24T13:03:43.102Z_
+
+---
+
+### LA-CORE-073 · process/atomicity ⭐ CORE
+
+**Descripción:** desde SOFIA-CORE Sprint 1 (orig LA-001-04) — En Sprint S01 Mini A Step 6, tras transicionar las issues SC-13 y SC-14 a estado
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.7.3 · Importada: 2026-04-24T13:03:43.102Z_
 
 ---
 
