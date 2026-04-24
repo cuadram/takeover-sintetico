@@ -86,6 +86,7 @@ TestResults/
 .sofia/snapshots/
 .sofia/sessions/
 .sofia/tmp/
+.sofia/backups/
 *.bak
 *.bak-pre-*
 MANIFEST.json.bak-*
