@@ -1,8 +1,11 @@
 ---
-sofia_version: "2.7"
-updated: "2026-04-28"
-name: qa-tester
+# --- SOFIA tier matrix (SC-41 · LA-CORE-074 Fase 1 · pulled-back B0.8.2 S04) ---
 tier: B
+model: claude-sonnet-4-6
+reasoning_effort: high
+assigned_in: SC-41 (S03 Step 3 sub-paso 3.6 · Fase 1)
+promoted_la: LA-CORE-074
+# --- Escalation rules (LA-CORE-074 + GR-CORE-037 · incorporado desde et 2026-04-28) ---
 recommended_model: sonnet-4.6
 escalation_rules:
   enabled: true
@@ -10,7 +13,15 @@ escalation_rules:
   config_source: "sofia-config.json:qa_tester_escalation"
   decision_field: "session.json:qa_model_decision"
   reference: "LA-CORE-074 + GR-CORE-037"
+name: qa-tester
+sofia_version: "2.7"
+version: "2.8"
+updated: "2026-05-11"
 changelog: |
+  v2.8 (2026-05-11) — Pull-back desde et + frontmatter F2 SOFIA tier matrix.
+    B0.8.2 S04 · D-S04-F3-Q9 firmada · incorpora escalation_rules block
+    (LA-CORE-074 + GR-CORE-037) y body 2249B más rico que estaba en et pero
+    no en CORE. Frontmatter Tier B reaplicado preservando escalation rules.
   v2.7 (2026-04-28) — LA-CORE-074 + GR-CORE-037: tier B (Sonnet 4.6 default)
     con escalado condicional a Opus 4.7 en dominios criticos. La decision la
     toma el orchestrator en step 6 leyendo sofia-config.json:qa_tester_escalation

@@ -1,6 +1,6 @@
 {
-  "last_sync_at": "2026-05-04T16:36:51.912Z",
-  "last_core_version": "2.7.16",
+  "last_sync_at": "2026-05-11T12:37:23.661Z",
+  "last_core_version": "2.7.21",
   "imported_la_ids": [
     "LA-CORE-001",
     "LA-CORE-002",
@@ -88,7 +88,15 @@
     "LA-CORE-090",
     "LA-CORE-093",
     "LA-CORE-079",
-    "LA-CORE-086"
+    "LA-CORE-086",
+    "LA-CORE-094",
+    "LA-CORE-095",
+    "LA-CORE-096",
+    "LA-CORE-097",
+    "LA-CORE-098",
+    "LA-CORE-099",
+    "LA-CORE-100",
+    "LA-CORE-101"
   ],
   "skipped_la_ids": [],
   "sync_history": [
@@ -278,6 +286,22 @@
         "LA-CORE-093",
         "LA-CORE-079",
         "LA-CORE-086"
+      ],
+      "skills_updated": [],
+      "mode": "delta"
+    },
+    {
+      "synced_at": "2026-05-11T12:37:23.661Z",
+      "core_version": "2.7.21",
+      "new_las": [
+        "LA-CORE-094",
+        "LA-CORE-095",
+        "LA-CORE-096",
+        "LA-CORE-097",
+        "LA-CORE-098",
+        "LA-CORE-099",
+        "LA-CORE-100",
+        "LA-CORE-101"
       ],
       "skills_updated": [],
       "mode": "delta"

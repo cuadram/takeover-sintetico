@@ -1,7 +1,7 @@
 # LESSONS LEARNED — facturaflow
 
-> Generado: 2026-05-04T16:36:51.921Z | Total: 94 LAs
-> LAs proyecto: 1 | LAs SOFIA-CORE integradas: 93
+> Generado: 2026-05-11T12:37:23.671Z | Total: 102 LAs
+> LAs proyecto: 1 | LAs SOFIA-CORE integradas: 101
 
 ## LAs del Proyecto
 
@@ -947,6 +947,86 @@ _SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
 _SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
+
+---
+
+### LA-CORE-094 · governance/agent-tier-model/phase-2 ⭐ CORE
+
+**Descripción:** LA-CORE-074 Fase 1 (Tier A · 6 agentes Opus 4.7) cerrada en SC-41 S03 con persistencia material en MANIFEST.agent_model_assignment.tier_a y validador exit=0. Fases 2 (Tier B · Sonnet 4.6 · 20 agentes productivos) y 3 (Tier C · Haiku 4.5 · 4 agentes integradores) quedan pendientes con placeholders explícitos `tier_b: PENDING_FASE_2_S04` y `tier_c: PENDING_FASE_2_S04` reservados en schema. Mientras el gap persista, orchestrator no aplica routing real por agente y se acumula coste excesivo en agentes integradores. H-S03-4 documenta gap material agents_total=24 vs disco=28 vs LA-074=30 que Fase 2 debe reconciliar. Corrección: rellenar placeholders existentes (NO extender schema), asignar 22 agentes restantes en disco según LA-074, reconciliar H-S03-4, validador v1→v2 (28/28 o 30/30), frontmatter YAML por SKILL.md. Aprendizaje: cuando una LA define universo amplio y el sprint solo cubre una fase, materializar fases pendientes con placeholders explícitos en schema convierte deuda implícita en deuda auditable. — Sprint S03 (canonized desde S04-CAND-1 promovido en Step 5 G-5 S03)
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-11T12:37:23.661Z_
+
+---
+
+### LA-CORE-095 · governance/quality-assurance/canonical-promotion ⭐ CORE
+
+**Descripción:** LA-CORE-093 (S02) define que toda LA promovida al corpus canónico SOFIA-CORE debe estar en 3 lugares sincronizados: (a) cuerpo H2 en LESSONS_LEARNED_CORE.md, (b) entry en MANIFEST.la_core_index, (c) contributions/la_core_NNN/contribution.json status ACCEPTED. LA-CORE-074 (S02) fue aceptada como contribution (review.at 2026-04-28T17:11:44Z, Confluence pageId 19922946) cubriendo solo el lugar (c); los lugares (a) y (b) quedaron sin completar (verificación H-S03-5: grep '## LA-CORE-074' LL_CORE → 0 matches; 'LA-CORE-074 in la_core_index' → False). Causa raíz cronológica: LA-CORE-074 aceptada antes de formalizarse LA-CORE-093, sin auditoría retroactiva. Auditoría sesión Step 5 S03 confirma LA-CORE-074 es la única LA-CORE genuina con este gap (otras 10 contributions ACCEPTED son LAs proyecto fuera de scope SOFIA-CORE). Corrección S04: ejecutar sofia-contribute --accept LA-CORE-074, verificar fingerprint LL_CORE cambia, re-validar manifest, commit con cross-reference LA ID. Aprendizaje: toda regla nueva con efecto sobre corpus canónico debe llevar acompañada script o checklist de aplicación retroactiva sobre LAs aceptadas previamente. — Sprint S03 (canonized desde S04-CAND-B/H-S03-5 promovido en Step 5 G-5 S03)
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-11T12:37:23.661Z_
+
+---
+
+### LA-CORE-096 · technical/operational/macos-pipe-buf ⭐ CORE
+
+**Descripción:** Durante SC-39 apply #1 (Step 3 S03 sub-paso 3.3), check post-apply ejecutó subprocess.run(['node','scripts/validate-manifest.js'], capture_output=True, text=True) sobre validator que emite ~79KB JSON. macOS limita PIPE_BUF a 64KB; con capture_output+text=True el contenido se trunca silenciosamente. Reproducción material en sesión Step 5: validator output 79143 bytes vs subprocess.run.stdout 77431 bytes (1712 bytes truncados, ~2.2%). El truncamiento provoca JSONDecodeError silently caught, falso positivo de validator falla, trigger de rollback automático aunque la mutación funcional había sido correcta. Antipatrón activo en producción: scripts/gen-lessons-core.py:286 usa el mismo patrón sobre el mismo validator. Corrección S04: doctrina explícita NO usar subprocess.run capture_output+text=True para outputs grandes; helper scripts/lib/safe_subprocess.py con run_capture_to_file; auditoría grep + migración de checkers afectados; gen-lessons-core.py:286 migrado como dogfooding; test unitario reproduce truncamiento. Aprendizaje: para outputs >64KB de procesos hijos en macOS (y sistemas con PIPE_BUF reducido), redirigir stdout a fichero antes de parsear; el falso positivo no es del proceso hijo sino del checker padre. — Sprint S03 (canonized desde S04-CAND-α promovido en Step 5 G-5 S03)
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-11T12:37:23.661Z_
+
+---
+
+### LA-CORE-097 · process/governance ⭐ CORE
+
+**Descripción:** desde bank-portal Sprint 26 (orig LA-026-04) — MANIFEST.la_core_index acumuló 8 entradas espurias con prefijo de ID local (LA-0
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-11T12:37:23.661Z_
+
+---
+
+### LA-CORE-098 · process/governance/snapshots ⭐ CORE
+
+**Descripción:** desde bank-portal Sprint 26 (orig LA-026-05) — El patron 'snapshot pre-update' establecido por phaseABC se trato como obligacio
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-11T12:37:23.661Z_
+
+---
+
+### LA-CORE-099 · tooling/testcontainers/docker ⭐ CORE
+
+**Descripción:** desde bank-portal Sprint 26 (orig LA-026-08) — Hallazgo lateral durante F.4. Consecuencia mas grave: TODOS los ITs del proyecto
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-11T12:37:23.661Z_
+
+---
+
+### LA-CORE-100 · tooling/spring-boot/config ⭐ CORE
+
+**Descripción:** desde bank-portal Sprint 26 (orig LA-026-07) — El comportamiento Spring Boot YAML profile-specific es no-intuitivo. Documentaci
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-11T12:37:23.661Z_
+
+---
+
+### LA-CORE-101 · process/governance/audit ⭐ CORE
+
+**Descripción:** desde bank-portal Sprint 26 (orig LA-026-06) — Patron de auditoria insuficiente: grep en archivo objetivo del analisis sin segu
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-11T12:37:23.661Z_
 
 ---
 

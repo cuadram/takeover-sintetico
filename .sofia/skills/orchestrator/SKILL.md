@@ -1,9 +1,20 @@
 ---
+# --- SOFIA tier matrix (SC-41 · LA-CORE-074 Fase 1 · pulled-back B0.8.1 S04) ---
+tier: A
+model: claude-opus-4-7
+reasoning_effort: xhigh
+assigned_in: SC-41 (S03 Step 3 sub-paso 3.6 · Fase 1)
+promoted_la: LA-CORE-074
 name: orchestrator
 sofia_version: "2.6"
-version: "2.10"
-updated: "2026-04-28"
+version: "2.11"
+updated: "2026-05-11"
 changelog: |
+  v2.11 (2026-05-11) — Pull-back desde et (v2.10) + frontmatter F2 SOFIA tier matrix.
+    B0.8.1 S04 · D-S04-F3-Q9 firmada · incorpora LA-CORE-074 integration
+    (qa_tester_escalation + qa_model_decision pre-step 6) que estaba en et pero
+    no en CORE. Frontmatter Tier A (claude-opus-4-7 xhigh) reaplicado sobre body
+    v2.10. CORE ahora alineado con clientes adelantados (et + tos).
   v2.10 (2026-04-28) — LA-CORE-074 + GR-CORE-037: pre-step 6 model selection.
     Antes de delegar a qa-tester, lee sofia-config.json:qa_tester_escalation,
     aplica reglas de escalado y persiste qa_model_decision en session.json.
@@ -32,7 +43,7 @@ changelog: |
   v2.1 (2026-03-26) — Dashboard Global como entregable consolidado.
 ---
 
-# Orchestrator — SOFIA Software Factory v2.9
+# Orchestrator — SOFIA Software Factory v2.11
 
 ## Rol
 Coordinar el pipeline completo de desarrollo de software, delegando a los 21
