@@ -1,7 +1,7 @@
 # LESSONS LEARNED — facturaflow
 
-> Generado: 2026-04-24T13:03:43.111Z | Total: 81 LAs
-> LAs proyecto: 1 | LAs SOFIA-CORE integradas: 80
+> Generado: 2026-05-04T16:36:51.921Z | Total: 94 LAs
+> LAs proyecto: 1 | LAs SOFIA-CORE integradas: 93
 
 ## LAs del Proyecto
 
@@ -817,6 +817,136 @@ _SOFIA-CORE v2.7.3 · Importada: 2026-04-24T13:03:43.102Z_
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
 _SOFIA-CORE v2.7.3 · Importada: 2026-04-24T13:03:43.102Z_
+
+---
+
+### LA-CORE-075 · governance / tooling / process-isolation ⭐ CORE
+
+**Descripción:** create-file-tool-no-persiste-en-disco-real-en-sesiones-sofia-core: Durante la verificación independiente del sub-paso 1.6 Step 1 S02 (aud
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
+
+---
+
+### LA-CORE-091 · process/protocol · meta-regla ⭐ CORE
+
+**Descripción:** toda-alteracion-de-LA-debe-usar-flujo-canonico-contributions-JSON: Durante la ejecución de SC-35 (rescate de 3 LAs huérfanas: LA-CORE-001, LA-CORE-0
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
+
+---
+
+### LA-CORE-092 · governance / schema-evolution ⭐ CORE
+
+**Descripción:** gr-core-029-scope-clarification-not-applicable-in-core-sessions: Al arrancar Sprint S02 Mini B-full · Step 1 INIT, se detectó una contradicción oper
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
+
+---
+
+### LA-CORE-076 · step1-patch-session-json-debe-ser-idempotente-frente-a-retries-por-tools-down (governance/tooling/idempotency) - severity medium - 2.7.7 - sprint S02-Mini-B-full ⭐ CORE
+
+**Descripción:** 
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
+
+---
+
+### LA-CORE-077 · claude-agent-sdk-evaluacion-archivada-no-reabrir-sin-cambio-arquitectonico (governance/decision-archive) - severity medium - 2.7.8 - sprint S02-Mini-B-full ⭐ CORE
+
+**Descripción:** 
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
+
+---
+
+### LA-CORE-078 · post-merge-annotations-must-propagate-to-develop-via-pre-merge-commit-or-express (governance/propagation) - severity medium - 2.7.9 - sprint S02-Mini-B-full ⭐ CORE
+
+**Descripción:** 
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
+
+---
+
+### LA-CORE-084 · atlassian-locale-i18n-mapping-must-be-verified-pre-operation (process/protocol/i18n) - severity medium - 2.7.10 - sprint S02-Mini-B-full ⭐ CORE
+
+**Descripción:** 
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
+
+---
+
+### LA-CORE-085 · sprint-close-must-be-atomic-and-clean-residual-state-fields (process/protocol/sprint-close) - severity medium - 2.7.11 - sprint S02-Mini-B-full ⭐ CORE
+
+**Descripción:** 
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
+
+---
+
+### LA-CORE-087 · mcp-atlassian-no-expone-jira-agile-sprint-management (process/protocol+workaround) - severity medium - 2.7.12 - sprint S02-Mini-B-full ⭐ CORE
+
+**Descripción:** 
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
+
+---
+
+### LA-CORE-090 · boot-check-on-demand-antes-de-responder-sobre-estado-de-proyecto (governance/verification-discipline) - severity medium - 2.7.13 - sprint S02-Mini-B-full ⭐ CORE
+
+**Descripción:** 
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
+
+---
+
+### LA-CORE-093 · la-promotion-must-write-three-coordinated-locations-or-detect-empty-body (governance/quality-assurance/process-protocol) - severity medium - 2.7.14 - sprint S02-Mini-B-full ⭐ CORE
+
+**Descripción:** 
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
+
+---
+
+### LA-CORE-079 · process/tooling ⭐ CORE
+
+**Descripción:** regex-headers-markdown-debe-ser-anchor-explicito-con-negative-lookahead: toda regex sobre artefactos markdown que pretenda anclar a un nivel específico de heading DEBE usar negative lookahead (?!#) inmediatamente después de los # del nivel objetivo (severity:low · v2.7.15 · D-S02-Step5-30)
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
+
+---
+
+### LA-CORE-086 · technical/operational ⭐ CORE
+
+**Descripción:** mcp-schema-doc-drift-fallback-to-enum-authoritative: cuando un schema MCP rechaza un valor que la description inline indica como válido, considerarlo drift documentación/schema y aplicar fallback al valor del enum autoritativo (severity:low · v2.7.16 · D-S02-Step5-30)
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
 
 ---
 

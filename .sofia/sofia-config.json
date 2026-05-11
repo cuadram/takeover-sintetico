@@ -36,5 +36,52 @@
     "branching_model": "feature/FEAT-XXX-sprintYY",
     "guardrail": "GR-CORE-030"
   },
-  "updated_at": "2026-04-11T14:29:25.802Z"
+  "updated_at": "2026-04-11T14:29:25.802Z",
+  "qa_tester_escalation": {
+    "_comment": "LA-CORE-074 + GR-CORE-037 — Tier de modelo qa-tester. Sonnet por defecto, Opus en dominios críticos. Aprobado PO 2026-04-28.",
+    "schema_version": "1.0",
+    "enabled": true,
+    "default_model": "sonnet-4.6",
+    "escalated_model": "opus-4.7",
+    "critical_domains": [
+      "auth",
+      "authentication",
+      "authorization",
+      "jwt",
+      "oauth",
+      "sso",
+      "payment",
+      "payments",
+      "bizum",
+      "transfer",
+      "transaction",
+      "security",
+      "encryption",
+      "crypto",
+      "secret",
+      "credential",
+      "multi-tenant",
+      "tenant-isolation",
+      "pii",
+      "gdpr",
+      "compliance",
+      "kyc",
+      "aml",
+      "iban",
+      "sepa"
+    ],
+    "trigger_match_on": [
+      "feat_id",
+      "feat_title",
+      "labels",
+      "components"
+    ],
+    "explicit_label_force_opus": "qa-critical",
+    "explicit_label_force_sonnet": "qa-standard-override",
+    "trace_field": "qa_model_decision",
+    "decision_reason_required": true,
+    "_propagated_at": "2026-04-28T17:43:51.117336Z",
+    "_propagated_from": "SOFIA-CORE/sofia-config-template.json",
+    "_propagated_by": "propagate-qa-escalation.py v1.1 safe-by-default"
+  }
 }
