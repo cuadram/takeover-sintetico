@@ -1,7 +1,7 @@
 # LESSONS LEARNED — facturaflow
 
-> Generado: 2026-05-11T12:37:23.671Z | Total: 102 LAs
-> LAs proyecto: 1 | LAs SOFIA-CORE integradas: 101
+> Generado: 2026-05-12T18:27:45.759Z | Total: 103 LAs
+> LAs proyecto: 1 | LAs SOFIA-CORE integradas: 102
 
 ## LAs del Proyecto
 
@@ -26,7 +26,7 @@ _Registrada: 2026-04-11T14:19:28.899Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.161Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.746Z_
 
 ---
 
@@ -36,7 +36,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.161Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.747Z_
 
 ---
 
@@ -46,7 +46,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.747Z_
 
 ---
 
@@ -56,7 +56,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.747Z_
 
 ---
 
@@ -66,7 +66,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.747Z_
 
 ---
 
@@ -76,7 +76,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.747Z_
 
 ---
 
@@ -86,7 +86,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.747Z_
 
 ---
 
@@ -96,7 +96,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.747Z_
 
 ---
 
@@ -106,7 +106,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.747Z_
 
 ---
 
@@ -116,7 +116,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.747Z_
 
 ---
 
@@ -126,7 +126,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.747Z_
 
 ---
 
@@ -136,7 +136,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.747Z_
 
 ---
 
@@ -146,7 +146,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.747Z_
 
 ---
 
@@ -156,7 +156,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.747Z_
 
 ---
 
@@ -166,7 +166,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.747Z_
 
 ---
 
@@ -176,7 +176,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.747Z_
 
 ---
 
@@ -186,7 +186,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.747Z_
 
 ---
 
@@ -196,7 +196,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.747Z_
 
 ---
 
@@ -206,7 +206,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.747Z_
 
 ---
 
@@ -216,7 +216,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.747Z_
 
 ---
 
@@ -226,7 +226,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.747Z_
 
 ---
 
@@ -236,7 +236,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -246,7 +246,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -256,7 +256,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -266,7 +266,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -276,7 +276,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -286,7 +286,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -296,7 +296,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -306,7 +306,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -316,7 +316,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -326,7 +326,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -336,7 +336,7 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -356,27 +356,27 @@ _SOFIA-CORE v2.6.29 · Importada: 2026-04-07T12:04:57.162Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.31 · Importada: 2026-04-07T12:11:06.796Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
-### LA-CORE-035 · takeover/process ⭐ CORE
+### LA-CORE-035 · governance/git ⭐ CORE
 
-**Descripción:** T-3 FA Reverse Agent no generaba entregables explicativos orientados a equipo/negocio. Solo producia artefactos internos del pipeline.
+**Descripción:** branching model SOFIA no aplicado desde inicio de proyecto -- deuda acumulada en BankPortal (11 ramas huerfanas), ExperisTracker (main directo 3 sprints), TakeOverSintetico (sin git init). REGLA: git init + main+develop + remote en Gate 1 obligatorio. Merge feature→develop por sprint, develop→main por release + tag.
 
-**Corrección:** T-3 debe producir ademas T3-FUNCTIONAL-DESCRIPTION.md + T3-FUNCTIONAL-DESCRIPTION.docx. El .docx se deposita manualmente por el operador tras descarga. Ruta canonica: docs/functional-analysis/
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.7 · Importada: 2026-04-10T02:00:00Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
 ### LA-CORE-036 · infrastructure ⭐ CORE
 
-**Descripción:** Binarios generados en contenedor Claude no pueden escribirse directamente en SOFIA_REPO. Base64 como puente de escritura es antipatron prohibido.
+**Descripción:** Binarios generados en contenedor Claude: flujo canonico = generate → present_files → operador descarga → deposita en SOFIA_REPO. filesystem:write_file solo texto plano. Base64 PROHIBIDO.
 
-**Corrección:** Flujo canonico: generar binario → present_files → operador descarga → operador deposita en SOFIA_REPO. Documentar paso en checklist de cierre de steps que produzcan binarios.
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.7 · Importada: 2026-04-10T02:00:00Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -386,7 +386,7 @@ _SOFIA-CORE v2.7 · Importada: 2026-04-10T02:00:00Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.37 · Importada: 2026-04-12T17:47:31.944Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -396,7 +396,7 @@ _SOFIA-CORE v2.6.37 · Importada: 2026-04-12T17:47:31.944Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.37 · Importada: 2026-04-12T17:47:31.944Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -406,7 +406,7 @@ _SOFIA-CORE v2.6.37 · Importada: 2026-04-12T17:47:31.944Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.40 · Importada: 2026-04-16T05:16:48.143Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -416,7 +416,7 @@ _SOFIA-CORE v2.6.40 · Importada: 2026-04-16T05:16:48.143Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.40 · Importada: 2026-04-16T05:16:48.143Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -426,7 +426,7 @@ _SOFIA-CORE v2.6.40 · Importada: 2026-04-16T05:16:48.143Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.40 · Importada: 2026-04-16T05:16:48.143Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -436,7 +436,7 @@ _SOFIA-CORE v2.6.40 · Importada: 2026-04-16T05:16:48.143Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.40 · Importada: 2026-04-16T05:16:48.143Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -446,7 +446,7 @@ _SOFIA-CORE v2.6.40 · Importada: 2026-04-16T05:16:48.143Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.40 · Importada: 2026-04-16T05:16:48.143Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -456,7 +456,7 @@ _SOFIA-CORE v2.6.40 · Importada: 2026-04-16T05:16:48.143Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.40 · Importada: 2026-04-16T05:16:48.143Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -466,7 +466,7 @@ _SOFIA-CORE v2.6.40 · Importada: 2026-04-16T05:16:48.143Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.40 · Importada: 2026-04-16T05:16:48.143Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -476,7 +476,7 @@ _SOFIA-CORE v2.6.40 · Importada: 2026-04-16T05:16:48.143Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.40 · Importada: 2026-04-16T05:16:48.143Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -486,7 +486,7 @@ _SOFIA-CORE v2.6.40 · Importada: 2026-04-16T05:16:48.143Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.41 · Importada: 2026-04-16T12:48:20.096Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -496,17 +496,17 @@ _SOFIA-CORE v2.6.41 · Importada: 2026-04-16T12:48:20.096Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.42 · Importada: 2026-04-16T12:48:20.096Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
 ### LA-CORE-048 · process/governance ⭐ CORE
 
-**Descripción:** Gate no persistido atomicamente + validate-fa-index CHECK 8 usaba idx.last_feat en lugar de session.current_feature + FA-Agent omitia campo feat en funcionalidades nuevas
+**Descripción:** Gate persistencia atomica session.json + validate-fa-index CHECK 8 usa session.current_feature + FA feat field obligatorio
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.43 · Importada: 2026-04-16T12:48:20.096Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -526,7 +526,7 @@ _SOFIA-CORE v? · Importada: ?_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.45 · Importada: 2026-04-16T14:45:33.116Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -536,7 +536,7 @@ _SOFIA-CORE v2.6.45 · Importada: 2026-04-16T14:45:33.116Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.45 · Importada: 2026-04-16T14:45:33.116Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -546,7 +546,7 @@ _SOFIA-CORE v2.6.45 · Importada: 2026-04-16T14:45:33.116Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.47 · Importada: 2026-04-16T17:58:40.384Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -586,7 +586,7 @@ _SOFIA-CORE v2.6.52 · Importada: 2026-04-16T18:07:37.196Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.52 · Importada: 2026-04-16T18:07:37.196Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -596,7 +596,7 @@ _SOFIA-CORE v2.6.52 · Importada: 2026-04-16T18:07:37.196Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.52 · Importada: 2026-04-16T21:24:09.034Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -606,7 +606,7 @@ _SOFIA-CORE v2.6.52 · Importada: 2026-04-16T21:24:09.034Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.52 · Importada: 2026-04-16T21:24:09.034Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -616,7 +616,7 @@ _SOFIA-CORE v2.6.52 · Importada: 2026-04-16T21:24:09.034Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.52 · Importada: 2026-04-16T21:24:09.034Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -626,7 +626,7 @@ _SOFIA-CORE v2.6.52 · Importada: 2026-04-16T21:24:09.034Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.52 · Importada: 2026-04-16T21:24:09.034Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -636,7 +636,7 @@ _SOFIA-CORE v2.6.52 · Importada: 2026-04-16T21:24:09.034Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.52 · Importada: 2026-04-16T21:24:09.034Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -676,7 +676,7 @@ _SOFIA-CORE v2.6.61 · Importada: 2026-04-21T05:37:38.854Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.61 · Importada: 2026-04-21T05:37:38.854Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -686,7 +686,7 @@ _SOFIA-CORE v2.6.61 · Importada: 2026-04-21T05:37:38.854Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.61 · Importada: 2026-04-21T05:37:38.854Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -696,7 +696,7 @@ _SOFIA-CORE v2.6.61 · Importada: 2026-04-21T05:37:38.854Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.61 · Importada: 2026-04-21T05:37:38.854Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -706,27 +706,27 @@ _SOFIA-CORE v2.6.61 · Importada: 2026-04-21T05:37:38.854Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.61 · Importada: 2026-04-21T05:37:38.854Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
-### LA-CORE-062 · process/tooling - session-sprint-history-schema-drift: schema dict vs list en sprint_history incompatible entre proyectos - patron defensivo obligatorio ⭐ CORE
+### LA-CORE-062 · process/tooling ⭐ CORE
 
-**Descripción:** 
+**Descripción:** El campo `sprint_history` de `.sofia/session.json` presenta dos schemas incompatibles en el portfolio: dict con keys `sprint_N` (BankPortal, ExperisTracker) y list de objetos con campo `sprint` (Ta...
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.68 · Importada: 2026-04-23T06:40:04.607Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
-### LA-CORE-063 · process/tooling - session-json-falsy-and-schema-derivation: dos bugs defensivos (sprint=0 falsy + process_areas ausente) en consumidores de session.json - patron hermano de LA-CORE-062 ⭐ CORE
+### LA-CORE-063 · process/tooling ⭐ CORE
 
-**Descripción:** 
+**Descripción:** Durante la generacion del dashboard FacturaFlow en FASE 3 de estabilizacion se detectaron dos bugs defensivos relacionados con schema drift de `session.json` (patron hermano de LA-CORE-062):
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.68 · Importada: 2026-04-23T06:40:04.607Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -736,7 +736,7 @@ _SOFIA-CORE v2.6.68 · Importada: 2026-04-23T06:40:04.607Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.68 · Importada: 2026-04-23T06:40:04.607Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -746,7 +746,7 @@ _SOFIA-CORE v2.6.68 · Importada: 2026-04-23T06:40:04.607Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.68 · Importada: 2026-04-23T06:40:04.607Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -756,7 +756,7 @@ _SOFIA-CORE v2.6.68 · Importada: 2026-04-23T06:40:04.607Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.68 · Importada: 2026-04-23T06:40:04.607Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -766,27 +766,27 @@ _SOFIA-CORE v2.6.68 · Importada: 2026-04-23T06:40:04.607Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.68 · Importada: 2026-04-23T06:40:04.607Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
-### LA-CORE-068 · frontend/angular - nunca usar [href] nativo para navegacion interna en Angular (causa full page reload + ShellComponent desaparece). Usar router.navigateByUrl() para URLs dinamicas o [routerLink] para estaticas. Seeds de notificaciones deben referenciar SOLO rutas registradas en app-routing.module.ts. Checklist G-4/G-5 bloqueante: grep -r '[href]' src/app/features/ (GR-ANGULAR-HREF-001). ⭐ CORE
+### LA-CORE-068 · frontend/angular ⭐ CORE
 
-**Descripción:** 
+**Descripción:** En componentes Angular, usar `[href]` nativo en enlaces internos causa full page reload: el ShellComponent desaparece y la pantalla queda en blanco sin menu.
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.68 · Importada: 2026-04-23T06:40:04.607Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
-### LA-CORE-070 · takeover/process - T-3 FA Reverse Agent debe producir T3-FUNCTIONAL-DESCRIPTION.md + T3-FUNCTIONAL-DESCRIPTION.docx como entregables explicativos del sistema heredado, ademas de los artefactos internos del pipeline (fa-index.json, fa-baseline, etc.). Sin estos entregables, el analisis funcional no queda accesible fuera del pipeline. ⭐ CORE
+### LA-CORE-070 · takeover/process ⭐ CORE
 
-**Descripción:** 
+**Descripción:** T-3 FA Reverse Agent produce únicamente artefactos internos del pipeline (fa-index.json, T3-FA-DRAFT.md, T3-FA-GAPS.md).
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.6.68 · Importada: 2026-04-23T06:40:04.607Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -796,7 +796,7 @@ _SOFIA-CORE v2.6.68 · Importada: 2026-04-23T06:40:04.607Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.7.3 · Importada: 2026-04-24T13:03:43.102Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -806,7 +806,7 @@ _SOFIA-CORE v2.7.3 · Importada: 2026-04-24T13:03:43.102Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.7.3 · Importada: 2026-04-24T13:03:43.102Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -816,7 +816,7 @@ _SOFIA-CORE v2.7.3 · Importada: 2026-04-24T13:03:43.102Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.7.3 · Importada: 2026-04-24T13:03:43.102Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -826,7 +826,7 @@ _SOFIA-CORE v2.7.3 · Importada: 2026-04-24T13:03:43.102Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -836,7 +836,7 @@ _SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -846,87 +846,87 @@ _SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
-### LA-CORE-076 · step1-patch-session-json-debe-ser-idempotente-frente-a-retries-por-tools-down (governance/tooling/idempotency) - severity medium - 2.7.7 - sprint S02-Mini-B-full ⭐ CORE
+### LA-CORE-076 · governance/tooling/idempotency ⭐ CORE
 
-**Descripción:** 
+**Descripción:** Durante el sub-paso 1.2-bis del Sprint S02 Mini B-full Step 1 (registro de LA candidate LA-CORE-075), el entorno de tools de Claude **cayó mid-PATCH**.
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
-### LA-CORE-077 · claude-agent-sdk-evaluacion-archivada-no-reabrir-sin-cambio-arquitectonico (governance/decision-archive) - severity medium - 2.7.8 - sprint S02-Mini-B-full ⭐ CORE
+### LA-CORE-077 · governance/decision-archive ⭐ CORE
 
-**Descripción:** 
+**Descripción:** D3 firmada en S01 cierre acordó archivar Claude Agent SDK como base operativa de SOFIA-CORE.
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
-### LA-CORE-078 · post-merge-annotations-must-propagate-to-develop-via-pre-merge-commit-or-express (governance/propagation) - severity medium - 2.7.9 - sprint S02-Mini-B-full ⭐ CORE
+### LA-CORE-078 · governance/propagation ⭐ CORE
 
-**Descripción:** 
+**Descripción:** En Sprint S01 Mini A Step 9 (cierre formal G-9), tras ejecutar el merge `feature/sprint-arq-S01-mini-a → develop` (PR #1, merge_commit_sha `8d04bcf`), Claude generó anotaciones de post-merge en la...
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
-### LA-CORE-084 · atlassian-locale-i18n-mapping-must-be-verified-pre-operation (process/protocol/i18n) - severity medium - 2.7.10 - sprint S02-Mini-B-full ⭐ CORE
+### LA-CORE-084 · process/protocol/i18n ⭐ CORE
 
-**Descripción:** 
+**Descripción:** En sesión Step 1 post-G-1 del sprint S02 (2026-04-26), múltiples casos de fricción operativa con Atlassian fueron causados por asumir convenciones inglesas API en un proyecto cuyas etiquetas UI est...
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
-### LA-CORE-085 · sprint-close-must-be-atomic-and-clean-residual-state-fields (process/protocol/sprint-close) - severity medium - 2.7.11 - sprint S02-Mini-B-full ⭐ CORE
+### LA-CORE-085 · process/protocol/sprint-close ⭐ CORE
 
-**Descripción:** 
+**Descripción:** Lectura de `.sofia/session.json` al reanudar Step 2 del sprint S02 en chat fresh (2026-04-26T09:40Z) detectó que el cierre del sprint anterior (S01-mini-b-lite) había dejado **5 campos residuales**...
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
-### LA-CORE-087 · mcp-atlassian-no-expone-jira-agile-sprint-management (process/protocol+workaround) - severity medium - 2.7.12 - sprint S02-Mini-B-full ⭐ CORE
+### LA-CORE-087 · process/protocol+workaround ⭐ CORE
 
-**Descripción:** 
+**Descripción:** Drift estructural conocido del MCP Atlassian para Claude: implementa principalmente la API de Jira Platform (issues) pero **deja fuera la API de Jira Agile** (sprints/boards/epics).
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
-### LA-CORE-090 · boot-check-on-demand-antes-de-responder-sobre-estado-de-proyecto (governance/verification-discipline) - severity medium - 2.7.13 - sprint S02-Mini-B-full ⭐ CORE
+### LA-CORE-090 · governance/verification-discipline ⭐ CORE
 
-**Descripción:** 
+**Descripción:** En sesión Claude del 2026-04-30 (post G-4 sub_bloque_3 cerrado), el PO inicia reflexión meta-protocolo sobre la cantidad de errores recientes detectados al verificar respuestas del agente.
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
-### LA-CORE-093 · la-promotion-must-write-three-coordinated-locations-or-detect-empty-body (governance/quality-assurance/process-protocol) - severity medium - 2.7.14 - sprint S02-Mini-B-full ⭐ CORE
+### LA-CORE-093 · governance/quality-assurance/process-protocol ⭐ CORE
 
-**Descripción:** 
+**Descripción:** Durante la verificación pre-diseño SC-30 sub-paso 2.3 Step 2 S02 (2026-04-26 ~14:00Z), se descubrió un patrón de DEBT silenciosa en LA-CORE-073: el header `## LA-CORE-073` existía en `LESSONS_LEARN...
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -936,7 +936,7 @@ _SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -946,7 +946,7 @@ _SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -956,7 +956,7 @@ _SOFIA-CORE v2.7.16 · Importada: 2026-05-04T16:36:51.912Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.7.21 · Importada: 2026-05-11T12:37:23.661Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -966,7 +966,7 @@ _SOFIA-CORE v2.7.21 · Importada: 2026-05-11T12:37:23.661Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.7.21 · Importada: 2026-05-11T12:37:23.661Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -976,7 +976,7 @@ _SOFIA-CORE v2.7.21 · Importada: 2026-05-11T12:37:23.661Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.7.21 · Importada: 2026-05-11T12:37:23.661Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -986,7 +986,7 @@ _SOFIA-CORE v2.7.21 · Importada: 2026-05-11T12:37:23.661Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.7.21 · Importada: 2026-05-11T12:37:23.661Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -996,7 +996,7 @@ _SOFIA-CORE v2.7.21 · Importada: 2026-05-11T12:37:23.661Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.7.21 · Importada: 2026-05-11T12:37:23.661Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -1006,7 +1006,7 @@ _SOFIA-CORE v2.7.21 · Importada: 2026-05-11T12:37:23.661Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.7.21 · Importada: 2026-05-11T12:37:23.661Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -1016,7 +1016,7 @@ _SOFIA-CORE v2.7.21 · Importada: 2026-05-11T12:37:23.661Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.7.21 · Importada: 2026-05-11T12:37:23.661Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 
@@ -1026,7 +1026,17 @@ _SOFIA-CORE v2.7.21 · Importada: 2026-05-11T12:37:23.661Z_
 
 **Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
 
-_SOFIA-CORE v2.7.21 · Importada: 2026-05-11T12:37:23.661Z_
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
+
+---
+
+### LA-CORE-102 · governance/configuration-management ⭐ CORE
+
+**Descripción:** manifest-scripts-must-stay-bidirectional-with-disk: durante verificación pre-diseño SC-28 sub-paso 2.1 Step 2 S02 (2026-04-26) se detectó drift de 14 scripts en disco no registrados en MANIFEST.scripts (set(disco) - set(MANIFEST)). Severidad medium (no bloquea operación pero debilita evidencia CMMI CM+PPQA+OPF). Cerrado operacionalmente en F4 S05 (D-S05-F4-Q8-manifest-cleanup-prime · MANIFEST v2.8.1 · scripts_drift=0). Promovida en G-7 S05 como recordatorio doctrinal: MANIFEST.scripts debe permanecer bidireccional con disco · candidato extensión validator (reverse check disco→manifest) y pre-commit hook futuro que rechace scripts/*.{js,py} no listados en MANIFEST.scripts.
+
+**Corrección:** Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.
+
+_SOFIA-CORE v2.7.21 · Importada: 2026-05-12T18:27:45.748Z_
 
 ---
 

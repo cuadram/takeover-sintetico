@@ -683,8 +683,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.161Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.746Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-002",
@@ -693,8 +694,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.747Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-003",
@@ -703,8 +705,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.747Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-004",
@@ -713,8 +716,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.747Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-005",
@@ -723,8 +727,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.747Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-006",
@@ -733,8 +738,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.747Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-007",
@@ -743,8 +749,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.747Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-008",
@@ -753,8 +760,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.747Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-009",
@@ -763,8 +771,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.747Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-010",
@@ -773,8 +782,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.747Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-011",
@@ -783,8 +793,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.747Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-012",
@@ -793,8 +804,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.747Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-013",
@@ -803,8 +815,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.747Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-014",
@@ -813,8 +826,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.747Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-015",
@@ -823,8 +837,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.747Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-016",
@@ -833,8 +848,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.747Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-017",
@@ -843,8 +859,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.747Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-018",
@@ -853,8 +870,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.747Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-019",
@@ -863,8 +881,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.747Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-020",
@@ -873,8 +892,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.747Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-021",
@@ -883,8 +903,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.747Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-022",
@@ -893,8 +914,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-023",
@@ -903,8 +925,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-024",
@@ -913,8 +936,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-025",
@@ -923,8 +947,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-026",
@@ -933,8 +958,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-027",
@@ -943,8 +969,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-028",
@@ -953,8 +980,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-029",
@@ -963,8 +991,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-030",
@@ -973,8 +1002,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-031",
@@ -983,8 +1013,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-032",
@@ -993,8 +1024,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.29",
-      "imported_at": "2026-04-07T12:04:57.162Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-023-01",
@@ -1013,28 +1045,31 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.31",
-      "imported_at": "2026-04-07T12:11:06.796Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-035",
-      "type": "takeover/process",
-      "description": "T-3 FA Reverse Agent no generaba entregables explicativos orientados a equipo/negocio. Solo producia artefactos internos del pipeline.",
-      "correction": "T-3 debe producir ademas T3-FUNCTIONAL-DESCRIPTION.md + T3-FUNCTIONAL-DESCRIPTION.docx. El .docx se deposita manualmente por el operador tras descarga. Ruta canonica: docs/functional-analysis/",
+      "type": "governance/git",
+      "description": "branching model SOFIA no aplicado desde inicio de proyecto -- deuda acumulada en BankPortal (11 ramas huerfanas), ExperisTracker (main directo 3 sprints), TakeOverSintetico (sin git init). REGLA: git init + main+develop + remote en Gate 1 obligatorio. Merge feature→develop por sprint, develop→main por release + tag.",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.7",
-      "imported_at": "2026-04-10T02:00:00Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-036",
       "type": "infrastructure",
-      "description": "Binarios generados en contenedor Claude no pueden escribirse directamente en SOFIA_REPO. Base64 como puente de escritura es antipatron prohibido.",
-      "correction": "Flujo canonico: generar binario → present_files → operador descarga → operador deposita en SOFIA_REPO. Documentar paso en checklist de cierre de steps que produzcan binarios.",
+      "description": "Binarios generados en contenedor Claude: flujo canonico = generate → present_files → operador descarga → deposita en SOFIA_REPO. filesystem:write_file solo texto plano. Base64 PROHIBIDO.",
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.7",
-      "imported_at": "2026-04-10T02:00:00Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-TO-001-01",
@@ -1055,8 +1090,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.37",
-      "imported_at": "2026-04-12T17:47:31.944Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-037",
@@ -1065,8 +1101,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.37",
-      "imported_at": "2026-04-12T17:47:31.944Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-038",
@@ -1075,8 +1112,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.40",
-      "imported_at": "2026-04-16T05:16:48.143Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-039",
@@ -1085,8 +1123,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.40",
-      "imported_at": "2026-04-16T05:16:48.143Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-040",
@@ -1095,8 +1134,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.40",
-      "imported_at": "2026-04-16T05:16:48.143Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-041",
@@ -1105,8 +1145,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.40",
-      "imported_at": "2026-04-16T05:16:48.143Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-042",
@@ -1115,8 +1156,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.40",
-      "imported_at": "2026-04-16T05:16:48.143Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-043",
@@ -1125,8 +1167,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.40",
-      "imported_at": "2026-04-16T05:16:48.143Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-044",
@@ -1135,8 +1178,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.40",
-      "imported_at": "2026-04-16T05:16:48.143Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-045",
@@ -1145,8 +1189,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.40",
-      "imported_at": "2026-04-16T05:16:48.143Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-046",
@@ -1155,8 +1200,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.41",
-      "imported_at": "2026-04-16T12:48:20.096Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-047",
@@ -1165,19 +1211,21 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.42",
-      "imported_at": "2026-04-16T12:48:20.096Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-048",
       "type": "process/governance",
-      "description": "Gate no persistido atomicamente + validate-fa-index CHECK 8 usaba idx.last_feat en lugar de session.current_feature + FA-Agent omitia campo feat en funcionalidades nuevas",
+      "description": "Gate persistencia atomica session.json + validate-fa-index CHECK 8 usa session.current_feature + FA feat field obligatorio",
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
       "origin": "LA-025-01 BankPortal Sprint 25",
-      "sofia_core_version": "2.6.43",
-      "imported_at": "2026-04-16T12:48:20.096Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-025-02",
@@ -1202,8 +1250,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.45",
-      "imported_at": "2026-04-16T14:45:33.116Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-050",
@@ -1212,8 +1261,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.45",
-      "imported_at": "2026-04-16T14:45:33.116Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-051",
@@ -1222,8 +1272,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.47",
-      "imported_at": "2026-04-16T17:58:40.384Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-025-01",
@@ -1262,8 +1313,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.52",
-      "imported_at": "2026-04-16T18:07:37.196Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-053",
@@ -1272,8 +1324,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.52",
-      "imported_at": "2026-04-16T21:24:09.034Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-054",
@@ -1282,8 +1335,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.52",
-      "imported_at": "2026-04-16T21:24:09.034Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-055",
@@ -1292,8 +1346,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.52",
-      "imported_at": "2026-04-16T21:24:09.034Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-056",
@@ -1302,8 +1357,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.52",
-      "imported_at": "2026-04-16T21:24:09.034Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-057",
@@ -1312,8 +1368,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.52",
-      "imported_at": "2026-04-16T21:24:09.034Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-025-09",
@@ -1352,8 +1409,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.61",
-      "imported_at": "2026-04-21T05:37:38.854Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-059",
@@ -1362,8 +1420,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.61",
-      "imported_at": "2026-04-21T05:37:38.854Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-060",
@@ -1372,8 +1431,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.61",
-      "imported_at": "2026-04-21T05:37:38.854Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-061",
@@ -1382,28 +1442,31 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.61",
-      "imported_at": "2026-04-21T05:37:38.854Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-062",
-      "type": "process/tooling - session-sprint-history-schema-drift: schema dict vs list en sprint_history incompatible entre proyectos - patron defensivo obligatorio",
-      "description": "",
+      "type": "process/tooling",
+      "description": "El campo `sprint_history` de `.sofia/session.json` presenta dos schemas incompatibles en el portfolio: dict con keys `sprint_N` (BankPortal, ExperisTracker) y list de objetos con campo `sprint` (Ta...",
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.68",
-      "imported_at": "2026-04-23T06:40:04.607Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-063",
-      "type": "process/tooling - session-json-falsy-and-schema-derivation: dos bugs defensivos (sprint=0 falsy + process_areas ausente) en consumidores de session.json - patron hermano de LA-CORE-062",
-      "description": "",
+      "type": "process/tooling",
+      "description": "Durante la generacion del dashboard FacturaFlow en FASE 3 de estabilizacion se detectaron dos bugs defensivos relacionados con schema drift de `session.json` (patron hermano de LA-CORE-062):",
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.68",
-      "imported_at": "2026-04-23T06:40:04.607Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-064",
@@ -1412,8 +1475,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.68",
-      "imported_at": "2026-04-23T06:40:04.607Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-065",
@@ -1422,8 +1486,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.68",
-      "imported_at": "2026-04-23T06:40:04.607Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-066",
@@ -1432,8 +1497,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.68",
-      "imported_at": "2026-04-23T06:40:04.607Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-067",
@@ -1442,28 +1508,31 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.68",
-      "imported_at": "2026-04-23T06:40:04.607Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-068",
-      "type": "frontend/angular - nunca usar [href] nativo para navegacion interna en Angular (causa full page reload + ShellComponent desaparece). Usar router.navigateByUrl() para URLs dinamicas o [routerLink] para estaticas. Seeds de notificaciones deben referenciar SOLO rutas registradas en app-routing.module.ts. Checklist G-4/G-5 bloqueante: grep -r '[href]' src/app/features/ (GR-ANGULAR-HREF-001).",
-      "description": "",
+      "type": "frontend/angular",
+      "description": "En componentes Angular, usar `[href]` nativo en enlaces internos causa full page reload: el ShellComponent desaparece y la pantalla queda en blanco sin menu.",
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.68",
-      "imported_at": "2026-04-23T06:40:04.607Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-070",
-      "type": "takeover/process - T-3 FA Reverse Agent debe producir T3-FUNCTIONAL-DESCRIPTION.md + T3-FUNCTIONAL-DESCRIPTION.docx como entregables explicativos del sistema heredado, ademas de los artefactos internos del pipeline (fa-index.json, fa-baseline, etc.). Sin estos entregables, el analisis funcional no queda accesible fuera del pipeline.",
-      "description": "",
+      "type": "takeover/process",
+      "description": "T-3 FA Reverse Agent produce únicamente artefactos internos del pipeline (fa-index.json, T3-FA-DRAFT.md, T3-FA-GAPS.md).",
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.6.68",
-      "imported_at": "2026-04-23T06:40:04.607Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-071",
@@ -1472,8 +1541,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.7.3",
-      "imported_at": "2026-04-24T13:03:43.102Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-072",
@@ -1482,8 +1552,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.7.3",
-      "imported_at": "2026-04-24T13:03:43.102Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-073",
@@ -1492,8 +1563,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.7.3",
-      "imported_at": "2026-04-24T13:03:43.102Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-075",
@@ -1502,8 +1574,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.7.16",
-      "imported_at": "2026-05-04T16:36:51.912Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-091",
@@ -1512,8 +1585,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.7.16",
-      "imported_at": "2026-05-04T16:36:51.912Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-092",
@@ -1522,88 +1596,97 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.7.16",
-      "imported_at": "2026-05-04T16:36:51.912Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-076",
-      "type": "step1-patch-session-json-debe-ser-idempotente-frente-a-retries-por-tools-down (governance/tooling/idempotency) - severity medium - 2.7.7 - sprint S02-Mini-B-full",
-      "description": "",
+      "type": "governance/tooling/idempotency",
+      "description": "Durante el sub-paso 1.2-bis del Sprint S02 Mini B-full Step 1 (registro de LA candidate LA-CORE-075), el entorno de tools de Claude **cayó mid-PATCH**.",
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.7.16",
-      "imported_at": "2026-05-04T16:36:51.912Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-077",
-      "type": "claude-agent-sdk-evaluacion-archivada-no-reabrir-sin-cambio-arquitectonico (governance/decision-archive) - severity medium - 2.7.8 - sprint S02-Mini-B-full",
-      "description": "",
+      "type": "governance/decision-archive",
+      "description": "D3 firmada en S01 cierre acordó archivar Claude Agent SDK como base operativa de SOFIA-CORE.",
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.7.16",
-      "imported_at": "2026-05-04T16:36:51.912Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-078",
-      "type": "post-merge-annotations-must-propagate-to-develop-via-pre-merge-commit-or-express (governance/propagation) - severity medium - 2.7.9 - sprint S02-Mini-B-full",
-      "description": "",
+      "type": "governance/propagation",
+      "description": "En Sprint S01 Mini A Step 9 (cierre formal G-9), tras ejecutar el merge `feature/sprint-arq-S01-mini-a → develop` (PR #1, merge_commit_sha `8d04bcf`), Claude generó anotaciones de post-merge en la...",
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.7.16",
-      "imported_at": "2026-05-04T16:36:51.912Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-084",
-      "type": "atlassian-locale-i18n-mapping-must-be-verified-pre-operation (process/protocol/i18n) - severity medium - 2.7.10 - sprint S02-Mini-B-full",
-      "description": "",
+      "type": "process/protocol/i18n",
+      "description": "En sesión Step 1 post-G-1 del sprint S02 (2026-04-26), múltiples casos de fricción operativa con Atlassian fueron causados por asumir convenciones inglesas API en un proyecto cuyas etiquetas UI est...",
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.7.16",
-      "imported_at": "2026-05-04T16:36:51.912Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-085",
-      "type": "sprint-close-must-be-atomic-and-clean-residual-state-fields (process/protocol/sprint-close) - severity medium - 2.7.11 - sprint S02-Mini-B-full",
-      "description": "",
+      "type": "process/protocol/sprint-close",
+      "description": "Lectura de `.sofia/session.json` al reanudar Step 2 del sprint S02 en chat fresh (2026-04-26T09:40Z) detectó que el cierre del sprint anterior (S01-mini-b-lite) había dejado **5 campos residuales**...",
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.7.16",
-      "imported_at": "2026-05-04T16:36:51.912Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-087",
-      "type": "mcp-atlassian-no-expone-jira-agile-sprint-management (process/protocol+workaround) - severity medium - 2.7.12 - sprint S02-Mini-B-full",
-      "description": "",
+      "type": "process/protocol+workaround",
+      "description": "Drift estructural conocido del MCP Atlassian para Claude: implementa principalmente la API de Jira Platform (issues) pero **deja fuera la API de Jira Agile** (sprints/boards/epics).",
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.7.16",
-      "imported_at": "2026-05-04T16:36:51.912Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-090",
-      "type": "boot-check-on-demand-antes-de-responder-sobre-estado-de-proyecto (governance/verification-discipline) - severity medium - 2.7.13 - sprint S02-Mini-B-full",
-      "description": "",
+      "type": "governance/verification-discipline",
+      "description": "En sesión Claude del 2026-04-30 (post G-4 sub_bloque_3 cerrado), el PO inicia reflexión meta-protocolo sobre la cantidad de errores recientes detectados al verificar respuestas del agente.",
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.7.16",
-      "imported_at": "2026-05-04T16:36:51.912Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-093",
-      "type": "la-promotion-must-write-three-coordinated-locations-or-detect-empty-body (governance/quality-assurance/process-protocol) - severity medium - 2.7.14 - sprint S02-Mini-B-full",
-      "description": "",
+      "type": "governance/quality-assurance/process-protocol",
+      "description": "Durante la verificación pre-diseño SC-30 sub-paso 2.3 Step 2 S02 (2026-04-26 ~14:00Z), se descubrió un patrón de DEBT silenciosa en LA-CORE-073: el header `## LA-CORE-073` existía en `LESSONS_LEARN...",
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.7.16",
-      "imported_at": "2026-05-04T16:36:51.912Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-079",
@@ -1612,8 +1695,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.7.16",
-      "imported_at": "2026-05-04T16:36:51.912Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-086",
@@ -1622,8 +1706,9 @@
       "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
       "scope": "SOFIA-CORE",
       "source": "promoted",
-      "sofia_core_version": "2.7.16",
-      "imported_at": "2026-05-04T16:36:51.912Z"
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z",
+      "legacy_separator": false
     },
     {
       "id": "LA-CORE-094",
@@ -1634,7 +1719,7 @@
       "scope": "SOFIA-CORE",
       "source": "promoted",
       "sofia_core_version": "2.7.21",
-      "imported_at": "2026-05-11T12:37:23.661Z"
+      "imported_at": "2026-05-12T18:27:45.748Z"
     },
     {
       "id": "LA-CORE-095",
@@ -1645,7 +1730,7 @@
       "scope": "SOFIA-CORE",
       "source": "promoted",
       "sofia_core_version": "2.7.21",
-      "imported_at": "2026-05-11T12:37:23.661Z"
+      "imported_at": "2026-05-12T18:27:45.748Z"
     },
     {
       "id": "LA-CORE-096",
@@ -1656,7 +1741,7 @@
       "scope": "SOFIA-CORE",
       "source": "promoted",
       "sofia_core_version": "2.7.21",
-      "imported_at": "2026-05-11T12:37:23.661Z"
+      "imported_at": "2026-05-12T18:27:45.748Z"
     },
     {
       "id": "LA-CORE-097",
@@ -1667,7 +1752,7 @@
       "scope": "SOFIA-CORE",
       "source": "promoted",
       "sofia_core_version": "2.7.21",
-      "imported_at": "2026-05-11T12:37:23.661Z"
+      "imported_at": "2026-05-12T18:27:45.748Z"
     },
     {
       "id": "LA-CORE-098",
@@ -1678,7 +1763,7 @@
       "scope": "SOFIA-CORE",
       "source": "promoted",
       "sofia_core_version": "2.7.21",
-      "imported_at": "2026-05-11T12:37:23.661Z"
+      "imported_at": "2026-05-12T18:27:45.748Z"
     },
     {
       "id": "LA-CORE-099",
@@ -1689,7 +1774,7 @@
       "scope": "SOFIA-CORE",
       "source": "promoted",
       "sofia_core_version": "2.7.21",
-      "imported_at": "2026-05-11T12:37:23.661Z"
+      "imported_at": "2026-05-12T18:27:45.748Z"
     },
     {
       "id": "LA-CORE-100",
@@ -1700,7 +1785,7 @@
       "scope": "SOFIA-CORE",
       "source": "promoted",
       "sofia_core_version": "2.7.21",
-      "imported_at": "2026-05-11T12:37:23.661Z"
+      "imported_at": "2026-05-12T18:27:45.748Z"
     },
     {
       "id": "LA-CORE-101",
@@ -1711,7 +1796,18 @@
       "scope": "SOFIA-CORE",
       "source": "promoted",
       "sofia_core_version": "2.7.21",
-      "imported_at": "2026-05-11T12:37:23.661Z"
+      "imported_at": "2026-05-12T18:27:45.748Z"
+    },
+    {
+      "id": "LA-CORE-102",
+      "type": "governance/configuration-management",
+      "description": "manifest-scripts-must-stay-bidirectional-with-disk: durante verificación pre-diseño SC-28 sub-paso 2.1 Step 2 S02 (2026-04-26) se detectó drift de 14 scripts en disco no registrados en MANIFEST.scripts (set(disco) - set(MANIFEST)). Severidad medium (no bloquea operación pero debilita evidencia CMMI CM+PPQA+OPF). Cerrado operacionalmente en F4 S05 (D-S05-F4-Q8-manifest-cleanup-prime · MANIFEST v2.8.1 · scripts_drift=0). Promovida en G-7 S05 como recordatorio doctrinal: MANIFEST.scripts debe permanecer bidireccional con disco · candidato extensión validator (reverse check disco→manifest) y pre-commit hook futuro que rechace scripts/*.{js,py} no listados en MANIFEST.scripts.",
+      "legacy_separator": false,
+      "correction": "Ver LESSONS_LEARNED_CORE.md en SOFIA-CORE para corrección completa.",
+      "scope": "SOFIA-CORE",
+      "source": "promoted",
+      "sofia_core_version": "2.7.21",
+      "imported_at": "2026-05-12T18:27:45.748Z"
     }
   ],
   "git_repository": {
@@ -1726,7 +1822,7 @@
     "gr_core_030_satisfied": true,
     "gr_core_030_satisfied_at": "2026-04-11T00:00:00Z"
   },
-  "updated_at": "2026-05-11T12:37:23.669Z",
+  "updated_at": "2026-05-12T18:27:45.758Z",
   "created_at": "2026-04-06T21:00:00Z",
   "code_review": {
     "sprint": 1,
@@ -1856,6 +1952,54 @@
           "qa-tester"
         ],
         "identical_count": 0,
+        "excluded": [],
+        "no_create_skipped": [
+          "angular-developer",
+          "architect",
+          "atlassian-agent",
+          "code-reviewer",
+          "developer-core",
+          "devops",
+          "documentation-agent",
+          "documentation-intake-agent",
+          "dotnet-developer",
+          "fa-reverse-agent",
+          "governance-gap-agent",
+          "inventory-agent",
+          "java-developer",
+          "jenkins-agent",
+          "nodejs-developer",
+          "performance-agent",
+          "php-developer",
+          "php-legacy-reverse",
+          "quality-baseline-agent",
+          "react-developer",
+          "requirements-analyst",
+          "scrum-master",
+          "security-agent",
+          "stabilization-planner",
+          "ux-ui-designer",
+          "ux-ui-minimal-designer",
+          "workflow-manager"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-05-12T18:27:45.770Z",
+      "action": "LA_SYNC_SKILLS_ALL",
+      "sofia_core_version": "2.7.21",
+      "sofia_core_manifest_version": "2.9.0",
+      "flags_used": {
+        "skills_all": true,
+        "no_create": true,
+        "exclude": []
+      },
+      "result": {
+        "created": [],
+        "updated": [
+          "orchestrator"
+        ],
+        "identical_count": 2,
         "excluded": [],
         "no_create_skipped": [
           "angular-developer",
