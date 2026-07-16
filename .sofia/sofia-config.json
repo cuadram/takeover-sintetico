@@ -1,4 +1,5 @@
 {
+  "sofia_core_path": "/Users/cuadram/proyectos/SOFIA-CORE-PROD",
   "project": "facturaflow",
   "client": "RetailCorp S.L.",
   "pipeline_type": "takeover",
