@@ -4,7 +4,7 @@
 'use strict';
 const { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,
         AlignmentType, BorderStyle, WidthType, ShadingType } = require(
-  '/Users/cuadram/Library/CloudStorage/OneDrive-Personal/WIP/SOFIA-CORE/node_modules/docx'
+  '/Users/cuadram/proyectos/SOFIA-CORE-PROD/node_modules/docx'
 );
 const fs   = require('fs');
 const path = require('path');

@@ -5,7 +5,7 @@
 /Users/cuadram/Library/CloudStorage/OneDrive-Personal/WIP/TakeOverSintetico
 
 ## SOFIA_CORE_PATH
-/Users/cuadram/Library/CloudStorage/OneDrive-Personal/WIP/SOFIA-CORE
+/Users/cuadram/proyectos/SOFIA-CORE-PROD
 
 ## Pipeline
 - **Tipo:** `takeover` (Sprint 0 — Toma de Control)
